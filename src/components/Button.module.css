@@ -1,0 +1,35 @@
+.button{
+    border-style: none;
+    background-color: blue;
+    color: white;
+    padding: 10px 40px;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  height: 100%;
+  width: 20px; 
+  background-color: blue;
+}
+
+.button::before {
+  left: -10px;
+  border-radius: 50% 0% 0% 50%;
+}
+
+.button::after {
+  right: -10px;
+  border-radius: 0% 50% 50% 0%;
+}
