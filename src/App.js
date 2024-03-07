@@ -1,8 +1,16 @@
-import MainContent from "./components/MainContent";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/homePage/HomePage";
+
+import MainContent from './components/MainContent';
 
 const App = () => {
   return (
-    <MainContent />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/project-1" element={<MainContent />} />
+
+    </Routes>
+    
   );
 }
 

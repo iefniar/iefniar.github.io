@@ -1,17 +1,32 @@
 .container{
-    background-color: white;
-    width: 100%;
-    max-width: 180px;
+    --color-000: #ffffff;
+    --color-100: #ebe3db;
+    --color-300: #a79b90;
+    --color-500: #9b8977;
+    --color-700: #58483b;
+    --color-900: #1a1714;
+    --color-1000: #000000;
+    --shadow-color: hsla(0, 0%, 0%, 0.2);
+    background-color: transparent;
+    max-width: 200px;
     min-height: 100px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-bottom-right-radius: 25%;
+    box-shadow: 0px 0px 10px var(--shadow-color);
     padding: 1rem;
     position: relative;
     opacity: 1;
     z-index: 2;
 }
+
+.container:hover{
+    cursor: pointer;
+    background-color: var(--color-000);
+}
+
+.container:hover .icon-div{
+    background-color: var(--color-300);
+}
+
 .content{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +39,7 @@
 .icon-div{
     min-width: 50px;
     min-height: 50px;
-    background-color: blue;
+    background-color: var(--color-100);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -32,5 +47,5 @@
     align-items: center;
 }
 .icon-div>span{
-    color: white;
+    color: var(--color-900);
 }

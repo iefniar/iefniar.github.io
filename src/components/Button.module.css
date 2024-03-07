@@ -1,35 +1,21 @@
 .button{
-    border-style: none;
-    background-color: blue;
-    color: white;
+    --color-100: #ebe3db;
+    --color-300: #a79b90;
+    --color-500: #9b8977;
+    --color-700: #58483b;
+    --color-900: #1a1714;
+    --color-1000: #000000;
+    border: 1px solid var(--color-1000);
+    background-color: transparent;
+    color: var(--color-1000);
     padding: 10px 40px;
-    margin-top: 1rem;
     display: inline-flex;
     align-items: center;
-    position: relative;
+    text-transform: uppercase;
 }
 
 .button:hover{
   cursor: pointer;
 }
 
-.button::before,
-.button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); 
-  height: 100%;
-  width: 20px; 
-  background-color: blue;
-}
 
-.button::before {
-  left: -10px;
-  border-radius: 50% 0% 0% 50%;
-}
-
-.button::after {
-  right: -10px;
-  border-radius: 0% 50% 50% 0%;
-}
