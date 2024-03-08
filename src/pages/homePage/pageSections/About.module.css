@@ -1,0 +1,55 @@
+:root{
+    --color-100: #ebe3db;
+    --color-300: #757473;
+    --color-500: #665f59;
+    --color-700: #58483b;
+    --color-900: #1a1714;
+    --color-1000: #000000;
+}
+
+.about-me-container, .about-me-container>h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-container>h3{
+    color: var(--color-100);
+}
+
+.about-me-container>h3>span{
+    display: block;
+    color: var(--color-300);
+    font-family: "Six Caps", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: .3rem;
+    line-height: 1.5;
+}
+
+.about-me-container>p{
+   
+    text-align: center;
+    color: var(--color-500);
+}
+
+.about-me-container>p>span{
+    color: var(--color-300);
+    
+}
+
+@media (min-width: 25em){
+    .about-me-container>h3>span{
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+    }
+
+}
+
+@media (min-width: 50em){
+    .about-me-container>h3>span{
+        font-size: 4rem;
+        letter-spacing: .5rem;
+    }
+
+}

@@ -1,14 +1,19 @@
-.navBar-container{
+:root{
     --color-100: #ebe3db;
-    --color-300: #a79b90;
-    --color-500: #9b8977;
+    --color-300: #757473;
+    --color-500: #665f59;
     --color-700: #58483b;
     --color-900: #1a1714;
     --color-1000: #000000;
+}
 
+.navBar-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: .5rem 1rem 1rem;
+    background-color: var(--color-900);
+    color: var(--color-100);
 }
 
 .navBar-container-links{
@@ -17,20 +22,25 @@
     justify-content: center;
 }
 
-.navBar-container-links>a{
-    color: var(--color-1000);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.navBar-container-links>a>h4{
-    font-size: 1rem;
-    font-weight: 400;
+.navBar-btn{
+    border-style: none;
+    background-color: var(--color-900);
+    color: var(--color-300);
+    font-family: "Six Caps", sans-serif;
+    font-family: "Merriweather", serif; 
+    transition: all ease-in-out 250ms;
 }
 
-.borrar{
-    width: 100%;
-    height: 800px;
-    background-color: green;
+.navBar-btn:hover, .navBar-btn:focus{
+    cursor: pointer;
+    color: var(--color-100);
+}
+
+.navBar-btn>h4{
+    font-size: .8rem;
+    font-weight: 100;
+}
+
+.hero-section{
+    background-color: var(--color-900);
 }

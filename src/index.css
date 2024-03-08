@@ -19,5 +19,6 @@ code {
 }
 
 .outer-container{
-  margin: 0.5em 1em;
+  padding: 0;
+  font-family: "Merriweather", serif; 
 }

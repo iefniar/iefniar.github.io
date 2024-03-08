@@ -1,21 +1,30 @@
 .button{
     --color-100: #ebe3db;
-    --color-300: #a79b90;
-    --color-500: #9b8977;
+    --color-300: #757473;
+    --color-500: #665f59;
     --color-700: #58483b;
     --color-900: #1a1714;
     --color-1000: #000000;
-    border: 1px solid var(--color-1000);
+    border: 1px solid var(--color-300);
     background-color: transparent;
-    color: var(--color-1000);
-    padding: 10px 40px;
+    color: var(--color-300);
+    padding: 10px 20px;
     display: inline-flex;
     align-items: center;
     text-transform: uppercase;
+    transition: all ease-in-out 250ms;
 }
 
 .button:hover{
   cursor: pointer;
+  border: 1px solid var(--color-100);
+  color: var(--color-100);
+}
+
+@media (min-width: 25em){
+  .button{
+    padding: 10px 40px;
+  }
 }
 
 
