@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import About from './pageSections/About';
 import Profile from './pageSections/Profile';
 import Contact from './pageSections/Contact';
+import MainPicture from '../../img/profile-picture.png';
 
 const HomePage = () => {
   const aboutRef = useRef(null);
@@ -22,7 +23,13 @@ const HomePage = () => {
   };
   
   return (
-    <>
+    <div className={classes['homePage-container']}>
+      <div className={classes['fixed-sideBar']}>
+        <img className={classes['main-picture']} src={MainPicture} alt='developer looking to the camera' />
+
+      </div>
+      
+
       <div className={classes['navBar-container']}>
         <div className={classes['navBar-container-links']}>
           <button className={classes['navBar-btn']} onClick={handleClickAbout}>
@@ -41,15 +48,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      <section className={classes['hero-section']}>
+      <div className={classes['hero-section']}>
         <About ref={aboutRef}/>
-      </section>
+      </div>
+      <div className={classes['profile-section']}>
+        <Profile ref={profileRef} />
+      </div>
+      <div className={classes['contact-section']}>
+        <Contact ref={contactRef} />
+      </div>
       
-      <Profile ref={profileRef} />
-      <Contact ref={contactRef} />  
       
-      
-    </>
+    </div>
   );
 }
 

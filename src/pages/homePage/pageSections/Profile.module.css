@@ -1,0 +1,28 @@
+:root{
+    --color-100: #ebe3db;
+    --color-300: #737375;
+    --color-500: #595b66;
+    --color-700: #3b4258;
+    --color-900: #161819;
+    --color-1000: #000000;
+}
+
+.profile-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "picture content content content";
+}
+
+
+.profile-content{
+    grid-area: content;
+    color: var(--color-300);
+
+}
+
+.profile-content>h2{
+    color: var(--color-100);
+    
+    
+    
+}

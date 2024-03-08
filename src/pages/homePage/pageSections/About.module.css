@@ -1,9 +1,9 @@
 :root{
     --color-100: #ebe3db;
-    --color-300: #757473;
-    --color-500: #665f59;
-    --color-700: #58483b;
-    --color-900: #1a1714;
+    --color-300: #737375;
+    --color-500: #595b66;
+    --color-700: #3b4258;
+    --color-900: #161819;
     --color-1000: #000000;
 }
 
@@ -14,6 +14,11 @@
     align-items: center;
 }
 
+.about-me-container{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
 .about-me-container>h3{
     color: var(--color-100);
 }
@@ -21,16 +26,15 @@
 .about-me-container>h3>span{
     display: block;
     color: var(--color-300);
-    font-family: "Six Caps", sans-serif;
     font-size: 1.8rem;
     letter-spacing: .3rem;
     line-height: 1.5;
 }
 
 .about-me-container>p{
-   
     text-align: center;
     color: var(--color-500);
+    margin: 2rem 0 3rem;
 }
 
 .about-me-container>p>span{
@@ -41,7 +45,6 @@
 @media (min-width: 25em){
     .about-me-container>h3>span{
         font-size: 2.5rem;
-        letter-spacing: .3rem;
     }
 
 }

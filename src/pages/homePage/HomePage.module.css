@@ -1,17 +1,51 @@
 :root{
     --color-100: #ebe3db;
-    --color-300: #757473;
-    --color-500: #665f59;
-    --color-700: #58483b;
-    --color-900: #1a1714;
+    --color-300: #737375;
+    --color-500: #595b66;
+    --color-700: #3b4258;
+    --color-900: #161819;
     --color-1000: #000000;
 }
 
+.homePage-container{
+    background-color: var(--color-900); 
+    display: grid;
+    grid-template-areas: 
+    "sideBar . . navbar"
+    "sideBar hero hero hero"
+    "sideBar profile profile profile"
+    "sideBar contact contact contact"; 
+}
+
+.fixed-sideBar{
+    grid-area: sideBar;
+    position: fixed;
+}
+
+.fixed-sideBar:hover, .fixed-sideBar:focus{
+    cursor: pointer;
+}
+
+.fixed-sideBar:hover .main-picture, .fixed-sideBar:focus .main-picture{
+    opacity: 0.9;
+}
+
+.main-picture{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    grid-area: picture;
+    transition: all ease-in-out 300ms;
+}
+
 .navBar-container{
+    grid-area: navbar;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem 1rem;
+    padding: 1rem;
     background-color: var(--color-900);
     color: var(--color-100);
 }
@@ -42,5 +76,23 @@
 }
 
 .hero-section{
+    grid-area: hero;
     background-color: var(--color-900);
+    min-height: 600px;
+    padding: 1rem;
+}
+
+.profile-section{
+    grid-area: profile;
+    background-color: var(--color-900);
+    min-height: 600px;
+    padding: 1rem;
+}
+
+.contact-section{
+    grid-area: contact;
+    background-color: var(--color-900);
+    min-height: 600px;
+    padding: 1rem;
+
 }
