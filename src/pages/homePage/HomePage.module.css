@@ -16,23 +16,35 @@
     background-color: var(--color-minimalist-100); 
     display: grid;
     grid-template-areas: 
-    ". . . navbar"
-    "hero hero hero hero"
-    "about about about about"
-    "projects projects projects projects"
-    "contact contact contact contact"; 
+    "hero"
+    "call-to-action-area"
+    "about"
+    "projects"
+    "contact"; 
 }
 
 .navBar-container{
-    grid-area: navbar;
+    padding: 1rem 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--color-minimalist-100);
+    color: var(--color-900);
+    position: fixed;
+    width: 100%;
+}
+
+.navBar-left{
+    grid-column: 1 / span 9;
+}
+
+.navBar-right{
+    grid-column: 10 / -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
-    background-color: var(--color-minimalist-100);
-    color: var(--color-900);
+    flex: 1;
 }
-
 .navBar-container-links{
     display: flex;
     align-items: center;
@@ -61,6 +73,33 @@
     background-color: var(--color-minimalist-100);
     min-height: 600px;
     padding: 1rem;
+}
+
+.call-to-action-area{
+    padding: 1rem 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 50px;
+}
+
+.button-area{
+    grid-column: -1 / -1; 
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+}
+
+.cta-text-area{
+    grid-column: -1 / -1;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-minimalist-900);
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
 }
 
 .about-section{

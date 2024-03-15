@@ -12,47 +12,45 @@
     --color-minimalist-900: #1E1E1E;
 }
 
-.text-container{
-    display: grid;
-    column-gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.text-1{
-    grid-column: span 4;
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 96px;
-    font-weight: 700;
-    color: var(--color-minimalist-500);
-}
-.text-2{
-    grid-column: span 4;
-    font-family: "Oswald", sans-serif;
-    font-size: 96px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-minimalist-800);
-}
-.text-3{
-    grid-column: 2/2;
-    font-family: "Oswald", sans-serif;
-    font-size: 128px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-minimalist-900);
-}
-.text-4{
-    grid-column: span 4;
+.text-type-1{
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 72px;
     font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
     color: var(--color-minimalist-500);
 }
-.text-5{
-    grid-column: 2/2;
+
+.text-type-2{
     font-family: "Oswald", sans-serif;
     font-size: 128px;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1;
     color: var(--color-minimalist-900);
+}
+
+.main-container{
+    margin: 80px;
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.text-1{
+    grid-column: 2 / -1;
+}
+.text-2{
+    grid-column: 2 / -1;
+    font-size: 96px;
+    color: var(--color-minimalist-800);
+}
+.text-3{
+    grid-column: 4 / -1;
+}
+.text-4{
+    grid-column: 2 / -1;
+}
+.text-5{
+    grid-column: 2 / -1;
 }
