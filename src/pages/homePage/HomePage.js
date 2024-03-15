@@ -1,21 +1,22 @@
 import classes from './HomePage.module.css';
 import { useRef } from 'react';
+import Hero from './pageSections/Hero';
 import About from './pageSections/About';
-import Profile from './pageSections/Profile';
+import Projects from './pageSections/Projects';
 import Contact from './pageSections/Contact';
-import MainPicture from '../../img/profile-picture.png';
+import Logo from '../../icons/Logo.svg';
 
 const HomePage = () => {
   const aboutRef = useRef(null);
-  const profileRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   const handleClickAbout = () => {
     aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleClickProfile = () => {
-    profileRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const handleClickProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleClickContact = () => {
@@ -24,12 +25,6 @@ const HomePage = () => {
   
   return (
     <div className={classes['homePage-container']}>
-      <div className={classes['fixed-sideBar']}>
-        <img className={classes['main-picture']} src={MainPicture} alt='developer looking to the camera' />
-
-      </div>
-      
-
       <div className={classes['navBar-container']}>
         <div className={classes['navBar-container-links']}>
           <button className={classes['navBar-btn']} onClick={handleClickAbout}>
@@ -37,8 +32,8 @@ const HomePage = () => {
           </button>
         </div>
         <div className={classes['navBar-container-links']}>
-          <button className={classes['navBar-btn']} onClick={handleClickProfile}>
-            <h4>Profile</h4>
+          <button className={classes['navBar-btn']} onClick={handleClickProjects}>
+            <h4>Projects</h4>
           </button>
         </div>
         <div className={classes['navBar-container-links']}>
@@ -46,13 +41,21 @@ const HomePage = () => {
             <h4>Contact</h4>
           </button>
         </div>
+        <div className={classes['navBar-container-links']}>
+          <button className={classes['navBar-btn']} >
+            <img src={Logo} alt="logo" />
+          </button>
+        </div>
       </div>
 
       <div className={classes['hero-section']}>
+        <Hero/>
+      </div>
+      <div className={classes['about-section']}>
         <About ref={aboutRef}/>
       </div>
-      <div className={classes['profile-section']}>
-        <Profile ref={profileRef} />
+      <div className={classes['projects-section']}>
+        <Projects ref={projectsRef} />
       </div>
       <div className={classes['contact-section']}>
         <Contact ref={contactRef} />

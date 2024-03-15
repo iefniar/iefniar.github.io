@@ -20,5 +20,7 @@ code {
 
 .outer-container{
   padding: 0;
-  font-family: "Merriweather", serif; 
+  font-family: "Oswald", sans-serif;
+  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
 }

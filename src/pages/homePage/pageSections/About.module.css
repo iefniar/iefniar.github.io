@@ -1,5 +1,5 @@
 :root{
-    --color-100: #ebe3db;
+    --color-100: #ffffff;
     --color-300: #737375;
     --color-500: #595b66;
     --color-700: #3b4258;
@@ -20,12 +20,12 @@
 }
 
 .about-me-container>h3{
-    color: var(--color-100);
+    color: var(--color-900);
 }
 
 .about-me-container>h3>span{
     display: block;
-    color: var(--color-300);
+    color: var(--color-1000);
     font-size: 1.8rem;
     letter-spacing: .3rem;
     line-height: 1.5;
@@ -33,12 +33,12 @@
 
 .about-me-container>p{
     text-align: center;
-    color: var(--color-500);
+    color: var(--color-900);
     margin: 2rem 0 3rem;
 }
 
 .about-me-container>p>span{
-    color: var(--color-300);
+    color: var(--color-1000);
     
 }
 

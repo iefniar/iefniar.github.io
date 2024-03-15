@@ -1,43 +1,26 @@
 :root{
-    --color-100: #ebe3db;
-    --color-300: #737375;
-    --color-500: #595b66;
-    --color-700: #3b4258;
-    --color-900: #161819;
-    --color-1000: #000000;
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
 }
 
 .homePage-container{
-    background-color: var(--color-900); 
+    background-color: var(--color-minimalist-100); 
     display: grid;
     grid-template-areas: 
-    "sideBar . . navbar"
-    "sideBar hero hero hero"
-    "sideBar profile profile profile"
-    "sideBar contact contact contact"; 
-}
-
-.fixed-sideBar{
-    grid-area: sideBar;
-    position: fixed;
-}
-
-.fixed-sideBar:hover, .fixed-sideBar:focus{
-    cursor: pointer;
-}
-
-.fixed-sideBar:hover .main-picture, .fixed-sideBar:focus .main-picture{
-    opacity: 0.9;
-}
-
-.main-picture{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    grid-area: picture;
-    transition: all ease-in-out 300ms;
+    ". . . navbar"
+    "hero hero hero hero"
+    "about about about about"
+    "projects projects projects projects"
+    "contact contact contact contact"; 
 }
 
 .navBar-container{
@@ -45,9 +28,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    background-color: var(--color-900);
-    color: var(--color-100);
+    padding: 1rem 3rem;
+    background-color: var(--color-minimalist-100);
+    color: var(--color-900);
 }
 
 .navBar-container-links{
@@ -58,40 +41,45 @@
 
 .navBar-btn{
     border-style: none;
-    background-color: var(--color-900);
-    color: var(--color-300);
-    font-family: "Six Caps", sans-serif;
-    font-family: "Merriweather", serif; 
+    background-color: var(--color-minimalist-100);
+    color: var(--color-minimalist-800);
+    font-family: "PT Sans", sans-serif;
     transition: all ease-in-out 250ms;
 }
 
 .navBar-btn:hover, .navBar-btn:focus{
     cursor: pointer;
-    color: var(--color-100);
+    color: var(--color-minimalist-600);
 }
 
 .navBar-btn>h4{
-    font-size: .8rem;
-    font-weight: 100;
+    font-size: 12px;
 }
 
 .hero-section{
     grid-area: hero;
-    background-color: var(--color-900);
+    background-color: var(--color-minimalist-100);
     min-height: 600px;
     padding: 1rem;
 }
 
-.profile-section{
-    grid-area: profile;
-    background-color: var(--color-900);
+.about-section{
+    grid-area: about;
+    background-color: var(--color-minimalist-900);
+    min-height: 600px;
+    padding: 1rem;
+}
+
+.projects-section{
+    grid-area: projects;
+    background-color: var(--color-minimalist-900);
     min-height: 600px;
     padding: 1rem;
 }
 
 .contact-section{
     grid-area: contact;
-    background-color: var(--color-900);
+    background-color: var(--color-minimalist-100);
     min-height: 600px;
     padding: 1rem;
 

@@ -1,17 +1,12 @@
 import classes from "./Card.module.css";
 
-const Card = ({icon, headlineTop, headlineBottom, text}) => {
+const Card = ({image, icon}) => {
   return (
-    <div className={classes.container}>
-        <div className={classes.content}>
-            <div className={classes['icon-div']}>
-                <span>{icon}</span>
-            </div>
-            <h4>{headlineTop}</h4>
-            <h4>{headlineBottom}</h4>
-            <p>{text}</p>
-        </div>
-        
+    <div className={classes.container}>    
+      <img className={classes['preview-img']} src={image} alt="project preview" />
+      <div className={classes['icon-div']}>
+          <span>{icon}</span>
+      </div>     
     </div>
   );
 }

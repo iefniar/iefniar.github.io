@@ -1,0 +1,26 @@
+:root{
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
+}
+
+.projects-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "picture content content content";
+}
+
+
+.projects-content{
+    grid-area: content;
+    
+
+}
