@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.d446e62e.css",
-    "main.js": "/static/js/main.ee53bbe2.js",
+    "main.css": "/static/css/main.5da7b44a.css",
+    "main.js": "/static/js/main.4068f4e9.js",
+    "static/media/project-1.png": "/static/media/project-1.b4950d147aed36dbdc71.png",
+    "static/media/project-2.png": "/static/media/project-2.71055a9f7893ad99228d.png",
     "static/media/profile-picture.png": "/static/media/profile-picture.67068e5e1aada9e12dee.png",
-    "static/media/Logo.svg": "/static/media/Logo.e7f21ca4eff52b4aeab5a59f0001905d.svg",
+    "static/media/devicon_mongodb.svg": "/static/media/devicon_mongodb.f5df220658b4957fdbf08d799ea25485.svg",
+    "static/media/devicon_react.svg": "/static/media/devicon_react.8bcf87c4f39a62c1574a273de37c4d39.svg",
+    "static/media/vscode-icons_file-type-node.svg": "/static/media/vscode-icons_file-type-node.28f1258fe0afe8e57ba25cd9dac8e513.svg",
+    "static/media/Logo.svg": "/static/media/Logo.2220fccb42713570bfca0fb9742cd457.svg",
+    "static/media/devicon_express.svg": "/static/media/devicon_express.33064850671a8b46305cd9b668ae3521.svg",
     "index.html": "/index.html",
-    "main.d446e62e.css.map": "/static/css/main.d446e62e.css.map",
-    "main.ee53bbe2.js.map": "/static/js/main.ee53bbe2.js.map"
+    "static/media/lets-icons_arrow-right-long-light.svg": "/static/media/lets-icons_arrow-right-long-light.f383796b1d8cedf94dc0ecde41f3694a.svg",
+    "main.5da7b44a.css.map": "/static/css/main.5da7b44a.css.map",
+    "main.4068f4e9.js.map": "/static/js/main.4068f4e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.d446e62e.css",
-    "static/js/main.ee53bbe2.js"
+    "static/css/main.5da7b44a.css",
+    "static/js/main.4068f4e9.js"
   ]
 }
