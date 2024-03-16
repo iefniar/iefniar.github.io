@@ -12,6 +12,24 @@
     --color-minimalist-900: #1E1E1E;
 }
 
+.text-type-1{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-700);
+}
+
+.text-type-2{
+    font-family: "Oswald", sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--color-minimalist-200);
+}
+
 .projects-container{
     margin: 80px;
     padding: 80px 0;
@@ -21,9 +39,41 @@
 }
 
 .card-area{
+    grid-column: 1 / -1;
+    margin-top: 5rem;
 
 }
 
+.small-card-items{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.small-card-items>a:hover, .small-card-items>a:focus{
+    cursor: pointer;
+}
+
+.small-img{
+    padding: 2rem;
+    min-height: 80px;
+    max-width: 320px;
+    display: block;
+    object-fit: cover;
+    transform: rotateZ(3deg);
+}
+
+.small-card-items>a:nth-child(2)>img{
+    margin-top: 2rem;
+    transform: rotateZ(-3deg);
+}
+
+.main-card{
+    margin-top: 5rem;
+    transition: all 250ms ease-in-out;
+}
+
 .text-area{
+    grid-column: 1 / -1;
     
 }

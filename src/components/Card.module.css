@@ -12,6 +12,24 @@
     --color-minimalist-900: #1E1E1E;
 }
 
+.text-type-1{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-200);
+}
+
+.text-type-2{
+    font-family: "Oswald", sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-200);
+}
+
 .container{
     --shadow-color: var(--color-minimalist-400);
     --min-height: 400px;
@@ -41,15 +59,14 @@
     object-fit: cover;
 }
 
-.icon-bottom{
-    display: block;
-    width: 40px;
+.text-over-image{
     position: absolute;
-    bottom: 0;
-    right: 2rem;
+    top: 40%;
+    left: 40%;
+    opacity: 0;
     transition: all 300ms ease-in-out;
 }
 
-.container:hover>a>img.icon-bottom{
-    width: 70px;
+.container:hover .text-over-image, .container:focus .text-over-image{
+    opacity: 1;
 }

@@ -1,15 +1,15 @@
 import classes from "./Card.module.css";
 import { Link } from 'react-router-dom';
 
-const Card = ({image, icon}) => {
+const Card = ({image, link}) => {
   return (
     <div className={classes.container}>   
-      <Link to='/project-1' onClick={()=>{console.log('image clicked')}}>
+      <Link to={link}>
         <img className={classes['preview-img']} src={image} alt="project preview" />
       </Link> 
-      <Link to='' onClick={()=>{console.log('icon clicked')}}>
-        <img className={classes['icon-bottom']} src={icon} alt="icon at the bottom" />
-      </Link>
+      <div className={`${classes['text-type-1']} ${classes['text-over-image']}`}>
+        Go to
+      </div>
     </div>
   );
 }
