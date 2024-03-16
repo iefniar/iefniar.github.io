@@ -13,14 +13,17 @@
 }
 
 .projects-container{
+    margin: 80px;
+    padding: 80px 0;
     display: grid;
     gap: 1rem;
-    grid-template-areas: "picture content content content";
+    grid-template-columns: repeat(12, 1fr);
 }
 
+.card-area{
 
-.projects-content{
-    grid-area: content;
+}
+
+.text-area{
     
-
 }

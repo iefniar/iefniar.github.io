@@ -16,7 +16,7 @@
     border-style: none;
     background-color: var(--color-minimalist-400);
     color: var(--color-minimalist-800);
-    padding: 20px 50px;
+    padding: 10px 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@
 
 @media (min-width: 25em){
   .button{
-    padding: 10px 40px;
+    padding: 15px 35px;
   }
 }
 

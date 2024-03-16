@@ -1,58 +1,92 @@
 :root{
-    --color-100: #ffffff;
-    --color-300: #737375;
-    --color-500: #595b66;
-    --color-700: #3b4258;
-    --color-900: #161819;
-    --color-1000: #000000;
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
 }
 
-.about-me-container, .about-me-container>h3{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.text-type-1{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-200);
+}
+
+.text-type-2{
+    font-family: "Oswald", sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-200);
 }
 
 .about-me-container{
-    padding: 1rem;
-    margin-top: 1rem;
+    margin: 80px;
+    padding: 80px 0;
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
 }
 
-.about-me-container>h3{
-    color: var(--color-900);
+.align-right{
+    gap: 1rem;
+    grid-column: 7 / -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.about-me-container>h3>span{
-    display: block;
-    color: var(--color-1000);
-    font-size: 1.8rem;
-    letter-spacing: .3rem;
-    line-height: 1.5;
+.first-text{
+    grid-column: 4 / -1;
 }
 
-.about-me-container>p{
-    text-align: center;
-    color: var(--color-900);
-    margin: 2rem 0 3rem;
+.text-2{
+    text-transform: uppercase;
+    color: var(--color-minimalist-700);
 }
 
-.about-me-container>p>span{
-    color: var(--color-1000);
-    
+.text-4{
+    grid-column: 5 / -1;
+}
+.text-5{
+    text-transform: uppercase;
+    color: var(--color-minimalist-700);
 }
 
-@media (min-width: 25em){
-    .about-me-container>h3>span{
-        font-size: 2.5rem;
-    }
-
+.icons-area{
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 4;
 }
 
-@media (min-width: 50em){
-    .about-me-container>h3>span{
-        font-size: 4rem;
-        letter-spacing: .5rem;
-    }
+.first-group, .second-group{
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
 
+.first-group>h4, .second-group>h4{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1;
+    color: var(--color-minimalist-700);
+}
+
+.first-group>h4:nth-child(4){
+    color: var(--color-minimalist-400);
 }
