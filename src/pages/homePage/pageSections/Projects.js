@@ -23,22 +23,28 @@ const Projects = (props, ref) => {
       </div>
       <div className={classes['card-area']}>
         <div className={classes['small-card-items']}>
-          <Link to='' onClick={()=>{
-            setMainCardItem({
-              cardImage: Project1,
-              cardLink: '/project-1'
-            })
-          }}>
-            <img className={classes['small-img']} src={Project1} alt="project 1 small preview" id='img-1' />
-          </Link> 
-          <Link to='' onClick={()=>{
-            setMainCardItem({
-              cardImage: Project2,
-              cardLink: '/project-2'
-            })
-          }}>
-            <img className={classes['small-img']} src={Project2} alt="project 2 small preview" id='img-2' />
-          </Link> 
+          <div className={classes['individual-item']}>
+            <Link to='' onClick={()=>{
+              setMainCardItem({
+                cardImage: Project1,
+                cardLink: '/project-1'
+              })
+            }}>
+              <img className={classes['small-img']} src={Project1} alt="project 1 small preview" id='img-1' />
+            </Link> 
+            <h4>e-commerce app</h4>
+          </div>
+          <div className={classes['individual-item']}>
+            <Link to='' onClick={()=>{
+              setMainCardItem({
+                cardImage: Project2,
+                cardLink: '/project-2'
+              })
+            }}>
+              <img className={classes['small-img']} src={Project2} alt="project 2 small preview" id='img-2' />
+            </Link> 
+            <h4>landing page of a restaurant</h4>
+          </div>
         </div>
         <div className={classes['main-card']}>
           <Card image={mainCardItem.cardImage} link={mainCardItem.cardLink} />

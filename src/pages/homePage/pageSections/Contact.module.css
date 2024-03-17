@@ -1,0 +1,113 @@
+:root{
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
+}
+
+.text-type-1{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+    color: var(--color-minimalist-500);
+}
+
+.text-type-2{
+    font-family: "Oswald", sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--color-minimalist-800);
+}
+
+.text-type-3{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-minimalist-700);
+}
+
+.contact-container{
+    margin-inline: 80px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 80px 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.text-1{
+    grid-column: 1 / -1;
+}
+
+.text-2{
+    grid-column: 1 / -1;
+}
+
+.icons-group{
+    display: flex;
+    gap: 5rem;
+    margin-top: 2rem;
+    grid-column: 1 / -1;
+}
+
+.social-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon>a{
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-icon>button{
+    border-style: none;
+    background-color: var(--color-minimalist-100);
+}
+
+.social-icon>button:hover{
+    cursor: pointer;
+}
+
+.social-icon>a>h4, .social-icon>button>h4{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-minimalist-700);    
+}
+
+.first-icon{
+    grid-column: 1 / 3;
+}
+
+.second-icon{
+    grid-column: 3 / 5;
+}
+
+.third-icon{
+    grid-column: 5 / -1;
+}
+
+.text-3{
+    margin-top: 10rem;
+    grid-column: 10 / -1;
+    justify-self: flex-end;
+    color: var(--color-minimalist-900);
+}
