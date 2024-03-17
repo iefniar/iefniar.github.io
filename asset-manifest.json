@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.254a60e7.css",
-    "main.js": "/static/js/main.49148b4a.js",
+    "main.css": "/static/css/main.c2a19170.css",
+    "main.js": "/static/js/main.b935e84d.js",
     "static/media/project-1.png": "/static/media/project-1.b4950d147aed36dbdc71.png",
     "static/media/project-2.png": "/static/media/project-2.71055a9f7893ad99228d.png",
-    "static/media/profile-picture.png": "/static/media/profile-picture.67068e5e1aada9e12dee.png",
     "static/media/devicon_mongodb.svg": "/static/media/devicon_mongodb.f5df220658b4957fdbf08d799ea25485.svg",
     "static/media/devicon_react.svg": "/static/media/devicon_react.8bcf87c4f39a62c1574a273de37c4d39.svg",
     "static/media/vscode-icons_file-type-node.svg": "/static/media/vscode-icons_file-type-node.28f1258fe0afe8e57ba25cd9dac8e513.svg",
     "static/media/Logo.svg": "/static/media/Logo.2220fccb42713570bfca0fb9742cd457.svg",
+    "static/media/mingcute_linkedin-fill.svg": "/static/media/mingcute_linkedin-fill.d8a071335743613ffb58a1218529bf79.svg",
+    "static/media/basil_gmail-outline.svg": "/static/media/basil_gmail-outline.ac38b00672ef13cede70d25993bfdd52.svg",
     "static/media/devicon_express.svg": "/static/media/devicon_express.33064850671a8b46305cd9b668ae3521.svg",
+    "static/media/ri_github-fill.svg": "/static/media/ri_github-fill.7be7e86ce80ee9a4ca31925638f79fd8.svg",
     "index.html": "/index.html",
-    "main.254a60e7.css.map": "/static/css/main.254a60e7.css.map",
-    "main.49148b4a.js.map": "/static/js/main.49148b4a.js.map"
+    "main.c2a19170.css.map": "/static/css/main.c2a19170.css.map",
+    "main.b935e84d.js.map": "/static/js/main.b935e84d.js.map"
   },
   "entrypoints": [
-    "static/css/main.254a60e7.css",
-    "static/js/main.49148b4a.js"
+    "static/css/main.c2a19170.css",
+    "static/js/main.b935e84d.js"
   ]
 }
