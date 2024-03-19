@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-white-100: #FFFFFF;
     --color-black-900: #000000;
     --color-minimalist-100: #F8F8F8;
@@ -12,71 +12,80 @@
     --color-minimalist-900: #1E1E1E;
 }
 
-.homePage-container{
-    background-color: var(--color-minimalist-100); 
+.homePage-container {
+    background-color: var(--color-minimalist-100);
+    background-image: url('../../img/blueish.jpg'),
+                      linear-gradient(to bottom right, #00010f, #000220, #002761);
+    /*background-repeat: repeat;*/
+    background-size: cover;
+    background-blend-mode: color-burn;
     display: grid;
-    grid-template-areas: 
-    "hero"
-    "call-to-action-area"
-    "about"
-    "projects"
-    "contact"; 
+    grid-template-areas:
+        "hero"
+        "call-to-action-area"
+        "about"
+        "projects"
+        "contact";
 }
 
-.navBar-container{
+.navBar-container {
     padding: 1rem 3rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);*/
     color: var(--color-900);
     position: fixed;
     width: 100%;
     z-index: 2;
 }
 
-.navBar-left{
+.navBar-left {
     grid-column: 1 / span 9;
 }
 
-.navBar-right{
+.navBar-right {
     grid-column: 10 / -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex: 1;
 }
-.navBar-container-links{
+
+.navBar-container-links {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navBar-btn{
+.navBar-btn {
     border-style: none;
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);*/
+    background-color: transparent;
     color: var(--color-minimalist-800);
     font-family: "PT Sans", sans-serif;
     transition: all ease-in-out 250ms;
 }
 
-.navBar-btn:hover, .navBar-btn:focus{
+.navBar-btn:hover,
+.navBar-btn:focus {
     cursor: pointer;
     color: var(--color-minimalist-600);
 }
 
-.navBar-btn>h4{
+.navBar-btn>h4 {
     font-size: 12px;
 }
 
-.hero-section{
+.hero-section {
     grid-area: hero;
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);*/
+    
     min-height: 600px;
     padding: 1rem;
 }
 
-.call-to-action-area{
+.call-to-action-area {
     padding: 1rem 3rem;
     display: grid;
     gap: 1rem;
@@ -84,42 +93,51 @@
     margin-bottom: 50px;
 }
 
-.button-area{
-    grid-column: -1 / -1; 
+.button-area {
+    grid-column: -1 / -1;
     display: flex;
     flex-direction: column;
     justify-self: end;
 }
 
-.cta-text-area{
+.cta-text-area {
     grid-column: -1 / -1;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1;
-    color: var(--color-minimalist-900);
+    color: var(--color-white-100);
     display: flex;
     flex-direction: column;
     justify-self: end;
 }
 
-.about-section{
+.about-projects-container{
+    background-image: url(../../img/concrete_white.png),
+                      linear-gradient(to bottom, #0e0e0f, #020202);
+    /*background-repeat: repeat;*/
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.about-section {
     grid-area: about;
-    background-color: var(--color-minimalist-900);
+    /*background-color: var(--color-minimalist-900);*/
     min-height: 600px;
     padding: 1rem;
 }
 
-.projects-section{
+.projects-section {
     grid-area: projects;
-    background-color: var(--color-minimalist-900);
+    /*background-color: var(--color-minimalist-900);*/
+    background-color: transparent;
     min-height: 600px;
     padding: 1rem;
 }
 
-.contact-section{
+.contact-section {
     grid-area: contact;
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);*/
     min-height: 600px;
     padding: 1rem;
 

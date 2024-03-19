@@ -18,7 +18,7 @@
     font-weight: 700;
     text-transform: lowercase;
     line-height: 1;
-    color: var(--color-minimalist-500);
+    color: var(--color-white-100);
 }
 
 .text-type-2{
@@ -27,7 +27,7 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
-    color: var(--color-minimalist-800);
+    color: var(--color-black-900);
 }
 
 .text-type-3{
@@ -35,7 +35,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
-    color: var(--color-minimalist-700);
+    color: var(--color-black-900);
 }
 
 .contact-container{
@@ -78,7 +78,8 @@
 
 .social-icon>button{
     border-style: none;
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);*/
+    background-color: transparent;
 }
 
 .social-icon>button:hover{
@@ -90,7 +91,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
-    color: var(--color-minimalist-700);    
+    color: var(--color-black-900);    
 }
 
 .first-icon{

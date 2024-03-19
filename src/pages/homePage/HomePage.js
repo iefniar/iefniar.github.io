@@ -62,12 +62,15 @@ const HomePage = () => {
           Craft a user experience that converts
         </div>
       </div>
-      <div className={classes['about-section']}>
-        <About ref={aboutRef}/>
+      <div className={classes['about-projects-container']}>
+        <div className={classes['about-section']}>
+          <About ref={aboutRef}/>
+        </div>
+        <div className={classes['projects-section']}>
+          <Projects ref={projectsRef} />
+        </div>
       </div>
-      <div className={classes['projects-section']}>
-        <Projects ref={projectsRef} />
-      </div>
+      
       <div className={classes['contact-section']}>
         <Contact ref={contactRef} />
       </div>

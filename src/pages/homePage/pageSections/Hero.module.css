@@ -18,7 +18,7 @@
     font-weight: 700;
     text-transform: lowercase;
     line-height: 1;
-    color: var(--color-minimalist-500);
+    color: var(--color-white-100);
 }
 
 .text-type-2{
@@ -27,7 +27,7 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
-    color: var(--color-minimalist-900);
+    color: var(--color-black-900);
 }
 
 .main-container{
@@ -43,7 +43,7 @@
 .text-2{
     grid-column: 2 / -1;
     font-size: 96px;
-    color: var(--color-minimalist-800);
+    color: var(--color-white-100);
 }
 .text-3{
     grid-column: 4 / -1;
