@@ -15,10 +15,12 @@
 .homePage-container {
     background-color: var(--color-minimalist-100);
     background-image: url('../../img/blueish.jpg'),
-                      linear-gradient(to bottom right, #00010f, #000220, #002761);
+                      linear-gradient(to bottom right, #554132, #7F593F, #AE7D66);
+    /*background-image: url('../../img/blueish.jpg'),
+                      linear-gradient(to bottom right, #00010f, #000220, #002761);*/
     /*background-repeat: repeat;*/
     background-size: cover;
-    background-blend-mode: color-burn;
+    background-blend-mode: multiply;
     display: grid;
     grid-template-areas:
         "hero"
@@ -80,7 +82,6 @@
 .hero-section {
     grid-area: hero;
     /*background-color: var(--color-minimalist-100);*/
-    
     min-height: 600px;
     padding: 1rem;
 }

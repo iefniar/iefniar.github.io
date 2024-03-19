@@ -19,7 +19,8 @@
     font-weight: 700;
     text-transform: lowercase;
     line-height: 1;
-    color: var(--color-minimalist-200);
+    color: var(--color-white-100);
+    color: #AE7D66;
 }
 
 .text-type-2{
@@ -28,7 +29,8 @@
     font-weight: 700;
     text-transform: lowercase;
     line-height: 1;
-    color: var(--color-minimalist-200);
+    color: var(--color-white-100);
+    color: #AE7D66;
 }
 
 .about-me-container{
@@ -54,7 +56,11 @@
 
 .text-2{
     text-transform: uppercase;
-    color: var(--color-minimalist-700);
+    color: var(--color-minimalist-300);
+    color: #5e4a3b;
+    /*background-image: url(../../../img/blue_cut.png);
+    background-clip: text;
+    color: transparent;*/
 }
 
 .text-4{
@@ -62,7 +68,11 @@
 }
 .text-5{
     text-transform: uppercase;
-    color: var(--color-minimalist-700);
+    color: var(--color-minimalist-300);
+    color: #5e4a3b;
+    /*background-image: url(../../../img/blue_cut.png);
+    background-clip: text;
+    color: transparent;*/
 }
 
 .icons-area{
@@ -85,9 +95,11 @@
     font-size: 32px;
     font-weight: 200;
     line-height: 1;
-    color: var(--color-minimalist-700);
+    /*color: var(--color-minimalist-500);*/
+    color: #554132;
 }
 
 .first-group>h4:nth-child(4){
-    color: var(--color-minimalist-400);
+    color: var(--color-white-100);
+    color: #AE7D66;
 }
