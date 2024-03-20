@@ -110,5 +110,5 @@
     margin-top: 10rem;
     grid-column: 10 / -1;
     justify-self: flex-end;
-    color: var(--color-minimalist-900);
+    color: var(--color-white-100);
 }

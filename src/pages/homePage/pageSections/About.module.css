@@ -20,7 +20,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
-    color: #AE7D66;
+    color: #805c4b;
 }
 
 .text-type-2{
@@ -30,7 +30,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
-    color: #AE7D66;
+    color: #805c4b;
 }
 
 .about-me-container{
@@ -96,10 +96,10 @@
     font-weight: 200;
     line-height: 1;
     /*color: var(--color-minimalist-500);*/
-    color: #554132;
+    color: #5e4a3b;
 }
 
 .first-group>h4:nth-child(4){
     color: var(--color-white-100);
-    color: #AE7D66;
+    color: #805c4b;
 }
