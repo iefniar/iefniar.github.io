@@ -28,6 +28,7 @@
         "about"
         "projects"
         "contact";
+    overflow: hidden;
 }
 
 .navBar-container {
