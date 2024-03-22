@@ -144,3 +144,33 @@
     padding: 1rem;
 
 }
+
+@media(max-width: 480px){
+    .navBar-left {
+        display: none;
+    }
+
+    .navBar-right {
+        grid-column: 1 / -1;
+    }
+
+    .hero-section {
+        min-height: 300px;
+    }
+
+    .call-to-action-area {
+        padding-inline: 1rem;
+    }
+
+    .button-area, .cta-text-area {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .cta-text-area{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+
+}
