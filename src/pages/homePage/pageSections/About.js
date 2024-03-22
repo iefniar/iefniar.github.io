@@ -7,6 +7,16 @@ import NodejsIcon from '../../../icons/vscode-icons_file-type-node.svg';
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const About = (props, ref) => {
+  const firstTextContainer = useRef(null);
+  const { scrollYProgress: scrollYProgressFirstTextContainer } = useScroll({
+      target: firstTextContainer,
+      offset: ["1.33 1.33", "1 1"]
+  });
+
+  const y1FirstTextContainer  = useTransform(scrollYProgressFirstTextContainer, [0, 1], [window.innerHeight*-0.3, 1]);
+  const scaleProgressFirstTextContainer  = useTransform(scrollYProgressFirstTextContainer, [0, 1], [0.7, 1]);
+  const opacityProgressFirstTextContainer  = useTransform(scrollYProgressFirstTextContainer, [0, 1], [0, 1]);
+
   const iconsContainer = useRef(null);
   const { scrollYProgress: scrollYProgressIconsContainer } = useScroll({
       target: iconsContainer,
@@ -18,9 +28,13 @@ const About = (props, ref) => {
 
   return (
     <div className={classes['about-me-container']} ref={ref}> 
-      <div className={`${classes['align-right']} ${classes['first-text']}`}>
+      <div ref={firstTextContainer} className={`${classes['align-right']} ${classes['first-text']}`}>
         <div className={classes['text-type-2']}>hi, i'm</div>
-        <div className={`${classes['text-type-2']} ${classes['text-2']}`}>Jeffrey</div>
+        <motion.div className={`${classes['text-type-2']} ${classes['text-2']}`}
+                    style={{opacity: opacityProgressFirstTextContainer, y: y1FirstTextContainer, scale: scaleProgressFirstTextContainer}}
+        >
+          Jeffrey
+        </motion.div>
       </div>
       <div className={classes['align-right']}>
         <div className={`${classes['text-type-1']} ${classes['text-3']}`}>a web developer</div>
@@ -39,12 +53,14 @@ const About = (props, ref) => {
           <img src={ReactIcon} alt="React.js icon" />
           <h4>React.js</h4>
         </motion.div>
-        <div className={classes['second-group']}>
+        <motion.div className={classes['second-group']}
+                    style={{opacity: opacityProgressIconsContainer, y: scrollYProgressIconsContainer, scale: scaleProgressIconsContainer}}
+        >
           <img src={ExpressIcon} alt="Express.js icon" />
           <h4>Express.js</h4>
           <img src={NodejsIcon} alt="Node.js icon" />
           <h4>Node.js</h4>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
