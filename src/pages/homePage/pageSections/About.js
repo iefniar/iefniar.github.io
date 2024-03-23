@@ -48,18 +48,26 @@ const About = (props, ref) => {
         <motion.div className={classes['first-group']}
                     style={{opacity: opacityProgressIconsContainer, y: scrollYProgressIconsContainer, scale: scaleProgressIconsContainer}}
         >
-          <img src={MongoDBIcon} alt="MongoDB icon" />
-          <h4>MongoDB</h4>
-          <img src={ReactIcon} alt="React.js icon" />
-          <h4>React.js</h4>
+          <div className={classes['icon-text-pair']}>
+            <img src={MongoDBIcon} alt="MongoDB icon" />
+            <h4>MongoDB</h4>
+          </div>
+          <div className={classes['icon-text-pair']}>
+            <img src={ReactIcon} alt="React.js icon" />
+            <h4>React.js</h4>
+          </div>
         </motion.div>
         <motion.div className={classes['second-group']}
                     style={{opacity: opacityProgressIconsContainer, y: scrollYProgressIconsContainer, scale: scaleProgressIconsContainer}}
         >
-          <img src={ExpressIcon} alt="Express.js icon" />
-          <h4>Express.js</h4>
-          <img src={NodejsIcon} alt="Node.js icon" />
-          <h4>Node.js</h4>
+          <div className={classes['icon-text-pair']}>
+            <img src={ExpressIcon} alt="Express.js icon" />
+            <h4>Express.js</h4>
+          </div>
+          <div className={classes['icon-text-pair']}>
+            <img src={NodejsIcon} alt="Node.js icon" />
+            <h4>Node.js</h4>
+          </div>
         </motion.div>
       </div>
     </div>

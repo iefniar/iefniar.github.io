@@ -28,7 +28,7 @@
         "about"
         "projects"
         "contact";
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .navBar-container {
@@ -39,7 +39,7 @@
     /*background-color: var(--color-minimalist-100);*/
     color: var(--color-900);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
 }
 
@@ -81,10 +81,12 @@
 }
 
 .hero-section {
+    --padding-inline-value: 1rem;
     grid-area: hero;
     /*background-color: var(--color-minimalist-100);*/
     min-height: 600px;
-    padding: 1rem;
+    padding: var(--padding-inline-value);
+    width: calc(100vw - 2*var(--padding-inline-value)) ;
 }
 
 .call-to-action-area {
@@ -123,10 +125,12 @@
 }
 
 .about-section {
+    --padding-inline-value: 1rem;
     grid-area: about;
     /*background-color: var(--color-minimalist-900);*/
     min-height: 600px;
-    padding: 1rem;
+    padding: 0 var(--padding-inline-value);
+    width: 100vw;
 }
 
 .projects-section {
@@ -146,6 +150,12 @@
 }
 
 @media(max-width: 480px){
+    .navBar-container {
+        /*padding: 30px;*/
+        padding: clamp(1.875rem, 8vw + 1rem, 3rem);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .navBar-left {
         display: none;
     }
@@ -154,12 +164,14 @@
         grid-column: 1 / -1;
     }
 
-    .hero-section {
+    .hero-section, .about-section {
+        --padding-inline-value: clamp(1.875rem, 8vw + 1rem, 3rem);;
         min-height: 300px;
     }
 
     .call-to-action-area {
-        padding-inline: 1rem;
+        padding-inline: 30px;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .button-area, .cta-text-area {
@@ -172,5 +184,8 @@
         font-weight: 400;
     }
 
+    .projects-section, .contact-section{
+        display: none;
+    }
 
 }

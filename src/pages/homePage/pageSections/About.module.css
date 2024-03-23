@@ -80,9 +80,10 @@
     display: flex;
     flex-direction: column;
     grid-column: 2 / 5;
+    gap: 1rem;
 }
 
-.first-group, .second-group{
+.first-group, .second-group, .icon-text-pair{
     display: flex;
     flex: 1;
     gap: 1rem;
@@ -90,7 +91,7 @@
     justify-content: flex-end;
 }
 
-.first-group>h4, .second-group>h4{
+.icon-text-pair>h4{
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 32px;
     font-weight: 200;
@@ -99,27 +100,36 @@
     color: #5e4a3b;
 }
 
-.first-group>h4:nth-child(4){
+.first-group>.icon-text-pair:nth-child(2)>h4{
     color: var(--color-white-100);
     color: #805c4b;
 }
 
 @media(max-width: 480px){
     .text-type-1{
-        font-size: 28px;
+        /*font-size: 28px;*/
+        font-size: clamp(1rem, 2vw + 1rem, 1.75rem);
         font-weight: 400;
+        line-height: 1.2;
     }
 
     .text-type-2{
-        font-size: 38px;
+        /*font-size: 38px;*/
+        font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+        line-height: 1.2;
+    }
+
+    .text-2, .text-5{
+        font-size: clamp(1.75rem, 6vw + 1rem, 3rem);
     }
 
     .about-me-container{
-        margin-inline: 20px;
+        margin: 20px 0;
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .align-right{
-        grid-column: 1 / -1;
+        grid-column: 3 / -1;
         justify-content: flex-start;
     }
     
@@ -138,11 +148,15 @@
     
     .first-group, .second-group{
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
     }
 
-    .first-group>h4, .second-group>h4{
-        font-size: 20px;
+    .icon-text-pair>img{
+        width: clamp(1rem, 2vw + 1rem, 1.875rem);;
+    }
+
+    .icon-text-pair>h4{
+        font-size: clamp(1rem, 2vw + 1rem, 1.875rem);
     }
 }
