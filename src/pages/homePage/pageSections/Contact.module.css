@@ -59,7 +59,7 @@
 .icons-group{
     display: flex;
     gap: 5rem;
-    margin-top: 2rem;
+    margin-top: 8rem;
     grid-column: 1 / -1;
 }
 
@@ -83,7 +83,6 @@
 
 .social-icon>button{
     border-style: none;
-    /*background-color: var(--color-minimalist-100);*/
     background-color: transparent;
 }
 
@@ -116,4 +115,63 @@
     grid-column: 10 / -1;
     justify-self: flex-end;
     color: var(--color-white-100);
+}
+
+@media(max-width: 480px){
+    .text-type-1{
+        font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+        font-weight: 400;
+    }
+
+    .text-type-2{
+        font-size: clamp(2.25rem, 8vw + 1.2rem, 5rem);
+    }
+
+    .text-type-3{
+        font-weight: 200;
+    }
+    .contact-container{
+        margin: 10px 0;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .icons-group{
+        gap: 3rem;
+        margin-top: 4rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-icon{
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icon>button, .social-icon>a{
+        width: 100%;
+        height: 100%;
+    }
+
+    .first-icon{
+        grid-column: 1 / -1;
+    }
+
+    .second-icon{
+        grid-column: 1 / -1;
+    }
+
+    .third-icon{
+        grid-column: 1 / -1;
+    }
+
+    .first-icon>button>img, .second-icon>a>img, .third-icon>a>img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .text-3{
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
 }

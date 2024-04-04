@@ -30,9 +30,6 @@
     line-height: 1;
     color: var(--color-white-100);
     color: #5e4a3b;
-    /*background-image: url(../../../img/blue_cut.png);
-    background-clip: text;
-    color: transparent;*/
 }
 
 .projects-container{
@@ -57,6 +54,7 @@
 
 .individual-item{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -107,4 +105,42 @@
 .text-area{
     grid-column: 1 / -1;
     
+}
+
+@media(max-width: 480px){
+    .text-type-1{
+        font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .text-type-2{
+        font-size: clamp(2.25rem, 8vw + 1.2rem, 5rem);
+        line-height: 1.2;
+    }
+
+    .projects-container{
+        margin: 20px 0;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .small-card-items{
+        flex-direction: column;
+    }
+
+    .individual-item{
+        gap: 1.5rem;
+    }
+
+    .small-img{
+        padding: 0rem;
+        min-height: 40px;
+        max-width: 100px;
+    }
+
+    .individual-item>h4{
+        font-size: clamp(0.5rem, 1vw + 1rem, 1rem);
+        line-height: 1.2;
+        font-weight: 200;
+    }
 }

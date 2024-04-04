@@ -16,9 +16,6 @@
     background-color: var(--color-minimalist-100);
     background-image: url('../../img/blueish.jpg'),
                       linear-gradient(to bottom right, #554132, #7F593F, #AE7D66);
-    /*background-image: url('../../img/blueish.jpg'),
-                      linear-gradient(to bottom right, #00010f, #000220, #002761);*/
-    /*background-repeat: repeat;*/
     background-size: cover;
     background-blend-mode: multiply;
     display: grid;
@@ -36,7 +33,6 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
-    /*background-color: var(--color-minimalist-100);*/
     color: var(--color-900);
     position: fixed;
     width: 100vw;
@@ -63,7 +59,6 @@
 
 .navBar-btn {
     border-style: none;
-    /*background-color: var(--color-minimalist-100);*/
     background-color: transparent;
     color: #f5e7e1;
     font-family: "PT Sans", sans-serif;
@@ -83,7 +78,6 @@
 .hero-section {
     --padding-inline-value: 1rem;
     grid-area: hero;
-    /*background-color: var(--color-minimalist-100);*/
     min-height: 600px;
     padding: var(--padding-inline-value);
     width: calc(100vw - 2*var(--padding-inline-value)) ;
@@ -119,7 +113,6 @@
 .about-projects-container{
     background-image: url(../../img/concrete_white.png),
                       linear-gradient(to bottom, #0e0e0f, #020202);
-    /*background-repeat: repeat;*/
     background-size: cover;
     background-blend-mode: multiply;
 }
@@ -127,31 +120,28 @@
 .about-section {
     --padding-inline-value: 1rem;
     grid-area: about;
-    /*background-color: var(--color-minimalist-900);*/
     min-height: 600px;
     padding: 0 var(--padding-inline-value);
-    width: 100vw;
 }
 
 .projects-section {
+    --padding-inline-value: 1rem;
     grid-area: projects;
-    /*background-color: var(--color-minimalist-900);*/
     background-color: transparent;
     min-height: 600px;
-    padding: 1rem;
+    padding: 0 var(--padding-inline-value);
 }
 
 .contact-section {
+    --padding-inline-value: 1rem;
     grid-area: contact;
-    /*background-color: var(--color-minimalist-100);*/
     min-height: 600px;
-    padding: 1rem;
+    padding: 0 var(--padding-inline-value);
 
 }
 
 @media(max-width: 480px){
     .navBar-container {
-        /*padding: 30px;*/
         padding: clamp(1.875rem, 8vw + 1rem, 3rem);
         grid-template-columns: repeat(4, 1fr);
     }
@@ -164,8 +154,8 @@
         grid-column: 1 / -1;
     }
 
-    .hero-section, .about-section {
-        --padding-inline-value: clamp(1.875rem, 8vw + 1rem, 3rem);;
+    .hero-section, .about-section, .projects-section, .contact-section{
+        --padding-inline-value: clamp(1.875rem, 8vw + 1rem, 3rem);
         min-height: 300px;
     }
 
@@ -182,10 +172,6 @@
     .cta-text-area{
         font-size: 16px;
         font-weight: 400;
-    }
-
-    .projects-section, .contact-section{
-        display: none;
     }
 
 }

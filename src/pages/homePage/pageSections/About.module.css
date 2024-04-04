@@ -58,9 +58,6 @@
     text-transform: uppercase;
     color: var(--color-minimalist-300);
     color: #5e4a3b;
-    /*background-image: url(../../../img/blue_cut.png);
-    background-clip: text;
-    color: transparent;*/
 }
 
 .text-4{
@@ -70,9 +67,6 @@
     text-transform: uppercase;
     color: var(--color-minimalist-300);
     color: #5e4a3b;
-    /*background-image: url(../../../img/blue_cut.png);
-    background-clip: text;
-    color: transparent;*/
 }
 
 .icons-area{
@@ -96,7 +90,6 @@
     font-size: 32px;
     font-weight: 200;
     line-height: 1;
-    /*color: var(--color-minimalist-500);*/
     color: #5e4a3b;
 }
 
@@ -107,14 +100,12 @@
 
 @media(max-width: 480px){
     .text-type-1{
-        /*font-size: 28px;*/
         font-size: clamp(1rem, 2vw + 1rem, 1.75rem);
         font-weight: 400;
         line-height: 1.2;
     }
 
     .text-type-2{
-        /*font-size: 38px;*/
         font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
         line-height: 1.2;
     }
@@ -142,7 +133,7 @@
     }
 
     .icons-area{
-        padding-top: 100px;
+        padding-top: 120px;
         grid-column: 1 / -1;
     }
     
@@ -153,7 +144,7 @@
     }
 
     .icon-text-pair>img{
-        width: clamp(1rem, 2vw + 1rem, 1.875rem);;
+        width: clamp(1rem, 2vw + 1rem, 1.875rem);
     }
 
     .icon-text-pair>h4{
