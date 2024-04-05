@@ -18,8 +18,7 @@
     font-weight: 700;
     text-transform: lowercase;
     line-height: 1;
-    color: var(--color-minimalist-300);
-    color: #805c4b;  
+    color: var(--color-white-100); 
 }
 
 .text-type-2{
@@ -29,7 +28,7 @@
     text-transform: uppercase;
     line-height: 1;
     color: var(--color-white-100);
-    color: #5e4a3b;
+    /*color: #092035;*/
 }
 
 .projects-container{
@@ -107,6 +106,43 @@
     
 }
 
+@media(max-width: 768px){
+    .text-type-1{
+        font-size: clamp(1.75rem, 2.5vw + 1rem, 3rem);
+        line-height: 1.2;
+    }
+
+    .text-type-2{
+        font-size: clamp(2rem, 5vw + 1.2rem, 4rem);
+        line-height: 1.2;
+    }
+
+    .projects-container{
+        margin: 40px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .small-card-items{
+        flex-direction: column;
+    }
+
+    .individual-item{
+        gap: 1.5rem;
+    }
+
+    .small-img{
+        padding: 0rem;
+        min-height: 80px;
+        max-width: 200px;
+    }
+
+    .individual-item>h4{
+        font-size: clamp(1rem, 1vw + 1rem, 2rem);
+        line-height: 1.2;
+        font-weight: 200;
+    }
+}
+
 @media(max-width: 480px){
     .text-type-1{
         font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
@@ -116,6 +152,7 @@
 
     .text-type-2{
         font-size: clamp(2.25rem, 8vw + 1.2rem, 5rem);
+        font-weight: 400;
         line-height: 1.2;
     }
 

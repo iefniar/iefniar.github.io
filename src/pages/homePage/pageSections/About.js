@@ -1,9 +1,9 @@
 import { forwardRef, useRef } from "react";
 import classes from './About.module.css';
-import MongoDBIcon from '../../../icons/devicon_mongodb.svg';
-import ReactIcon from '../../../icons/devicon_react.svg';
-import ExpressIcon from '../../../icons/devicon_express.svg';
-import NodejsIcon from '../../../icons/vscode-icons_file-type-node.svg';
+import MongoDBIcon from '../../../icons/tabler_brand-mongodb.svg';
+import ReactIcon from '../../../icons/ri_reactjs-fill.svg';
+import ExpressIcon from '../../../icons/simple-icons_express.svg';
+import NodejsIcon from '../../../icons/la_node-js.svg';
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const About = (props, ref) => {
@@ -53,16 +53,16 @@ const About = (props, ref) => {
             <h4>MongoDB</h4>
           </div>
           <div className={classes['icon-text-pair']}>
-            <img src={ReactIcon} alt="React.js icon" />
-            <h4>React.js</h4>
+            <img src={ExpressIcon} alt="Express.js icon" />
+            <h4>Express.js</h4>
           </div>
         </motion.div>
         <motion.div className={classes['second-group']}
                     style={{opacity: opacityProgressIconsContainer, y: scrollYProgressIconsContainer, scale: scaleProgressIconsContainer}}
         >
           <div className={classes['icon-text-pair']}>
-            <img src={ExpressIcon} alt="Express.js icon" />
-            <h4>Express.js</h4>
+            <img src={ReactIcon} alt="React.js icon" />
+            <h4>React.js</h4>
           </div>
           <div className={classes['icon-text-pair']}>
             <img src={NodejsIcon} alt="Node.js icon" />

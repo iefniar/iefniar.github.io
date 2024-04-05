@@ -15,7 +15,7 @@
 .homePage-container {
     background-color: var(--color-minimalist-100);
     background-image: url('../../img/blueish.jpg'),
-                      linear-gradient(to bottom right, #554132, #7F593F, #AE7D66);
+                      linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);
     background-size: cover;
     background-blend-mode: multiply;
     display: grid;
@@ -111,10 +111,11 @@
 }
 
 .about-projects-container{
-    background-image: url(../../img/concrete_white.png),
-                      linear-gradient(to bottom, #0e0e0f, #020202);
-    background-size: cover;
-    background-blend-mode: multiply;
+    /*background-image: url(../../img/concrete_white.png),
+                      linear-gradient(to bottom, #0e0e0f, #020202);*/
+    background-color: var(--color-black-900);
+    /*background-size: cover;
+    background-blend-mode: multiply;*/
 }
 
 .about-section {
@@ -137,6 +138,26 @@
     grid-area: contact;
     min-height: 600px;
     padding: 0 var(--padding-inline-value);
+
+}
+
+@media(max-width: 768px){
+    .navBar-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .navBar-left {
+        grid-column: 1 / 2;
+    }
+
+    .navBar-right {
+        grid-column: 2 / -1;
+    }
+
+    .cta-text-area{
+        font-size: 14px;
+        font-weight: 400;
+    }
 
 }
 

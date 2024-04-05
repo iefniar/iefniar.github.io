@@ -2,8 +2,8 @@ import { forwardRef, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../../components/Card';
 import classes from './Projects.module.css';
-import Project1 from '../../../img/project-1.png';
-import Project2 from '../../../img/project-2.png';
+import Project1 from '../../../img/project-1-blue.jpg';
+import Project2 from '../../../img/project-2-blue.jpg';
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const Projects = (props, ref) => {

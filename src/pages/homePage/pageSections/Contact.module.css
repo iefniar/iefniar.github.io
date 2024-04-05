@@ -117,6 +117,71 @@
     color: var(--color-white-100);
 }
 
+@media(max-width: 768px){
+    .text-type-1{
+        font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+        font-weight: 400;
+    }
+
+    .text-type-2{
+        font-size: clamp(2.25rem, 8vw + 1.2rem, 5rem);
+    }
+
+    .social-icon>a>h4, .social-icon>button>h4{
+        font-size: clamp(1.75rem, 2vw + 1rem, 2rem);
+        font-weight: bold;
+    }
+
+    .text-type-3{
+        font-size: clamp(1.75rem, 2vw + 1rem, 2rem);
+        font-weight: 500;
+    }
+    .contact-container{
+        margin: 40px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .icons-group{
+        gap: 6rem;
+        margin-top: 4rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-icon{
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-icon>button, .social-icon>a{
+        width: 100%;
+        height: 100%;
+    }
+
+    .first-icon{
+        grid-column: 1 / -1;
+    }
+
+    .second-icon{
+        grid-column: 1 / -1;
+    }
+
+    .third-icon{
+        grid-column: 1 / -1;
+    }
+
+    .first-icon>button>img, .second-icon>a>img, .third-icon>a>img{
+        width: 80%;
+        height: 80%;
+    }
+
+    .text-3{
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+}
+
 @media(max-width: 480px){
     .text-type-1{
         font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
@@ -127,8 +192,14 @@
         font-size: clamp(2.25rem, 8vw + 1.2rem, 5rem);
     }
 
+    .social-icon>a>h4, .social-icon>button>h4{
+        font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+        font-weight: bold;
+    }
+
     .text-type-3{
         font-weight: 200;
+        font-size: clamp(1rem, 2vw + 1rem, 1.75rem);
     }
     .contact-container{
         margin: 10px 0;

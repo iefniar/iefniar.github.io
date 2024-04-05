@@ -46,7 +46,6 @@
 
 .container:hover{
     cursor: pointer;
-    /*background-color: var(--color-white-100);*/
     opacity: 1;
     transform: rotateZ(0deg);
     transform: scale(1.05);
@@ -69,6 +68,23 @@
 
 .container:hover .text-over-image, .container:focus .text-over-image{
     opacity: 1;
+}
+
+@media(max-width: 768px){
+    .text-type-1{
+        font-size: clamp(3rem, 5vw + 1rem, 6rem);
+        line-height: 1.2;
+    }
+
+    .container{
+        --min-height: 190px;
+        --min-width: 380px;
+    }
+
+    .text-over-image{
+        top: 45%;
+        left: 45%;
+    }
 }
 
 @media(max-width: 480px){
