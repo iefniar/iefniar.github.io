@@ -32,9 +32,8 @@
 
 .container{
     --shadow-color: var(--color-minimalist-400);
-    --min-height: 400px;
-    --min-width: 800px;
-    /*background-color: var(--color-minimalist-200);*/
+    --min-height: 200px;
+    --min-width: 400px;
     min-width: var(--min-width);
     min-height: var(--min-height);
     position: relative;
