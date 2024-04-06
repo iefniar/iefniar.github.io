@@ -13,11 +13,12 @@
 }
 
 .homePage-container {
-    background-color: var(--color-minimalist-100);
+    /*background-color: var(--color-minimalist-100);
     background-image: url('../../img/blueish.jpg'),
                       linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: multiply;*/
+    background-image: linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);
     display: grid;
     grid-template-areas:
         "hero"

@@ -20,6 +20,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
+    
 }
 
 .text-type-2{
@@ -29,6 +30,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
+    
 }
 
 .about-me-container{
@@ -54,8 +56,9 @@
 
 .text-2{
     text-transform: uppercase;
-    color: #092035;
     color: var(--color-white-100);
+    text-shadow: 1px 1px 50px #14598b;
+    filter: drop-shadow(1px 1px 10px #14598b);
 }
 
 .text-4{
@@ -65,6 +68,8 @@
     text-transform: uppercase;
     color: #092035;
     color: var(--color-white-100);
+    text-shadow: 1px 1px 50px #14598b;
+    filter: drop-shadow(1px 1px 10px #14598b);
 }
 
 .icons-area{
@@ -82,6 +87,7 @@
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    
 }
 
 .icon-text-pair{
@@ -89,6 +95,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: flex-start;
+    
 }
 
 .icon-text-pair>h4{
@@ -98,10 +105,20 @@
     line-height: 1;
     color: #092035;
     color: var(--color-white-100);
+    
 }
 
-.first-group>.icon-text-pair:nth-child(2)>h4{
+.second-group>.icon-text-pair:nth-child(1){
+    filter: drop-shadow(1px 1px 10px #14598b);
+}
+
+.second-group>.icon-text-pair:nth-child(1)>img{
+    filter: drop-shadow(1px 1px 10px #14598b);
+}
+
+.second-group>.icon-text-pair:nth-child(1)>h4{
     color: var(--color-white-100);
+    text-shadow: 1px 1px 10px #14598b;
 }
 
 @media(max-width: 768px){
