@@ -1,0 +1,65 @@
+.navBar-container{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.navBar-left{
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navBar-left>div{
+    flex: 1;
+}
+
+.go-back-btn{
+    border: none;
+    background-color: whitesmoke;
+}
+
+.go-back-btn:hover, .go-back-btn:focus{
+    cursor: pointer;
+}
+
+.go-back-btn:hover>*, .go-back-btn:focus>*{
+    color: rgb(25, 118, 210);
+
+}
+
+.go-back-btn>*{
+    transition: all 350ms ease-in-out;
+}
+
+.navBar-right{
+    display: flex;
+    gap: 2rem;
+    flex: 10;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navBar-search-container{
+    display: flex;
+    border: 1px solid darkgrey;
+    padding: .2rem;
+}
+
+.navBar-search-container:focus-within{
+    border: 1px solid rgb(25, 118, 210);
+}
+
+.navBar-search-container>input{
+    border-style: none;
+    background-color: whitesmoke;
+}
+
+.navBar-search-container>input:focus{
+    outline: none;
+}
+
