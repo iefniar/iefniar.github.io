@@ -6,10 +6,11 @@ const Card = ({image, link}) => {
     <div className={classes.container}>   
       <Link to={link}>
         <img className={classes['preview-img']} src={image} alt="project preview" />
+        <div className={`${classes['text-type-1']} ${classes['text-over-image']}`}>
+          Explore
+        </div>
       </Link> 
-      <div className={`${classes['text-type-1']} ${classes['text-over-image']}`}>
-        Go to
-      </div>
+      
     </div>
   );
 }
