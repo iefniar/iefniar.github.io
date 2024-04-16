@@ -21,7 +21,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .text-type-2{
@@ -32,7 +32,7 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .about-me-container{
