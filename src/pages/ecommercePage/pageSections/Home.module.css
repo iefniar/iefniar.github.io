@@ -47,13 +47,21 @@
 }
 
 .hero-left>h1{
-    font-family: "PT Sans Narrow", sans-serif;
+    /*font-family: "PT Sans Narrow", sans-serif;*/
+    font-family: "PT Sans", sans-serif;
+    /*font-family: "Oswald", sans-serif;*/
     font-size: clamp(1.75rem, 4vw + 1rem, 4rem);
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);*/
+}
+
+.hero-left>h1>span{
+    color: dodgerblue;
+    font-size: clamp(2rem, 10vw + 1rem, 8rem);
+    text-transform: uppercase;
 }
 
 .hero-left>h3{
@@ -80,17 +88,22 @@
 }
 
 .middle-section>h2{
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
     font-weight: 500;
     text-transform: capitalize;
     line-height: 1;
     color: var(--color-black-900);
-
 }
 
 .middle-section>h2:nth-child(1){
     text-transform: uppercase;
+}
+
+.middle-section>h2>span{
+    font-size: clamp(3rem, 4vw + 1rem, 5rem);
+    font-weight: 700;
+    color: dodgerblue;
 }
 
 .middle-section>span{

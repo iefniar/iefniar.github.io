@@ -6,6 +6,8 @@ import Woman1 from '../../../img/ecommerce/models/women/woman-1.jpg';
 import Man11 from '../../../img/ecommerce/models/men/man-11.jpg';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowCircleDownOutlined } from '@mui/icons-material';
+import MiniCard from '../../../components/MiniCard';
+import Items from './Items';
 
 const Home = () => {
   return (
@@ -14,7 +16,7 @@ const Home = () => {
             <img src={Project1} alt='ecommerce-hero-section' />
             <div className={classes['hero-text']}>
               <div className={classes['hero-left']}>
-                <h1>Confidence Starts Here</h1>
+                <h1>Confidence Starts <br></br> <span>Here</span></h1>
                 <h3>Shop Pre-Curated Outfits & Look Amazing!</h3>
                 <ECommerceButton text='Explore' />
               </div>
@@ -22,8 +24,8 @@ const Home = () => {
             </div>
         </div>
         <div className={classes['middle-section']}>
-          <h2>Score Up to 50% Off on Your New Favorite Pieces!</h2>
-          <h2>Free Shipping & Easy Returns: Shop Risk-Free</h2>
+          <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
+          <h2>Free Shipping & Easy Returns: Shop <span>Risk-Free</span></h2>
           <span><ArrowCircleDownOutlined /></span>
         </div>
         <div className={classes['cards-section']}>
@@ -32,6 +34,8 @@ const Home = () => {
             <CategoriesCard image={Man11} headline='Modern Look' btnText='Shop Now' />
             
         </div>
+        <MiniCard image={Man11} />
+        <Items />
     </div>
   );
 }
