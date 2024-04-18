@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className={classes['outer-container']}>
         <div className={classes['hero-section']}>
-            <img src={Project1} alt='ecommerce-hero-section' />
+            <img src='/optimized-images/project-1-blue.webp' alt='ecommerce-hero-section' />
             <div className={classes['hero-text']}>
               <div className={classes['hero-left']}>
                 <h1>Confidence Starts <br></br> <span>Here</span></h1>
@@ -29,13 +29,14 @@ const Home = () => {
           <span><ArrowCircleDownOutlined /></span>
         </div>
         <div className={classes['cards-section']}>
-            <CategoriesCard image={Man6} headline='New Style' btnText='Shop Now' />
-            <CategoriesCard image={Woman1} headline='New Style' btnText='Shop Now' />
-            <CategoriesCard image={Man11} headline='Modern Look' btnText='Shop Now' />
-            
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-6.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-1.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-11.webp' headline='Modern Look' btnText='Shop Now' />
         </div>
-        <MiniCard image={Man11} />
-        <Items />
+        <div className={classes['items-section']}>
+          <Items />
+        </div>
+        
     </div>
   );
 }

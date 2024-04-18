@@ -1,0 +1,17 @@
+.container{
+
+}
+
+.collection{
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection>li{
+ 
+}

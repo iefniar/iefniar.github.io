@@ -2,8 +2,6 @@ import { forwardRef, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../../components/Card';
 import classes from './Projects.module.css';
-import Project1 from '../../../img/project-1-blue.jpg';
-import Project2 from '../../../img/project-2-blue.jpg';
 import { useTransform, useScroll, motion } from 'framer-motion';
 
 const Projects = (props, ref) => {
@@ -21,7 +19,7 @@ const Projects = (props, ref) => {
   const opacityProgressCard2Container = useTransform(scrollYProgressCardsContainer, [0, 1], [0, 1]);
 
   const [mainCardItem, setMainCardItem] = useState({
-    cardImage: Project1,
+    cardImage: '/optimized-images/project-1-blue.webp',
     cardLink: '/project-1'
   });
 
@@ -42,11 +40,11 @@ const Projects = (props, ref) => {
           >
             <Link to='' onClick={()=>{
               setMainCardItem({
-                cardImage: Project1,
+                cardImage: '/optimized-images/project-1-blue.webp',
                 cardLink: '/project-1'
               })
             }}>
-              <img className={classes['small-img']} src={Project1} alt="project 1 small preview" id='img-1' />
+              <img className={classes['small-img']} src='/optimized-images/project-1-blue.webp' alt="project 1 small preview" id='img-1' />
             </Link> 
             <h4>e-commerce app</h4>
           </motion.div>
@@ -55,17 +53,17 @@ const Projects = (props, ref) => {
           >
             <Link to='' onClick={()=>{
               setMainCardItem({
-                cardImage: Project2,
+                cardImage: '/optimized-images/project-2-blue.webp',
                 cardLink: '/project-2'
               })
             }}>
-              <img className={classes['small-img']} src={Project2} alt="project 2 small preview" id='img-2' />
+              <img className={classes['small-img']} src='/optimized-images/project-2-blue.webp' alt="project 2 small preview" id='img-2' />
             </Link> 
             <h4>landing page of a restaurant</h4>
           </motion.div>
         </div>
         <div className={classes['main-card']}>
-          <Card image={mainCardItem.cardImage} link={mainCardItem.cardLink} />
+          <Card imagePath={mainCardItem.cardImage} link={mainCardItem.cardLink} />
         </div>
       </div>
       

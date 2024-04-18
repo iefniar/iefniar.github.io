@@ -5,16 +5,12 @@ import { outfits } from '../../../Data';
 const Items = () => {
   return (
     <div className={classes.container}>
-        <div className={classes.collection}>
-            <ul>
-                {outfits.map(item => (
-                    <li key={item.id}>< MiniCard image={item.url} /></li>
-                )
-                )}
-            
-            </ul>
-        </div>
-
+        <ul className={classes.collection}>
+            {outfits.map(item => (
+                <li key={item.id}>< MiniCard imagePath={item.url} /></li>
+              )
+            )}
+        </ul>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import classes from './MiniCard.module.css';
 import { SearchOutlined, ShoppingCartOutlined, FavoriteBorderOutlined } from '@mui/icons-material';
 
-const MiniCard = ({image}) => {
+const MiniCard = ({imagePath}) => {
   return (
     <div className={classes['container']}>
-        <img src={image} alt='small-preview' />
+        <img src={imagePath} alt='small-preview' />
         <div className={classes['group-container']}>
           <div><SearchOutlined /></div>
           <div><ShoppingCartOutlined /></div>

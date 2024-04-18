@@ -123,3 +123,11 @@
     display: flex;
     gap: 1rem;
 }
+
+.cards-section>*{
+    flex: 1;
+}
+
+.items-section{
+    padding: 2rem;
+}
