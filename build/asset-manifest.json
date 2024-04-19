@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e677ed22.css",
+    "main.js": "/static/js/main.83d6d7b7.js",
+    "static/media/man-6.jpg": "/static/media/man-6.52457a85abfe695f7146.jpg",
+    "static/media/woman-1.jpg": "/static/media/woman-1.bc87f2bda057f40b2569.jpg",
+    "static/media/project-1-blue.jpg": "/static/media/project-1-blue.8de346e61aca20615b68.jpg",
+    "static/media/man-11.jpg": "/static/media/man-11.a911e8198722b8b7a797.jpg",
+    "static/media/ri_reactjs-fill.svg": "/static/media/ri_reactjs-fill.7c751bf1faa20daba89565b4295b6499.svg",
+    "static/media/Logo.svg": "/static/media/Logo.98468b33be8c2f9d70fe79185881e8a3.svg",
+    "static/media/la_node-js.svg": "/static/media/la_node-js.c6d4926994c2f10acc43ae100682c37c.svg",
+    "static/media/mingcute_linkedin-fill.svg": "/static/media/mingcute_linkedin-fill.865b9b4622da9e6bcf9308b5334b1983.svg",
+    "static/media/basil_gmail-outline.svg": "/static/media/basil_gmail-outline.53b114df3db219aab427fb4514c5f2fc.svg",
+    "static/media/simple-icons_express.svg": "/static/media/simple-icons_express.e9b756f6148c96d72919096406ff95f9.svg",
+    "static/media/ri_github-fill.svg": "/static/media/ri_github-fill.4e4485382aa1398a9e9855b1b204c6e5.svg",
+    "index.html": "/index.html",
+    "static/media/tabler_brand-mongodb.svg": "/static/media/tabler_brand-mongodb.1c41781ec44fbfdf2c4e78efaf7129d6.svg",
+    "main.e677ed22.css.map": "/static/css/main.e677ed22.css.map",
+    "main.83d6d7b7.js.map": "/static/js/main.83d6d7b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e677ed22.css",
+    "static/js/main.83d6d7b7.js"
+  ]
+}
