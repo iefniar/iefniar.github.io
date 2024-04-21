@@ -7,9 +7,14 @@ import Man11 from '../../../img/ecommerce/models/men/man-11.jpg';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowCircleDownOutlined } from '@mui/icons-material';
 import MiniCard from '../../../components/MiniCard';
+import VideoPlayer from './VideoPlayer';
 import Items from './Items';
 
 const Home = () => {
+  const initialStyle = { opacity: 0 }; 
+  const animateStyle = { opacity: 1 }; 
+  const transition = { duration: 0.5 }; 
+
   return (
     <div className={classes['outer-container']}>
         <div className={classes['hero-section']}>
@@ -23,10 +28,7 @@ const Home = () => {
               <div className={classes['hero-right']} />
             </div>
         </div>
-        <video width="100%" height="100%" controls>
-          <source src="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-        </video>
+        <VideoPlayer videoSrc="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" loop initialStyle={initialStyle} animateStyle={animateStyle} transition={transition} />
         <div className={classes['middle-section']}>
           <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
           <h2>Free Shipping & Easy Returns: Shop <span>Risk-Free</span></h2>
