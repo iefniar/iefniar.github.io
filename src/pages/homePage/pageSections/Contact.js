@@ -56,7 +56,7 @@ const Contact = (props, ref) => {
           </a>
         </motion.div>
       </div>
-      <div className={`${classes['text-type-3']} ${classes['text-3']}`}>All rights reserved. 2024</div>
+      <div className={`${classes['text-type-3']} ${classes['text-3']}`}>Due credit to Pexels & Pixabay. 2024</div>
     </div>
   );
 }

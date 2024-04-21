@@ -23,6 +23,10 @@ const Home = () => {
               <div className={classes['hero-right']} />
             </div>
         </div>
+        <video width="100%" height="100%" controls>
+          <source src="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
         <div className={classes['middle-section']}>
           <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
           <h2>Free Shipping & Easy Returns: Shop <span>Risk-Free</span></h2>
