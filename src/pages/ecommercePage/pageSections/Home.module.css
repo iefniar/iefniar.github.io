@@ -120,11 +120,18 @@
 
 .cards-section{
     padding: 2rem;
+}
+
+.cards-group{
     display: flex;
     gap: 1rem;
 }
 
-.cards-section>*{
+.cards-group:nth-child(2){
+    margin-top: 1rem;
+}
+
+.cards-group>*{
     flex: 1;
 }
 

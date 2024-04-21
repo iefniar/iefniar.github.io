@@ -51,3 +51,26 @@ export const outfits = [
     }
 
 ];
+
+export const selectedOutfits = [
+    {
+        id: 1,
+        url: "/optimized-images/ecommerce/outfits/outfit-1.webp"
+    },
+    {
+        id: 4,
+        url: "/optimized-images/ecommerce/outfits/outfit-4.webp"
+     
+    },
+    {
+        id: 7,
+        url: "/optimized-images/ecommerce/outfits/outfit-7.webp"
+     
+    },
+    {
+        id: 10,
+        url: "/optimized-images/ecommerce/outfits/outfit-10.webp"
+     
+    }
+
+];

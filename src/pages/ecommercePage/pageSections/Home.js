@@ -29,9 +29,16 @@ const Home = () => {
           <span><ArrowCircleDownOutlined /></span>
         </div>
         <div className={classes['cards-section']}>
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-6.webp' headline='New Style' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-1.webp' headline='New Style' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-11.webp' headline='Modern Look' btnText='Shop Now' />
+          <div className={classes['cards-group']}>
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-16.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/both/both-1.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-17.webp' headline='Modern Look' btnText='Shop Now' />
+          </div>
+          <div className={classes['cards-group']}>
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-13.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/women-2.webp' headline='New Style' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-15.webp' headline='Modern Look' btnText='Shop Now' />
+          </div>
         </div>
         <div className={classes['items-section']}>
           <Items />
