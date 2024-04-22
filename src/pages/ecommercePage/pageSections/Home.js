@@ -1,3 +1,4 @@
+
 import classes from './Home.module.css';
 import { useRef, useEffect } from 'react';
 import Project1 from '../../../img/project-1-blue.jpg';
@@ -12,52 +13,56 @@ import VideoPlayer from './VideoPlayer';
 import { ScrollMagic } from 'scrollmagic';
 import { Controller, Scene } from 'react-scrollmagic-r18';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import Items from './Items';
 
 const Home = () => {
-  const initialStyle = { opacity: 0 }; 
-  const animateStyle = { opacity: 1 }; 
-  const transition = { duration: 0.5 }; 
+//gsap code start
 
-  const videoSectionRef = useRef(null);
-  const videoRef = useRef(null);
-  const videoTextRef = useRef(null);
-  let videoSection, video, videoText;
-  let scrollPosition = 0;
-  const handleScrollUpdate = (e) => {
-    console.log('Current scroll position:', e.scrollOffset);
-    /*scrollPosition = e.scrollPos / 1000;*/
-    scrollPosition = e.scrollOffset / 1000;
-  };
+gsap.registerPlugin(ScrollTrigger);
 
-  setInterval(() => {
-    const video = videoRef.current;
-    /*video.currentTime = scrollPosition;
-    video.currentTime = 1;*/
-    video.currentTime = scrollPosition;
-  }, 41.6);
+const gsapVideoRef = useRef(null);
 
+useEffect(() => {
+  const gsapVideo = gsapVideoRef.current;
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: gsapVideo,
+      start: "top top",
+      end: "1000px",
+      pin: true,
+      scrub: 1,
+      onUpdate: (self) => {
+        console.log(
+          "progress:",
+          self.progress.toFixed(3),
+          "direction:",
+          self.direction,
+          "velocity",
+          self.getVelocity()
+        );
+      },
+    }
+  });
+  tl.add(() => {
+    setInterval(() => {
+      gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3);
   
-/*
-  useEffect(() => {
-    videoSection = videoSectionRef.current;
-    video = videoRef.current;
-    videoText = videoTextRef.current;
+    }, 33.3);
 
-    const controller = new ScrollMagic.Controller();
-    const scene = new ScrollMagic.Scene({
-      duration: 7000,
-      triggerElement: videoSection,
-      triggerHook: 0
-    })
-    .addIndicators()
-    .setPin(videoSection)
-    .addTo(controller);
+  }, 0.5);
 
-  }, []);
-*/
+ 
 
-  
+}, []);
+
+
+
+//gsap code end
+
 
   return (
     <div className={classes['outer-container']}>
@@ -72,20 +77,9 @@ const Home = () => {
               <div className={classes['hero-right']} />
             </div>
         </div>
-        <VideoPlayer videoSrc="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" loop initialStyle={initialStyle} animateStyle={animateStyle} transition={transition} />
+    
         <div>
-        <Controller>
-          <Scene duration={7000} pin triggerHook='onLeave' >
-            
-              <div className={classes['video-section']} ref={videoSectionRef}>
-                <h1 ref={videoTextRef}>Video headline</h1>
-                <video ref={videoRef} src='/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4' />
-              </div>
-            </Scene>
-            <Scene triggerElement={videoSectionRef.current}>
-            <trigger onUpdate={handleScrollUpdate} />
-          </Scene>
-        </Controller>
+          <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" playsInline muted />
         </div>
         <div className={classes['middle-section']}>
           <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
