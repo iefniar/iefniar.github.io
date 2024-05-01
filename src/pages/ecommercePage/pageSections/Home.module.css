@@ -79,6 +79,7 @@
 }
 
 .video-section{
+    margin-block: 10rem;
     height: 100vh;
     position: relative;
 }
@@ -151,8 +152,4 @@
 
 .cards-group>*{
     flex: 1;
-}
-
-.items-section{
-    padding: 2rem;
 }

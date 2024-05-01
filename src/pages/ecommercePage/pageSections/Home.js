@@ -1,42 +1,28 @@
-
 import classes from './Home.module.css';
 import { useRef, useEffect } from 'react';
-import Project1 from '../../../img/project-1-blue.jpg';
 import CategoriesCard from '../../../components/CategoriesCard';
-import Man6 from '../../../img/ecommerce/models/men/man-6.jpg';
-import Woman1 from '../../../img/ecommerce/models/women/woman-1.jpg';
-import Man11 from '../../../img/ecommerce/models/men/man-11.jpg';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowCircleDownOutlined } from '@mui/icons-material';
-import MiniCard from '../../../components/MiniCard';
-import VideoPlayer from './VideoPlayer';
-import { ScrollMagic } from 'scrollmagic';
-import { Controller, Scene } from 'react-scrollmagic-r18';
-
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Items from './Items';
-
 const Home = () => {
 //gsap code start
-
 gsap.registerPlugin(ScrollTrigger);
-
 const gsapVideoRef = useRef(null);
 
 useEffect(() => {
   const gsapVideo = gsapVideoRef.current;
-
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: gsapVideo,
+      trigger: "#videoSection",
       start: "top top",
-      end: "1000px",
+      end: "+=3000",
       pin: true,
-      scrub: 1,
+      scrub: 0.2,
+      snap: 0.01,
       onUpdate: (self) => {
-        console.log(
+        /*console.log(
           "progress:",
           self.progress.toFixed(3),
           "direction:",
@@ -44,25 +30,18 @@ useEffect(() => {
           "velocity",
           self.getVelocity()
         );
+        */
+
+        setInterval(() => {
+          gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3)*7;
+        }, 33.3);
+
       },
     }
   });
-  tl.add(() => {
-    setInterval(() => {
-      gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3);
   
-    }, 33.3);
-
-  }, 0.5);
-
- 
-
 }, []);
-
-
-
 //gsap code end
-
 
   return (
     <div className={classes['outer-container']}>
@@ -77,9 +56,9 @@ useEffect(() => {
               <div className={classes['hero-right']} />
             </div>
         </div>
-    
-        <div>
+        <div className={classes['video-section']} id='videoSection'>
           <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" playsInline muted />
+          <h1>Scroll</h1>
         </div>
         <div className={classes['middle-section']}>
           <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
@@ -98,9 +77,7 @@ useEffect(() => {
             <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-15.webp' headline='Modern Look' btnText='Shop Now' />
           </div>
         </div>
-        <div className={classes['items-section']}>
-          <Items />
-        </div>
+       
         
     </div>
   );
