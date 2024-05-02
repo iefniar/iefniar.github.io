@@ -2,7 +2,7 @@ import classes from './Home.module.css';
 import { useRef, useEffect } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
-import { ArrowCircleDownOutlined } from '@mui/icons-material';
+import { ArrowCircleDownOutlined, ArrowDownwardOutlined } from '@mui/icons-material';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -57,8 +57,8 @@ useEffect(() => {
             </div>
         </div>
         <div className={classes['video-section']} id='videoSection'>
-          <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/video-woman-portfolio-1-compressed.mp4" playsInline muted />
-          <h1>Scroll</h1>
+          <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/ecommerce-video.mp4" playsInline muted />
+          <span><ArrowDownwardOutlined /></span>
         </div>
         <div className={classes['middle-section']}>
           <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
