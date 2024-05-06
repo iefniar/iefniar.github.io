@@ -78,18 +78,35 @@
     margin-top: 5rem;
 }
 
-.video-section{
-    margin-block: 10rem;
-    height: 100vh;
-    position: relative;
+.banner-ads{
+    margin-block: 0rem;
+    width: 100%;
+    background-color: rgb(25, 118, 210);
+    color: var(--color-white-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding-block: .5rem;
 }
 
-.video-section>span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-white-100);
+.banner-ads>h3{
+    font-family: "PT Sans", sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.banner-ads>h3>span{
+    color: var(--color-black-900);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.video-section{
+    margin-bottom: 10rem;
+    height: 100vh;
+    position: relative;
 }
 
 .video-section>video{
@@ -97,6 +114,28 @@
     height: 100%;
     object-fit: cover;
 }
+
+.scroll-down{
+    position: absolute;
+    top: 98%;
+    left: 2%;
+    transform: translate(-2%, -98%);
+    border-radius: 50%;
+    border: 1px dashed var(--color-white-100);
+    padding: 1rem;
+    opacity: 0.7;
+}
+
+.scroll-down>h4{
+    color: var(--color-white-100);
+    text-transform: uppercase;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.scroll-down>h4>span{
+    color: dodgerblue;
+}
+
 
 .middle-section{
     margin-block: 5rem;
@@ -130,7 +169,9 @@
     margin-top: 2rem;
     width: 6rem;
     height: 6rem;
-    color: var(--color-minimalist-300);
+    color: dodgerblue;
+    border: 1px dashed dodgerblue;
+    border-radius: 50%;
 }
 
 .middle-section>span>*{

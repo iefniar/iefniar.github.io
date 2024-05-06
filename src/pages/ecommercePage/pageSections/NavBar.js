@@ -25,7 +25,7 @@ const NavBar = () => {
             <div className={classes['navBar-right']}>
                 <div className={classes['navBar-search-container']}>
                     <input placeholder='Search' />
-                    <SearchOutlined />
+                    <span><SearchOutlined /></span>
                 </div>
                 <div>
                     register

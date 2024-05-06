@@ -54,6 +54,11 @@
     border: 1px solid rgb(25, 118, 210);
 }
 
+.navBar-search-container:focus-within>span{
+    color: rgb(25, 118, 210);
+
+}
+
 .navBar-search-container>input{
     border-style: none;
     background-color: whitesmoke;
