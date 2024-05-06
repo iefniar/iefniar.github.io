@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.15219ad5.css",
-    "main.js": "/static/js/main.65d4907a.js",
+    "main.css": "/static/css/main.e598a07c.css",
+    "main.js": "/static/js/main.fefe6b3f.js",
     "static/media/ri_reactjs-fill.svg": "/static/media/ri_reactjs-fill.7c751bf1faa20daba89565b4295b6499.svg",
     "static/media/Logo.svg": "/static/media/Logo.98468b33be8c2f9d70fe79185881e8a3.svg",
     "static/media/la_node-js.svg": "/static/media/la_node-js.c6d4926994c2f10acc43ae100682c37c.svg",
@@ -11,11 +11,11 @@
     "static/media/ri_github-fill.svg": "/static/media/ri_github-fill.4e4485382aa1398a9e9855b1b204c6e5.svg",
     "index.html": "/index.html",
     "static/media/tabler_brand-mongodb.svg": "/static/media/tabler_brand-mongodb.1c41781ec44fbfdf2c4e78efaf7129d6.svg",
-    "main.15219ad5.css.map": "/static/css/main.15219ad5.css.map",
-    "main.65d4907a.js.map": "/static/js/main.65d4907a.js.map"
+    "main.e598a07c.css.map": "/static/css/main.e598a07c.css.map",
+    "main.fefe6b3f.js.map": "/static/js/main.fefe6b3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.15219ad5.css",
-    "static/js/main.65d4907a.js"
+    "static/css/main.e598a07c.css",
+    "static/js/main.fefe6b3f.js"
   ]
 }
