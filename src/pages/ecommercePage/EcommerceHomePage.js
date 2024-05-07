@@ -1,9 +1,9 @@
-import classes from './EcommercePage.module.css';
+import classes from './EcommerceHomePage.module.css';
 import NavBar from './pageSections/NavBar';
 import Home from './pageSections/Home';
 import Footer from './pageSections/Footer';
 
-const EcommercePage = () => {
+const EcommerceHomePage = () => {
   return (
     <>
       <NavBar />
@@ -13,4 +13,4 @@ const EcommercePage = () => {
   );
 }
 
-export default EcommercePage;
+export default EcommerceHomePage;

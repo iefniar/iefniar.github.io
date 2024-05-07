@@ -1,0 +1,45 @@
+:root{
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
+}
+
+.main-container{
+    padding: 2rem;
+}
+
+.main-container>h2{
+    font-family: "PT Sans", sans-serif;
+    font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1;
+    color: var(--color-minimalist-800);
+    margin-top: 0;
+}
+
+.filtering-area>label{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: clamp(1rem, 1vw + 1rem, 1.2rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-minimalist-800);
+}
+
+.filtering-area{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filtering-area>select{
+    padding: .5rem;
+}
