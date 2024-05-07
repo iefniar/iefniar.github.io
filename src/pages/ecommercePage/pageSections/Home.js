@@ -51,15 +51,15 @@ useEffect(() => {
               <div className={classes['hero-left']}>
                 <h1>Confidence Starts <br></br> <span>Here</span></h1>
                 <h3>Shop Pre-Curated Outfits & Look Amazing!</h3>
-                <ECommerceButton text='Explore' />
+                <ECommerceButton text='Explore' path='/project-1/items' />
               </div>
               <div className={classes['hero-right']} />
             </div>
         </div>
-        <div className={classes['banner-ads']}>
-          <h3><span>High</span> quality</h3>
-          <h3>|</h3>
-          <h3><span>Exclusive</span> pricing</h3>
+        <div className={classes['middle-section']}>
+          <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
+          <h2>Free Shipping & Easy Returns: Shop <span>Risk-Free</span></h2>
+          <span><ArrowDropDownOutlined /></span>
         </div>
         <div className={classes['video-section']} id='videoSection'>
           <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/ecommerce-video.mp4" playsInline muted />
@@ -67,25 +67,27 @@ useEffect(() => {
             <h4>Scroll <br></br> <span>Down</span></h4>
           </div>
         </div>
-        <div className={classes['middle-section']}>
-          <h2>Score Up to <span>50% Off</span> on Your New Favorite Pieces!</h2>
-          <h2>Free Shipping & Easy Returns: Shop <span>Risk-Free</span></h2>
-          <span><ArrowDropDownOutlined /></span>
+        <div className={classes['middle-bottom-section']}>
+          <h2>Dress To <span>Impress</span></h2>
+          <h4>Shop Now, Wear Now</h4>
+        </div>
+        <div className={classes['banner-ads']}>
+          <h3><span>High</span> quality</h3>
+          <h3>|</h3>
+          <h3><span>Exclusive</span> pricing</h3>
         </div>
         <div className={classes['cards-section']}>
           <div className={classes['cards-group']}>
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-16.webp' headline='Fresh Arrivals' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/both/both-1.webp' headline='Style Inspiration' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-17.webp' headline='Luxe Lounge' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-16.webp' headline='Fresh Arrivals' btnText='Shop Now' btnPath='/project-1/items' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/both/both-1.webp' headline='Style Inspiration' btnText='Shop Now' btnPath='/project-1/items' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-17.webp' headline='Luxe Lounge' btnText='Shop Now' btnPath='/project-1/items' />
           </div>
           <div className={classes['cards-group']}>
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-13.webp' headline='Winter Warmers' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/women-2.webp' headline='Fall Essentials' btnText='Shop Now' />
-            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-15.webp' headline='Summer Ready' btnText='Shop Now' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/men/man-13.webp' headline='Winter Warmers' btnText='Shop Now' btnPath='/project-1/items' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/women-2.webp' headline='Fall Essentials' btnText='Shop Now' btnPath='/project-1/items' />
+            <CategoriesCard imagePath='/optimized-images/ecommerce/models/women/woman-15.webp' headline='Summer Ready' btnText='Shop Now' btnPath='/project-1/items' />
           </div>
         </div>
-       
-        
     </div>
   );
 }

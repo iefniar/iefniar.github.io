@@ -21,7 +21,6 @@ const ItemsPage = () => {
                     <option value='female'>Female</option>
                     <option value='male'>Male</option>
                 </select>
-
             </div>
             <Items />
         </div>

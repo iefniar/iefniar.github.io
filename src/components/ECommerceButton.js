@@ -1,8 +1,11 @@
 import classes from './ECommerceButton.module.css';
+import { Link } from 'react-router-dom';
 
-const ECommerceButton = ({text}) => {
+const ECommerceButton = ({text, path}) => {
   return (
-    <button className={classes.btn}>{text}</button>
+    <Link to={path}>
+      <button className={classes.btn}>{text}</button>
+    </Link>
   );
 }
 
