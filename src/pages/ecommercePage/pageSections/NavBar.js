@@ -1,5 +1,5 @@
 import classes from './NavBar.module.css';
-import { ArrowBackOutlined, ShoppingCartOutlined, SearchOutlined } from '@mui/icons-material';
+import { ArrowBackOutlined, ShoppingBagOutlined, SearchOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -35,7 +35,7 @@ const NavBar = () => {
                 </div>
                 <div>
                     <Badge badgeContent='3' color='primary'>
-                        <ShoppingCartOutlined />
+                        <ShoppingBagOutlined />
                     </Badge>
                 </div>
             </div>

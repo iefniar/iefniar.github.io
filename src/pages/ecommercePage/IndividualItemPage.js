@@ -22,12 +22,10 @@ const IndividualItemPage = () => {
                     <div className={classes['add-to-cart']}>
                         <button>Add To Cart</button>
                     </div>
-
                 </div>
             </div>
             <div className={classes['right-section']}>
                 <img src='/optimized-images/ecommerce/models/men/man-7.webp' alt='item in detail' />
-
             </div>
         </div>
         <Footer />

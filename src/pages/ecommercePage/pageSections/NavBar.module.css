@@ -46,12 +46,12 @@
 
 .navBar-search-container{
     display: flex;
-    border: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
     padding: .2rem;
 }
 
 .navBar-search-container:focus-within{
-    border: 1px solid rgb(25, 118, 210);
+    border-bottom: 1px solid rgb(25, 118, 210);
 }
 
 .navBar-search-container:focus-within>span{
