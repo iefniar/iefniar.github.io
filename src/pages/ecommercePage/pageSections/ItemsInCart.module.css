@@ -1,0 +1,109 @@
+:root{
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-minimalist-100: #F8F8F8;
+    --color-minimalist-200: #EBEBEB;
+    --color-minimalist-300: #DADADA;
+    --color-minimalist-400: #BBBBBB;
+    --color-minimalist-500: #9B9B9B;
+    --color-minimalist-600: #707070;
+    --color-minimalist-700: #595959;
+    --color-minimalist-800: #404040;
+    --color-minimalist-900: #1E1E1E;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: clamp(1rem, 1vw + .2rem, 1.5rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-black-900);
+}
+
+.container{
+
+}
+
+ul{
+    list-style: none;
+}
+
+.item-container{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.left{
+    width: 200px;
+    height: 200px;
+}
+
+.left>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.middle-right-container{
+    width: 100%;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.middle>div{
+    display: flex;
+    
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+
+}
+
+.right>div{
+    display: flex;
+    align-items: center;
+}
+
+.quantity-selection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 1px solid var(--color-minimalist-900);
+    padding: .2rem;
+    
+}
+
+.quantity-selection>button{
+    border: none;
+    background-color: whitesmoke;
+}
+
+.remove-item{
+    margin-inline: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+hr{
+    margin-inline: 2rem;
+    border-color: dodgerblue;
+}

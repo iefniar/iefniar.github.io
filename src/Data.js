@@ -74,3 +74,20 @@ export const selectedOutfits = [
     }
 
 ];
+
+export const itemsInShoppingCart = [
+    {
+        id: 1,
+        url: "/optimized-images/ecommerce/shoes/shoes-17.webp",
+        product: "sneakers",
+        price: 70.00,
+        quantity: 1
+    },
+    {
+        id: 2,
+        url: "/optimized-images/ecommerce/watches/watch-3.webp",
+        product: "watch",
+        price: 25.60,
+        quantity: 2
+    }
+];
