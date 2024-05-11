@@ -3,8 +3,6 @@ import NavBar from './pageSections/NavBar';
 import Footer from './pageSections/Footer';
 import { RemoveOutlined, AddOutlined } from '@mui/icons-material';
 
-import ItemsInCart from './pageSections/ItemsInCart';
-
 const IndividualItemPage = () => {
   return (
     <>
@@ -30,9 +28,6 @@ const IndividualItemPage = () => {
                 <img src='/optimized-images/ecommerce/models/men/man-7.webp' alt='item in detail' />
             </div>
         </div>
-
-        <ItemsInCart />
-
         <Footer />
     </>
   )
