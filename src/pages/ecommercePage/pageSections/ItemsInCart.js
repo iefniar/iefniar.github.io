@@ -1,6 +1,7 @@
 import classes from './ItemsInCart.module.css';
 import { itemsInShoppingCart } from '../../../Data';
 import { DeleteOutlined, AddOutlined, RemoveOutlined } from '@mui/icons-material'; 
+import { Link } from 'react-router-dom';
 
 const ItemsInCart = () => {
   return (
@@ -58,7 +59,9 @@ const ItemsInCart = () => {
                 <h3><span>Total</span></h3>
                 <h3><span>USD$ 120.00</span></h3>
             </div>
-            <button>Checkout</button>
+            <Link to='/project-1/checkout'>
+                <button>Checkout</button>
+            </Link>
         </div>
     </div>
   )

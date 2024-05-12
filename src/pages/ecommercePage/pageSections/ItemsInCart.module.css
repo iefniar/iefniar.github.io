@@ -152,7 +152,12 @@ ul{
     justify-content: space-between;
 }
 
-.order-summary>button{
+.order-summary>a{
+    width: 100%;
+}
+
+.order-summary>a>button{
+    width: 100%;
     margin-block: 2rem;
     background-color: rgb(25, 118, 210);
     border: 1px solid var(--color-minimalist-900);
@@ -160,7 +165,7 @@ ul{
     transition: all 350ms ease-in-out;
 }
 
-.order-summary>button:hover, .order-summary>button:focus{
+.order-summary>a>button:hover, .order-summary>a>button:focus{
     cursor: pointer;
     background-color: var(--color-minimalist-900);
     color: whitesmoke;
