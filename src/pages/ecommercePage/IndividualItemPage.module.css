@@ -58,8 +58,9 @@
 }
 
 .left-section>h4{
+    margin-block: 1rem;
     font-family: "PT Sans", sans-serif;
-    font-size: clamp(.5rem, .6vw + .2rem, 1rem);
+    font-size: clamp(.8rem, .6vw + .2rem, 1rem);
     font-weight: 500;
     line-height: 1;
     color: var(--color-black-900);

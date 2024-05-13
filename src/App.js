@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/homePage/HomePage";
 import EcommerceHomePage from "./pages/ecommercePage/EcommerceHomePage";
+import RegisterPage from "./pages/ecommercePage/RegisterPage";
 import ItemsPage from "./pages/ecommercePage/ItemsPage";
 import IndividualItemPage from "./pages/ecommercePage/IndividualItemPage";
 import ShoppingCartPage from "./pages/ecommercePage/ShoppingCartPage";
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/project-1" element={<EcommerceHomePage />} />
+        <Route path="/project-1/register" element={<RegisterPage />} />
         <Route path="/project-1/items" element={<ItemsPage />} />
         <Route path="/project-1/individual-item" element={<IndividualItemPage />} /> 
         <Route path="/project-1/cart" element={<ShoppingCartPage />} /> 

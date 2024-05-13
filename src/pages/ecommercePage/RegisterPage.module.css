@@ -12,17 +12,36 @@
     --color-minimalist-900: #1E1E1E;
 }
 
-.main-container{
-    padding: 2rem 8rem 6rem 8rem;
-    display: flex;
-    gap: 2rem;
+.main-area{
+    background-image: url('../../../public/optimized-images/ecommerce/models/women/women-1-cropped.webp');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh; 
+    position: relative;
+}
+
+.main-area::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 110, 255, 0.4), rgba(0, 54, 126, 0.2)); 
+    z-index: 1;
 }
 
 .form-area{
-    flex: 3;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 2rem;
     border-radius: .5rem;
-    border: 1px solid var(--color-minimalist-400);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .form-inner{
@@ -36,91 +55,22 @@
     gap: 2rem;
 }
 
-.special-row{
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
 .column, .simple-row{
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.margin-bottom-utility{
-    margin-bottom: 2rem;
-}
-
-.cart-area{
-    flex: 2;
-    height: 100%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: .5rem;
-    border: 1px solid var(--color-minimalist-400);
-}
-
-.cart-top{
-    border-bottom: 1px solid var(--color-minimalist-400);   
-}
-
-.cart-middle{
-    padding-block: 2rem;
-    display: flex;
-    gap: 1rem;
-    border-bottom: 1px solid var(--color-minimalist-400);
-}
-
-.cart-column{
-    flex: 1;
-}
-
-.cart-column>img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.cart-bottom{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.cart-area>ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.form-inner>h3, .cart-top>h3{
+.form-inner>h3{
     margin-bottom: 2rem;
     font-family: "PT Sans", sans-serif;
     font-size: clamp(1rem, 1vw + .2rem, 1.5rem);
     font-weight: 700;
     line-height: 1;
     color: var(--color-black-900);
-
 }
 
-.cart-top>h3{
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.cart-bottom>h4{
-    font-family: "PT Sans", sans-serif;
-    font-size: clamp(1.5rem, 1vw + .2rem, 2rem);
-    font-weight: 500;
-    line-height: 1;
-    color: var(--color-black-900);
-}
-
-.special-row>h4, .column>label, .simple-row>label{
+.column>label, .simple-row>label{
     font-family: "PT Sans", sans-serif;
     font-size: clamp(.5rem, 1vw + .2rem, 1rem);
     font-weight: 500;
@@ -135,8 +85,8 @@
 
 .column>input, .simple-row>input{
     border: none;
-    background-color: whitesmoke;
-    border-bottom: 1px solid var(--color-minimalist-400);
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-black-900);
 }
 
 .column>input:focus, .simple-row>input:focus{
@@ -147,7 +97,7 @@
 .form-inner>button{
     margin-block: 2rem;
     background-color: rgb(25, 118, 210);
-    border: 1px solid var(--color-minimalist-900);
+    border: none;
     padding: .5rem 2rem;
     transition: all 350ms ease-in-out;
 }
@@ -157,4 +107,5 @@
     background-color: var(--color-minimalist-900);
     color: whitesmoke;
 }
+
 

@@ -23,16 +23,16 @@ const ItemsInCart = () => {
                                 </div>
                                 <div className={classes['right']}>
                                     <div>
+                                        <h3><span>Price:&nbsp; </span></h3>
+                                        <h3>USD$ {item.price}</h3>
+                                    </div>
+                                    <div>
                                         <h3><span>Quantity:&nbsp; </span></h3>
                                         <div className={classes['quantity-selection']}>
                                             <button><RemoveOutlined /></button>
                                             <span>{item.quantity}</span>
                                             <button><AddOutlined /></button>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <h3><span>Price:&nbsp; </span></h3>
-                                        <h3>USD$ {item.price}</h3>
                                     </div>
                                 </div>
                             </div>
