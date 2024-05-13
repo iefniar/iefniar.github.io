@@ -19,21 +19,27 @@ const NavBar = () => {
                         <ArrowBackOutlined />
                     </button>  
                 </div>
-                <div>
-                    Logo
-                </div>
+                <Link to='/project-1'>
+                    <div>
+                        Logo
+                    </div>
+                </Link>
             </div>
             <div className={classes['navBar-right']}>
                 <div className={classes['navBar-search-container']}>
                     <input placeholder='Search' />
                     <span><SearchOutlined /></span>
                 </div>
-                <div>
-                    register
-                </div>
-                <div>
-                    sign in
-                </div>
+                <Link to='/project-1/register'>
+                    <div>
+                        Register
+                    </div>
+                </Link>
+                <Link to='/project-1/sign-in'>
+                    <div>
+                        Sign In
+                    </div>
+                </Link>
                 <Link to='/project-1/cart'>
                     <div>
                         <Badge badgeContent='3' color='primary'>

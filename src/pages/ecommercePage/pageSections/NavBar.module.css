@@ -28,7 +28,7 @@
     align-items: center;
 }
 
-.navBar-left>div{
+.navBar-left>div, .navBar-left>a{
     flex: 1;
 }
 
@@ -58,7 +58,8 @@
     align-items: center;
 }
 
-a{
+.navBar-left>a, .navBar-right>a{
+    text-decoration: none;
     color: var(--color-black-900);
 }
 
