@@ -4,11 +4,11 @@ import Footer from './pageSections/Footer';
 import { RemoveOutlined, AddOutlined } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';
 
-import { selectedOutfits } from '../../Data';
+import { allItems } from '../../Data';
 
 const IndividualItemPage = () => {
     const params = useParams();
-    const foundItem = selectedOutfits.find(item => item.id === params.itemId);
+    const foundItem = allItems.find(item => item.id === params.itemId);
 
     return (
         <>
