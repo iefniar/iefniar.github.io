@@ -55,21 +55,29 @@ export const outfits = [
 export const selectedOutfits = [
     {
         id: '1',
-        url: "/optimized-images/ecommerce/outfits/outfit-1.webp"
+        url: "/optimized-images/ecommerce/outfits/outfit-1.webp",
+        product: "white tshirt outfit",
+        price: 20.00
     },
     {
         id: '4',
-        url: "/optimized-images/ecommerce/outfits/outfit-4.webp"
+        url: "/optimized-images/ecommerce/outfits/outfit-4.webp",
+        product: "black tshirt outfit",
+        price: 22.00
      
     },
     {
         id: '7',
-        url: "/optimized-images/ecommerce/outfits/outfit-7.webp"
+        url: "/optimized-images/ecommerce/outfits/outfit-7.webp",
+        product: "blue tshirt outfit",
+        price: 25.00
      
     },
     {
         id: '10',
-        url: "/optimized-images/ecommerce/outfits/outfit-10.webp"
+        url: "/optimized-images/ecommerce/outfits/outfit-10.webp",
+        product: "brown boots outfit",
+        price: 30.00
      
     }
 

@@ -3,6 +3,7 @@ import { ArrowBackOutlined, ShoppingBagOutlined, SearchOutlined } from '@mui/ico
 import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -10,6 +11,8 @@ const NavBar = () => {
     const goBackHandler = () => {
         navigate(-1); 
     };
+
+    const totalItemsInCart = useSelector(state => state.cart.totalQuantity);
 
     return (
         <div className={classes['navBar-container']}>
@@ -42,7 +45,7 @@ const NavBar = () => {
                 </Link>
                 <Link to='/project-1/cart'>
                     <div>
-                        <Badge badgeContent='3' color='primary'>
+                        <Badge badgeContent={totalItemsInCart} color='primary'>
                             <ShoppingBagOutlined />
                         </Badge>
                     </div>

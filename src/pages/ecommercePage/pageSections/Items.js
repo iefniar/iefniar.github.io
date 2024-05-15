@@ -7,7 +7,14 @@ const Items = () => {
     <div className={classes.container}>
         <ul className={classes.collection}>
             {selectedOutfits.map(item => (
-                <li key={item.id}>< MiniCard imagePath={item.url} itemId={item.id} /></li>
+                <li key={item.id}>
+                  < MiniCard  
+                    id={item.id} 
+                    url={item.url} 
+                    product={item.product} 
+                    price={item.price} 
+                  />
+                </li>
               )
             )}
         </ul>

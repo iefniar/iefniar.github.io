@@ -53,7 +53,13 @@
     gap: 1rem;
 }
 
-.group-container>div, .group-container>a>div{
+.group-container>button{
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.group-container>div, .group-container>a>div, .group-container>button>div{
     border-radius: 50%;
     padding: .5rem;
     background-color: var(--color-white-100);
@@ -66,11 +72,15 @@
     color: var(--color-black-900);
 }
 
-.group-container>div>*, .group-container>a>div>*{
+.group-container>div>*, .group-container>a>div>*, .group-container>button>div>*{
     transition: all 350ms ease-in-out;
 }
 
-.group-container>div:hover>*, .group-container>div:focus>*, .group-container>a>div:hover>*, .group-container>a>div:focus>*{
+.group-container>div:hover>*, .group-container>div:focus>*, .group-container>a>div:hover>*, .group-container>a>div:focus>*, .group-container>button>div:hover>*, .group-container>button>div:focus>*{
     font-size: 48px;
 
+}
+
+.group-container>button:hover, .group-container>button:focus{
+    cursor: pointer;
 }
