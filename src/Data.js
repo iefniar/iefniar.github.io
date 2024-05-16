@@ -295,6 +295,294 @@ export const allItems = [
         category: 'sunglasses',
         description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
     },
+    {
+        id: '38',
+        url: "/optimized-images/ecommerce/sunglasses/sunglasses-8.webp",
+        product: "Black And Pink Sunglasses",
+        price: 15.00,
+        category: 'sunglasses',
+        description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
+    },
+    {
+        id: '39',
+        url: "/optimized-images/ecommerce/sunglasses/sunglasses-9.webp",
+        product: "Brown Sunglasses",
+        price: 20.00,
+        category: 'sunglasses',
+        description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
+    },
+    {
+        id: '40',
+        url: "/optimized-images/ecommerce/sunglasses/sunglasses-10.webp",
+        product: "Yellow Sunglasses",
+        price: 12.00,
+        category: 'sunglasses',
+        description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
+    },
+    {
+        id: '41',
+        url: "/optimized-images/ecommerce/sunglasses/sunglasses-11.webp",
+        product: "Orange Sunglasses",
+        price: 17.00,
+        category: 'sunglasses',
+        description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
+    },
+    {
+        id: '42',
+        url: "/optimized-images/ecommerce/sunglasses/sunglasses-12.webp",
+        product: "Blue Sunglasses",
+        price: 18.00,
+        category: 'sunglasses',
+        description: 'Cool comfort meets UV protection. These sunglasses keep your eyes protected, all while upping your style game.'
+    },
+    {
+        id: '43',
+        url: "/optimized-images/ecommerce/t-shirts/t-shirt-1.webp",
+        product: "White And Red T-Shirt",
+        price: 20.00,
+        category: 't-shirts',
+        description: 'Invest in timeless style with this white and red t-shirt. Constructed from heavyweight, pre-shrunk cotton, it is built to last wash after wash. The soft, breathable fabric ensures you will enjoy this wardrobe essential for seasons to come.'
+    },
+    {
+        id: '44',
+        url: "/optimized-images/ecommerce/t-shirts/t-shirt-2.webp",
+        product: "Black And White T-Shirt",
+        price: 22.00,
+        category: 't-shirts',
+        description: 'Invest in timeless style with this black and white t-shirt. Constructed from heavyweight, pre-shrunk cotton, it is built to last wash after wash. The soft, breathable fabric ensures you will enjoy this wardrobe essential for seasons to come.'
+    },
+    {
+        id: '45',
+        url: "/optimized-images/ecommerce/t-shirts/t-shirt-3.webp",
+        product: "White And Pink T-Shirt",
+        price: 20.00,
+        category: 't-shirts',
+        description: 'Invest in timeless style with this white and pink t-shirt. Constructed from heavyweight, pre-shrunk cotton, it is built to last wash after wash. The soft, breathable fabric ensures you will enjoy this wardrobe essential for seasons to come.'
+    },
+    {
+        id: '46',
+        url: "/optimized-images/ecommerce/watches/watch-1.webp",
+        product: "Minimalist Black And White Watch",
+        price: 30.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '47',
+        url: "/optimized-images/ecommerce/watches/watch-2.webp",
+        product: "Minimalist Brown And White Watch",
+        price: 35.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '48',
+        url: "/optimized-images/ecommerce/watches/watch-3.webp",
+        product: "Minimalist Black And White Watch",
+        price: 25.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '49',
+        url: "/optimized-images/ecommerce/watches/watch-4.webp",
+        product: "Minimalist Silver Watch",
+        price: 45.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '50',
+        url: "/optimized-images/ecommerce/watches/watch-5.webp",
+        product: "Minimalist Golden Watch",
+        price: 48.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '51',
+        url: "/optimized-images/ecommerce/watches/watch-6.webp",
+        product: "Minimalist Silver Watch",
+        price: 40.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '52',
+        url: "/optimized-images/ecommerce/watches/watch-7.webp",
+        product: "Minimalist Golden Watch",
+        price: 50.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '53',
+        url: "/optimized-images/ecommerce/watches/watch-8.webp",
+        product: "Minimalist Silver Watch",
+        price: 40.00,
+        category: 'watches',
+        description: 'This minimalist watch is the perfect choice for those who appreciate understated elegance and enduring quality. It is a timeless piece that will never go out of style.'
+    },
+    {
+        id: '54',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-1.webp",
+        product: "Flower Blouse",
+        price: 12.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '55',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-2.webp",
+        product: "Yellow T-Shirt",
+        price: 8.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '56',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-3.webp",
+        product: "Cream Colored Blouse",
+        price: 15.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '57',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-4.webp",
+        product: "Purple Blouse",
+        price: 18.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '58',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-5.webp",
+        product: "Red Blouse",
+        price: 15.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '59',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-6.webp",
+        product: "Open Back Blouse",
+        price: 18.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '60',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-7.webp",
+        product: "Long-Sleeved Blouse",
+        price: 23.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '61',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-8.webp",
+        product: "Cream-Colored Sweater",
+        price: 28.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '62',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-9.webp",
+        product: "White T-Shirt",
+        price: 12.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '63',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-10.webp",
+        product: "Denim Dress",
+        price: 31.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '64',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-11.webp",
+        product: "Yellow T-Shirt",
+        price: 18.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '65',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-12.webp",
+        product: "Black Blouse",
+        price: 10.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '66',
+        url: "/optimized-images/ecommerce/female-clothing/female-clothing-13.webp",
+        product: "Black Tank Top",
+        price: 7.00,
+        category: 'female',
+        description: 'This versatile piece features a modern design that flatters any body type. With its unique and refreshing style, it elevates your look for any occasion, showcasing your sense of class and good taste.'
+    },
+    {
+        id: '67',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-1.webp",
+        product: "White T-Shirt",
+        price: 15.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '68',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-2.webp",
+        product: "Red T-Shirt",
+        price: 17.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '69',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-3.webp",
+        product: "Blue T-Shirt",
+        price: 19.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '70',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-4.webp",
+        product: "Black And White T-Shirt",
+        price: 25.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '71',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-5.webp",
+        product: "Black T-Shirt",
+        price: 20.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '72',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-6.webp",
+        product: "Blue Shirt",
+        price: 28.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    },
+    {
+        id: '73',
+        url: "/optimized-images/ecommerce/male-clothing/male-clothing-7.webp",
+        product: "Grey Suit",
+        price: 40.00,
+        category: 'male',
+        description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
+    }
 ];
 
 export const outfits = [
