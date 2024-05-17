@@ -6,7 +6,7 @@ import { allItems } from '../../Data';
 
 const ItemsPage = () => {
   const itemsCopy = [...allItems];
-  const filteredItems = [...itemsCopy.filter(item => item.category === 'trending male')];
+  const filteredItems = [...itemsCopy.filter(item => item.category === 'trending male' || item.category === 'trending male and female' || item.category === 'trending female')];
 
   return (
     <>

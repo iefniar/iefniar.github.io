@@ -655,6 +655,62 @@ export const allItems = [
         category: 'trending male',
         description: 'Own the city with the Urban Edge. This combo features dark sunglasses, a statement green coat, sleek grey pants, and black gloves. It is a sharp and functional look for the man who thrives in the urban jungle.'
     },
+    {
+        id: '83',
+        url: "/optimized-images/ecommerce/models/men/man-10.webp",
+        product: "Executive Neutrals",
+        price: 67.00,
+        category: 'trending male',
+        description: 'This timeless ensemble features a long, neutral-tone overcoat for an air of sophistication. The crisp white shirt provide a polished foundation, while the included tie adds a touch of formality. This versatile outfit is perfect for the office, meetings, or any occasion where you need to make a powerful impression.'
+    },
+    {
+        id: '84',
+        url: "/optimized-images/ecommerce/models/men/man-11.webp",
+        product: "Everyday Essentials",
+        price: 40.00,
+        category: 'trending male',
+        description: 'This versatile combo features a classic white t-shirt for ultimate comfort, a blue denim jacket that adds a touch of ruggedness, and a black cap to complete the laid-back look. This essential outfit is perfect for running errands, hanging out with friends, or just relaxing at home.'
+    },
+    {
+        id: '85',
+        url: "/optimized-images/ecommerce/models/men/man-12.webp",
+        product: "Channel Nautical",
+        price: 30.00,
+        category: 'trending male',
+        description: 'This statement piece features a luxurious blue coat with a crisp white neck, evoking a touch of nautical flair. The coat sleek design turns heads, while the white detail adds timeless sophistication.'
+    },
+    {
+        id: '86',
+        url: "/optimized-images/ecommerce/models/men/man-13.webp",
+        product: "Minimalist Masterpiece",
+        price: 25.00,
+        category: 'trending male',
+        description: 'This white hooded coat features a clean, streamlined design that transcends trends. The integrated hood adds a touch of functionality without compromising on style. Made from premium fabric, this versatile piece elevates your everyday look and keeps you comfortable wherever you go.'
+    },
+    {
+        id: '87',
+        url: "/optimized-images/ecommerce/models/men/man-14.webp",
+        product: "Weekend Voyage",
+        price: 55.00,
+        category: 'trending male',
+        description: 'This complete outfit features a crisp white t-shirt for comfort, classic blue jeans for a relaxed vibe, and a statement blue coat with a white neck detail for a touch of nautical flair. Topped off with black boots for a touch of edge, this versatile ensemble is perfect for weekend adventures or casual outings.'
+    },
+    {
+        id: '88',
+        url: "/optimized-images/ecommerce/models/both/both-1.webp",
+        product: "White Canvas",
+        price: 45.00,
+        category: 'trending male and female',
+        description: 'This minimalist outfit features a crisp white suit with a modern, wide-leg silhouette. Made from high-quality, breathable fabric, this versatile ensemble offers both comfort and effortless style. It is perfect for anyone who wants to make a bold and sophisticated impression, regardless of gender.'
+    },
+    {
+        id: '89',
+        url: "/optimized-images/ecommerce/models/women/woman-1.webp",
+        product: "Cloud Drift Hoodie",
+        price: 25.00,
+        category: 'trending female',
+        description: 'This hooded coat features a soft, soothing blend of blue and violet, reminiscent of a calming summer sky. Crafted from luxurious fabric, this cozy and stylish piece provides warmth and adds a touch of ethereal elegance to your neutral palette.'
+    },
 ];
 
 export const outfits = [
