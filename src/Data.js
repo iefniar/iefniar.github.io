@@ -582,7 +582,79 @@ export const allItems = [
         price: 40.00,
         category: 'male',
         description: 'Built for action, this piece injects a dose of modern style into your everyday grind. The clean design flatters any build, keeping you looking sharp wherever you roam. Elevate your off-duty look and own your personal style.'
-    }
+    },
+    {
+        id: '74',
+        url: "/optimized-images/ecommerce/models/men/man-1.webp",
+        product: "Denim Trucker Jacket",
+        price: 50.00,
+        category: 'trending male',
+        description: 'Inject some swagger into your look with this men jacket. Constructed from comfy, everyday fabric, it is perfect for adding a layer of style on the go.'
+    },
+    {
+        id: '75',
+        url: "/optimized-images/ecommerce/models/men/man-2.webp",
+        product: "Leather Jacket",
+        price: 60.00,
+        category: 'trending male',
+        description: 'Inject instant edge with this men leather jacket. Supple, genuine leather provides lasting comfort and a cool, rebellious vibe. Timeless design makes it a versatile wardrobe staple.'
+    },
+    {
+        id: '76',
+        url: "/optimized-images/ecommerce/models/men/man-3.webp",
+        product: "Muted-Tone Sunglasses",
+        price: 30.00,
+        category: 'trending male',
+        description: 'Level up your style with these men sunglasses in cool pastel hues. The classic, timeless design makes them a versatile accessory for any outfit. Made with high-quality materials, these shades offer superior sun protection and all-day comfort.'
+    },
+    {
+        id: '77',
+        url: "/optimized-images/ecommerce/models/men/man-4.webp",
+        product: "Blackout Bundle",
+        price: 70.00,
+        category: 'trending male',
+        description: 'This complete outfit features a black hat, sunglasses, t-shirt, and pants, offering a sleek and versatile base for any casual occasion. Simply throw it on and go, knowing you will look sharp and stylish.'
+    },
+    {
+        id: '78',
+        url: "/optimized-images/ecommerce/models/men/man-5.webp",
+        product: "Coastal Comfort",
+        price: 75.00,
+        category: 'trending male',
+        description: 'Featuring sleek black sunglasses, a cozy cream sweater, and matching pants and coat, this ensemble offers effortless sophistication for any occasion. Neutral tones and luxurious fabrics create a polished look that transitions seamlessly from day to night.'
+    },
+    {
+        id: '79',
+        url: "/optimized-images/ecommerce/models/men/man-6.webp",
+        product: "Gentleman Ensemble",
+        price: 85.00,
+        category: 'trending male',
+        description: 'This combo features a sharp gray suit with tie, crisp white shirt, and cozy gray scarf, all topped off with stylish sunglasses. Effortless polish for any occasion.'
+    },
+    {
+        id: '80',
+        url: "/optimized-images/ecommerce/models/men/man-7.webp",
+        product: "Classic Casual",
+        price: 45.00,
+        category: 'trending male',
+        description: 'This combo includes a comfy white t-shirt, dark grey jeans for a relaxed vibe, and iconic black Converse for timeless cool. Effortless style, ready for anything.'
+    },
+    {
+        id: '81',
+        url: "/optimized-images/ecommerce/models/men/man-8.webp",
+        product: "Asphalt Assault Bundle",
+        price: 55.00,
+        category: 'trending male',
+        description: 'This edgy combo includes sleek sunglasses, black jeans, leather jacket, and gloves - all the gear for a bad-boy biker look. Hit the streets with confidence.'
+    },
+    {
+        id: '82',
+        url: "/optimized-images/ecommerce/models/men/man-9.webp",
+        product: "Urban Edge",
+        price: 75.00,
+        category: 'trending male',
+        description: 'Own the city with the Urban Edge. This combo features dark sunglasses, a statement green coat, sleek grey pants, and black gloves. It is a sharp and functional look for the man who thrives in the urban jungle.'
+    },
 ];
 
 export const outfits = [

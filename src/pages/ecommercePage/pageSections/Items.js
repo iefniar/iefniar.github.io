@@ -1,12 +1,11 @@
 import classes from './Items.module.css';
 import MiniCard from '../../../components/MiniCard';
-import { allItems } from '../../../Data';
 
-const Items = () => {
+const Items = ({itemsArray}) => {
   return (
     <div className={classes.container}>
         <ul className={classes.collection}>
-            {allItems.map(item => (
+            {itemsArray.map(item => (
                 <li key={item.id}>
                   < MiniCard  
                     id={item.id} 

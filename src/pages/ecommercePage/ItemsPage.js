@@ -2,8 +2,12 @@ import classes from './ItemsPage.module.css';
 import NavBar from './pageSections/NavBar';
 import Items from './pageSections/Items';
 import Footer from './pageSections/Footer';
+import { allItems } from '../../Data';
 
 const ItemsPage = () => {
+  const itemsCopy = [...allItems];
+  const filteredItems = [...itemsCopy.filter(item => item.category === 'trending male')];
+
   return (
     <>
         <NavBar />
@@ -12,7 +16,8 @@ const ItemsPage = () => {
             <div className={classes['filtering-area']}>
                 <label htmlFor='category-select'>Filter by:</label>
                 <select id='category-select'>
-                    <option value='' selected disabled>Category</option>
+                    <option value='' disabled>Category</option>
+                    <option value='trending' selected>Trending</option>
                     <option value='outfits'>Outfits</option>
                     <option value='shoes'>Shoes</option>
                     <option value='sunglasses'>Sunglasses</option>
@@ -22,7 +27,7 @@ const ItemsPage = () => {
                     <option value='male'>Male</option>
                 </select>
             </div>
-            <Items />
+            <Items itemsArray={filteredItems} />
         </div>
         <Footer />
     </>
