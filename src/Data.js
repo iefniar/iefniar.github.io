@@ -711,6 +711,38 @@ export const allItems = [
         category: 'trending female',
         description: 'This hooded coat features a soft, soothing blend of blue and violet, reminiscent of a calming summer sky. Crafted from luxurious fabric, this cozy and stylish piece provides warmth and adds a touch of ethereal elegance to your neutral palette.'
     },
+    {
+        id: '90',
+        url: "/optimized-images/ecommerce/models/women/woman-2.webp",
+        product: "Pink Chic",
+        price: 45.00,
+        category: 'trending female',
+        description: 'This combo features a luxurious, wide pink overcoat and elegant beige pants for a bold and sophisticated look. Own your confidence and blossom in this unforgettable outfit.'
+    },
+    {
+        id: '91',
+        url: "/optimized-images/ecommerce/models/women/woman-3.webp",
+        product: "City Chic",
+        price: 55.00,
+        category: 'trending female',
+        description: 'This combo features a black and white overcoat, a cozy pink sweater, a sleek brown skirt, and black sunglasses. This versatile outfit is perfect for any occasion where you want to stand out in modern style.'
+    },
+    {
+        id: '92',
+        url: "/optimized-images/ecommerce/models/women/woman-4.webp",
+        product: "City Sunrise",
+        price: 65.00,
+        category: 'trending female',
+        description: 'This modern outfit features a chic orange suit that exudes confidence. The bold color makes a statement, while the clean lines ensure a sophisticated look. The black and white blouse adds a touch of timeless elegance, and the sunglasses complete the polished ensemble. Own your day in the city with this eye-catching and versatile outfit.'
+    },
+    {
+        id: '93',
+        url: "/optimized-images/ecommerce/models/women/woman-5.webp",
+        product: "City Bloom",
+        price: 50.00,
+        category: 'trending female',
+        description: 'This chic set features a modern, cream-toned overcoat and matching pants in a charming floral print. The feminine design adds a touch of whimsy to your urban style. A sleek black blouse creates a sophisticated base, while sunglasses complete the polished look. This versatile outfit is perfect for blooming with confidence in any setting.'
+    },
 ];
 
 export const outfits = [
