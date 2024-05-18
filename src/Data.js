@@ -743,6 +743,134 @@ export const allItems = [
         category: 'trending female',
         description: 'This chic set features a modern, cream-toned overcoat and matching pants in a charming floral print. The feminine design adds a touch of whimsy to your urban style. A sleek black blouse creates a sophisticated base, while sunglasses complete the polished look. This versatile outfit is perfect for blooming with confidence in any setting.'
     },
+    {
+        id: '94',
+        url: "/optimized-images/ecommerce/models/women/woman-6.webp",
+        product: "Weekend Vibes",
+        price: 30.00,
+        category: 'trending female',
+        description: 'This casual-chic combo features a green-blue denim jacket for a laid-back feel. A vibrant red bandana adds a playful touch, while matching red sunglasses complete the look. The sunny yellow skirt injects a burst of color, making it perfect for weekend adventures or any occasion where you want to shine.'
+    },
+    {
+        id: '95',
+        url: "/optimized-images/ecommerce/models/women/woman-7.webp",
+        product: "Wildflower Escape",
+        price: 35.00,
+        category: 'trending female',
+        description: 'Featuring playful heart-shaped sunglasses, a breezy white blouse with a green leaf print, and a long, flowing denim skirt, this combo lets you channel your bohemian spirit. Perfect for festivals, picnics, or a day spent exploring under the sun.'
+    },
+    {
+        id: '96',
+        url: "/optimized-images/ecommerce/models/women/woman-8.webp",
+        product: "Golden Hour",
+        price: 15.00,
+        category: 'trending female',
+        description: 'Oversized and bathed in a warm yellow hue, these sunglasses elevate any outfit with a touch of effortless cool. Channel the golden hour glow and radiate confidence with these bold and eye-catching shades.'
+    },
+    {
+        id: '97',
+        url: "/optimized-images/ecommerce/models/women/woman-9.webp",
+        product: "City Pop",
+        price: 35.00,
+        category: 'trending female',
+        description: 'This vibrant combo features a comfy skin-toned sweater and matching pants for a sleek base. Playful pops of red, yellow, blue, and black explode through the stylish red hat, a cute pink purse, and eye-catching yellow heels. Own your individuality and stand out in this bold and fun ensemble.'
+    },
+    {
+        id: '98',
+        url: "/optimized-images/ecommerce/models/women/woman-10.webp",
+        product: "Blush Ambition",
+        price: 30.00,
+        category: 'trending female',
+        description: 'This power suit elevates your presence with a stunning shade of pink. The clean lines and tailored fit create a confident silhouette, while the soft blush hue adds a touch of femininity. The crisp white blouse provides a classic foundation, and the rounded sunglasses and black hat complete the polished look. Own your success in this sophisticated and striking ensemble.'
+    },
+    {
+        id: '99',
+        url: "/optimized-images/ecommerce/models/women/woman-11.webp",
+        product: "Casual Comfort",
+        price: 37.00,
+        category: 'trending female',
+        description: 'This essential outfit features a cozy grey sweater for ultimate comfort and classic blue jeans for a relaxed vibe. This versatile combination is perfect for running errands, lounging at home, or casual outings. Throw it on and go.'
+    },
+    {
+        id: '100',
+        url: "/optimized-images/ecommerce/models/women/woman-12.webp",
+        product: "Weekend Escape",
+        price: 45.00,
+        category: 'trending female',
+        description: 'This playful outfit features a cozy white cap for a casual touch, a comfy pink sweater that adds a pop of color, and a classic blue denim skirt for a relaxed vibe. The statement green coat adds a touch of personality, while the red purse completes the look. This versatile combination is perfect for weekend adventures, exploring the city, or brunch with friends.'
+    },
+    {
+        id: '101',
+        url: "/optimized-images/ecommerce/models/women/woman-13.webp",
+        product: "Easy Elegance",
+        price: 50.00,
+        category: 'trending female',
+        description: 'This timeless outfit features a crisp white long-sleeved shirt for a polished foundation. Layer on the sleek black blouse for added versatility and a touch of mystery. The comfortable wide-leg blue jeans complete the look with a relaxed vibe. This essential combination is perfect for work, errands, or any casual occasion where you want to look effortlessly put-together.'
+    },
+    {
+        id: '102',
+        url: "/optimized-images/ecommerce/models/women/woman-14.webp",
+        product: "Modern Muse",
+        price: 60.00,
+        category: 'trending female',
+        description: 'The Modern Muse Collection lets you switch between confidence and whimsy. Own the room in a blooming blue suit, then twirl in a graphic dress. The rich brown leather purse ties it all together, adding timeless polish for your ever-evolving style.'
+    },
+    {
+        id: '103',
+        url: "/optimized-images/ecommerce/models/women/woman-15.webp",
+        product: "Vintage Jumpsuit",
+        price: 35.00,
+        category: 'trending female',
+        description: 'This chic one-piece in crisp white is a throwback to timeless elegance. Embrace the retro vibes and feel effortlessly stylish in this versatile jumpsuit.'
+    },
+    {
+        id: '104',
+        url: "/optimized-images/ecommerce/models/women/woman-16.webp",
+        product: "Enigma Ensemble",
+        price: 40.00,
+        category: 'trending female',
+        description: 'This sophisticated pairing of a bold blue suit and a crisp white blouse creates an air of effortless confidence. Leave a lasting impression, ready to tackle anything.'
+    },
+    {
+        id: '105',
+        url: "/optimized-images/ecommerce/models/women/woman-17.webp",
+        product: "Cobalt Blue",
+        price: 67.00,
+        category: 'trending female',
+        description: 'This statement-making set combines a bold blue suit with coordinating jewelry: think dazzling earrings and eye-catching rings. Step into confidence and leave a lasting impression.'
+    },
+    {
+        id: '106',
+        url: "/optimized-images/ecommerce/models/women/woman-18.webp",
+        product: "Executive Edge",
+        price: 60.00,
+        category: 'trending female',
+        description: 'This sophisticated ensemble exudes confidence, ready to conquer any boardroom or social scene. Elevate your power dressing with The Executive Edge.'
+    },
+    {
+        id: '107',
+        url: "/optimized-images/ecommerce/models/women/woman-19.webp",
+        product: "Citrus Chic",
+        price: 50.00,
+        category: 'trending female',
+        description: 'This stunning set features a vibrant orange dress in a minimalist silhouette, complemented by a crisp white long-sleeved blouse.'
+    },
+    {
+        id: '108',
+        url: "/optimized-images/ecommerce/models/women/women-1.webp",
+        product: "Minimalist Masterclass",
+        price: 58.00,
+        category: 'trending female',
+        description: 'The Minimalist Masterclass offers a chic two-piece ensemble in a timeless silhouette. Pair it with your favorite black boots for a powerful and undeniably modern look.'
+    },
+    {
+        id: '109',
+        url: "/optimized-images/ecommerce/models/women/women-2.webp",
+        product: "The Parisian",
+        price: 42.00,
+        category: 'trending female',
+        description: 'This crisp white long-sleeved shirt pairs perfectly with classic blue jeans for a timeless look. Create endless outfit combinations and embrace a touch of Parisian cool.'
+    }
 ];
 
 export const outfits = [
