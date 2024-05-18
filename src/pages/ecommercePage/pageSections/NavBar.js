@@ -12,7 +12,7 @@ const NavBar = () => {
         navigate(-1); 
     };
 
-    const totalItemsInCart = useSelector(state => state.cart.totalQuantity);
+    const totalItemsInCart = useSelector(state => state.cart.items.length);
 
     return (
         <div className={classes['navBar-container']}>
