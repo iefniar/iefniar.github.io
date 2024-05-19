@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa449a9d.css",
-    "main.js": "/static/js/main.f50f4ec4.js",
+    "main.css": "/static/css/main.77db50cf.css",
+    "main.js": "/static/js/main.a18da018.js",
     "static/media/man-2-cropped.webp": "/static/media/man-2-cropped.7cc88c9cbedbc4439207.webp",
     "static/media/women-1-cropped.webp": "/static/media/women-1-cropped.ae5d8f7bcbf18fc7825a.webp",
     "static/media/ri_reactjs-fill.svg": "/static/media/ri_reactjs-fill.7c751bf1faa20daba89565b4295b6499.svg",
@@ -13,11 +13,11 @@
     "static/media/ri_github-fill.svg": "/static/media/ri_github-fill.4e4485382aa1398a9e9855b1b204c6e5.svg",
     "index.html": "/index.html",
     "static/media/tabler_brand-mongodb.svg": "/static/media/tabler_brand-mongodb.1c41781ec44fbfdf2c4e78efaf7129d6.svg",
-    "main.fa449a9d.css.map": "/static/css/main.fa449a9d.css.map",
-    "main.f50f4ec4.js.map": "/static/js/main.f50f4ec4.js.map"
+    "main.77db50cf.css.map": "/static/css/main.77db50cf.css.map",
+    "main.a18da018.js.map": "/static/js/main.a18da018.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa449a9d.css",
-    "static/js/main.f50f4ec4.js"
+    "static/css/main.77db50cf.css",
+    "static/js/main.a18da018.js"
   ]
 }
