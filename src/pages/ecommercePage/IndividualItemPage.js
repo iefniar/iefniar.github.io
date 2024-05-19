@@ -59,9 +59,9 @@ const IndividualItemPage = () => {
                     <p>{foundItem.description}</p>
                     <div className={classes['actions-section']}>
                         <div className={classes['quantity-selection']}>
-                            <button><RemoveOutlined /></button>
+                            <button onClick={() => {removeItemHandler(foundItem)}}><RemoveOutlined /></button>
                             <span>{quantityDynamicValue}</span>
-                            <button><AddOutlined /></button>
+                            <button onClick={() => {addItemHandler(foundItem)}}><AddOutlined /></button>
                         </div>
                         <div className={classes['add-to-cart']}>
                             <button onClick={() => {btnActionHandler(foundItem)}}>{textToDisplayOnButton}</button>

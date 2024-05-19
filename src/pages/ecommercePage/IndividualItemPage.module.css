@@ -90,10 +90,19 @@
     padding: .2rem;
 }
 
+.quantity-selection:hover, .quantity-selection:focus{
+    background-color: rgb(25, 118, 210);
+    transition: all 350ms ease-in-out;
+}
+
 .quantity-selection>button{
     flex: 1;
     border: none;
-    background-color: whitesmoke;
+    background-color: transparent;
+}
+
+.quantity-selection>button:hover, .quantity-selection>button:focus{
+    cursor: pointer;
 }
 
 .quantity-selection>span{

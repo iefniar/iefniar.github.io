@@ -4,6 +4,7 @@ import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -13,6 +14,12 @@ const NavBar = () => {
     };
 
     const totalItemsInCart = useSelector(state => state.cart.items.length);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value);
+        
+    };
 
     return (
         <div className={classes['navBar-container']}>
@@ -30,7 +37,7 @@ const NavBar = () => {
             </div>
             <div className={classes['navBar-right']}>
                 <div className={classes['navBar-search-container']}>
-                    <input placeholder='Search' />
+                    <input type='text' placeholder='Search' value={searchTerm} onChange={handleChange} />
                     <span><SearchOutlined /></span>
                 </div>
                 <Link to='/project-1/register'>
