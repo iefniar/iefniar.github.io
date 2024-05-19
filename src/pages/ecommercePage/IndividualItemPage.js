@@ -3,12 +3,50 @@ import NavBar from './pageSections/NavBar';
 import Footer from './pageSections/Footer';
 import { RemoveOutlined, AddOutlined } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { cartActions } from '../../store/ecommerce/cart-slice';
 
 import { allItems } from '../../Data';
 
 const IndividualItemPage = () => {
     const params = useParams();
     const foundItem = allItems.find(item => item.id === params.itemId);
+    const cartItems = useSelector(state => state.cart.items);
+    const existingItem = cartItems.find(item => item.id === foundItem.id);
+    const dispatch = useDispatch();
+    let textToDisplayOnButton = (
+        <>
+            {existingItem? `Remove From Cart` : `Add To Cart`}
+        </>
+    );
+
+    let quantityDynamicValue = (
+        <>
+            {existingItem? `${existingItem.quantity}` : `0`}
+        </>
+    );
+
+    const addItemHandler = (currentItem) => {
+        dispatch(cartActions.addItemToCart({
+            id: currentItem.id,
+            url: currentItem.url,
+            product: currentItem.product,
+            price: currentItem.price
+        }));
+    }
+
+    const removeItemHandler = (currentItem) => {
+        dispatch(cartActions.removeItemFromCart(currentItem.id));
+    }
+
+    const btnActionHandler = (currentItem) => {
+        if(!existingItem){
+            addItemHandler(currentItem);
+        }
+        else{
+            removeItemHandler(currentItem);
+        }
+    }
 
     return (
         <>
@@ -22,11 +60,11 @@ const IndividualItemPage = () => {
                     <div className={classes['actions-section']}>
                         <div className={classes['quantity-selection']}>
                             <button><RemoveOutlined /></button>
-                            <span>0</span>
+                            <span>{quantityDynamicValue}</span>
                             <button><AddOutlined /></button>
                         </div>
                         <div className={classes['add-to-cart']}>
-                            <button>Add To Cart</button>
+                            <button onClick={() => {btnActionHandler(foundItem)}}>{textToDisplayOnButton}</button>
                         </div>
                     </div>
                 </div>
