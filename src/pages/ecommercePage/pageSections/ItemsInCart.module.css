@@ -123,9 +123,15 @@ ul{
     
 }
 
-.quantity-selection>button{
-    border: none;
+.quantity-selection>button, .remove-item>button{
+    border: 1px solid whitesmoke;  
     background-color: whitesmoke;
+}
+
+.quantity-selection>button:hover, .quantity-selection>button:focus, .remove-item>button:hover, .remove-item>button:focus{
+    cursor: pointer;
+    border: 1px solid var(--color-black-900);  
+    background-color: var(--color-minimalist-400);
 }
 
 .remove-item{

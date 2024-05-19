@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 const CheckoutForm = () => {
     const totalItemsInCart = useSelector(state => state.cart.items.length);
     const itemsInShoppingCart = useSelector(state => state.cart.items);
+    const orderTotal = useSelector(state => state.cart.orderTotal);
         
     return (
         <div className={classes['main-container']}>
@@ -79,7 +80,7 @@ const CheckoutForm = () => {
                     ))}
                 </ul>
                 <div className={classes['cart-bottom']}>
-                    <h4>USD$ 120.00</h4>
+                    <h4>USD$ {orderTotal}</h4>
                 </div>
             </div>
         </div>
