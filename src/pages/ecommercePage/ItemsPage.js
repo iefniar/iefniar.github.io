@@ -7,11 +7,10 @@ import { useState } from 'react';
 
 const ItemsPage = () => {
   const itemsCopy = [...allItems];
-  /*const filteredItems = [...itemsCopy.filter(item => item.category === 'trending male' || item.category === 'trending male and female' || item.category === 'trending female')];*/
   const [filteredItems, setFilteredItems] = useState(itemsCopy.filter(item => item.category === 'trending male' || item.category === 'trending male and female' || item.category === 'trending female'));
   const [selectedCategory, setSelectedCategory] = useState('trending');
 
-  const handleChange = (event) => {
+  const selectChangeHandler = (event) => {
     setSelectedCategory(event.target.value);
 
     if (event.target.value === 'trending') {
@@ -22,14 +21,18 @@ const ItemsPage = () => {
     }
   };
 
+  const searchInputWatcher = (searchInputValue) => {
+    setFilteredItems(itemsCopy.filter(item => item.description.includes(searchInputValue)));
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar searchCallbackFn={searchInputWatcher} />
       <div className={classes['main-container']}>
         <h2>Trending now</h2>
         <div className={classes['filtering-area']}>
           <label htmlFor='category-select'>Filter by:</label>
-          <select id='category-select' value={selectedCategory} onChange={handleChange}>
+          <select id='category-select' value={selectedCategory} onChange={selectChangeHandler}>
             <option value='' disabled>Category</option>
             <option value='trending'>Trending</option>
             <option value='outfits'>Outfits</option>

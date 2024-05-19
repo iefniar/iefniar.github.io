@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
-const NavBar = () => {
+const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
     const navigate = useNavigate();
 
     const goBackHandler = () => {
@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value);
-        
+        searchCallbackFn(event.target.value);
     };
 
     return (
@@ -37,7 +37,7 @@ const NavBar = () => {
             </div>
             <div className={classes['navBar-right']}>
                 <div className={classes['navBar-search-container']}>
-                    <input type='text' placeholder='Search' value={searchTerm} onChange={handleChange} />
+                    <input type='text' placeholder='Search by color, product...' value={searchTerm} onChange={handleChange} />
                     <span><SearchOutlined /></span>
                 </div>
                 <Link to='/project-1/register'>
