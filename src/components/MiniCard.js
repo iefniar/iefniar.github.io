@@ -1,14 +1,17 @@
 import classes from './MiniCard.module.css';
 import { SearchOutlined, ShoppingBagOutlined, FavoriteBorderOutlined } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store/ecommerce/cart-slice';
 
 const MiniCard = (props) => {
   const { id, url, product, price} = props;
   const path = '/project-1/individual-item/' + id;
   const dispatch = useDispatch();
-  
+  const cartItems = useSelector(state => state.cart.items);
+  const existingItem = cartItems.find(item => item.id === id);
+  const classToggler = existingItem? classes.active : classes.inactive;
+
   const addItemHandler = () => {
     dispatch(cartActions.addItemToCart({
         id,
@@ -16,6 +19,19 @@ const MiniCard = (props) => {
         product,
         price
     }));
+  }
+
+  const trashItemHandler = () => {
+    dispatch(cartActions.sendItemToTrash(id));
+  }
+
+  const btnActionHandler = () => {
+    if(existingItem){
+      trashItemHandler();
+    }
+    else{
+      addItemHandler();
+    }
   }
 
   return (
@@ -27,8 +43,8 @@ const MiniCard = (props) => {
                 <SearchOutlined />
               </div>
             </Link>
-            <button onClick={addItemHandler}>
-              <div><ShoppingBagOutlined /></div>
+            <button onClick={btnActionHandler}>
+              <div className={classToggler}><ShoppingBagOutlined /></div>
             </button>
             <div><FavoriteBorderOutlined /></div>
           </div>

@@ -59,13 +59,29 @@
     background-color: transparent;
 }
 
-.group-container>div, .group-container>a>div, .group-container>button>div{
+.group-container>div, .group-container>a>div{
     border-radius: 50%;
     padding: .5rem;
     background-color: var(--color-white-100);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.group-container>button>div{
+    border-radius: 50%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inactive{
+    background-color: var(--color-white-100);
+}
+
+.active{
+    background-color: dodgerblue;
 }
 
 .group-container>a{
