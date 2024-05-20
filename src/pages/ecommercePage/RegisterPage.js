@@ -3,6 +3,7 @@ import NavBar from './pageSections/NavBar';
 import Footer from './pageSections/Footer';
 
 const RegisterPage = () => {
+
   return (
     <>
         <NavBar />
