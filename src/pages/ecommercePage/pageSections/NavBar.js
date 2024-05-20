@@ -3,10 +3,12 @@ import { ArrowBackOutlined, ShoppingBagOutlined, SearchOutlined } from '@mui/ico
 import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { authActions } from '../../../store/ecommerce/auth-slice';
 
 const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const goBackHandler = () => {
@@ -20,6 +22,12 @@ const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
         setSearchTerm(event.target.value);
         searchCallbackFn(event.target.value);
     };
+
+    const userLoggedIn = useSelector(state => state.auth.anyUserLoggedIn);
+
+    const logOutHandler = () => {
+        dispatch(authActions.logOutUser());
+    }
 
     return (
         <div className={classes['navBar-container']}>
@@ -40,16 +48,26 @@ const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
                     <input type='text' placeholder='Search by color, product...' value={searchTerm} onChange={handleChange} />
                     <span><SearchOutlined /></span>
                 </div>
-                <Link to='/project-1/register'>
-                    <div>
-                        Register
-                    </div>
-                </Link>
-                <Link to='/project-1/sign-in'>
-                    <div>
-                        Sign In
-                    </div>
-                </Link>
+                {!userLoggedIn? (
+                    <Link to='/project-1/register'>
+                        <div>
+                            Register
+                        </div>
+                    </Link>
+                    ) : (
+                        <button onClick={logOutHandler}>
+                            Log Out
+                        </button>
+                    )
+                }
+                {!userLoggedIn && (
+                    <Link to='/project-1/sign-in'>
+                        <div>
+                            Sign In
+                        </div>
+                    </Link>
+                    )
+                }
                 <Link to='/project-1/cart'>
                     <div>
                         <Badge badgeContent={totalItemsInCart} color='primary'>
