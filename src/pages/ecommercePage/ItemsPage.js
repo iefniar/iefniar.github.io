@@ -27,9 +27,9 @@ const ItemsPage = () => {
 
   return (
     <>
-      <NavBar searchCallbackFn={searchInputWatcher} />
+      <NavBar showNavBarSearchContainer={true} searchCallbackFn={searchInputWatcher} />
       <div className={classes['main-container']}>
-        <h2>Trending now</h2>
+        <h2>{selectedCategory}</h2>
         <div className={classes['filtering-area']}>
           <label htmlFor='category-select'>Filter by:</label>
           <select id='category-select' value={selectedCategory} onChange={selectChangeHandler}>

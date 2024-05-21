@@ -5,6 +5,7 @@ import { RemoveOutlined, AddOutlined } from '@mui/icons-material';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { cartActions } from '../../store/ecommerce/cart-slice';
+import { useNavigate } from 'react-router-dom';
 
 import { allItems } from '../../Data';
 
@@ -14,38 +15,55 @@ const IndividualItemPage = () => {
     const cartItems = useSelector(state => state.cart.items);
     const existingItem = cartItems.find(item => item.id === foundItem.id);
     const dispatch = useDispatch();
-    let textToDisplayOnButton = (
+    const userLoggedIn = useSelector(state => state.auth.anyUserLoggedIn);
+    const navigate = useNavigate();
+    const textToDisplayOnButton = (
         <>
             {existingItem? `Remove From Cart` : `Add To Cart`}
         </>
     );
 
-    let quantityDynamicValue = (
+    const quantityDynamicValue = (
         <>
             {existingItem? `${existingItem.quantity}` : `0`}
         </>
     );
 
     const addItemHandler = (currentItem) => {
-        dispatch(cartActions.addItemToCart({
-            id: currentItem.id,
-            url: currentItem.url,
-            product: currentItem.product,
-            price: currentItem.price
-        }));
+        if(!userLoggedIn){
+            navigate('/project-1/sign-in');
+        }
+        else{
+            dispatch(cartActions.addItemToCart({
+                id: currentItem.id,
+                url: currentItem.url,
+                product: currentItem.product,
+                price: currentItem.price
+            }));
+        }   
     }
 
     const removeItemHandler = (currentItem) => {
-        dispatch(cartActions.removeItemFromCart(currentItem.id));
+        if(!userLoggedIn){
+            navigate('/project-1/sign-in');
+        }
+        else{
+            dispatch(cartActions.removeItemFromCart(currentItem.id));
+        }
     }
 
     const btnActionHandler = (currentItem) => {
-        if(!existingItem){
-            addItemHandler(currentItem);
+        if(!userLoggedIn){
+            navigate('/project-1/sign-in');
         }
         else{
-            removeItemHandler(currentItem);
-        }
+            if(!existingItem){
+                addItemHandler(currentItem);
+            }
+            else{
+                removeItemHandler(currentItem);
+            }
+        }    
     }
 
     return (

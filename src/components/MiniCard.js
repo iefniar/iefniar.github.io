@@ -3,6 +3,7 @@ import { SearchOutlined, ShoppingBagOutlined, FavoriteBorderOutlined } from '@mu
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store/ecommerce/cart-slice';
+import { useNavigate } from 'react-router-dom';
 
 const MiniCard = (props) => {
   const { id, url, product, price} = props;
@@ -11,6 +12,8 @@ const MiniCard = (props) => {
   const cartItems = useSelector(state => state.cart.items);
   const existingItem = cartItems.find(item => item.id === id);
   const classToggler = existingItem? classes.active : classes.inactive;
+  const userLoggedIn = useSelector(state => state.auth.anyUserLoggedIn);
+  const navigate = useNavigate();
 
   const addItemHandler = () => {
     dispatch(cartActions.addItemToCart({
@@ -25,12 +28,17 @@ const MiniCard = (props) => {
     dispatch(cartActions.sendItemToTrash(id));
   }
 
-  const btnActionHandler = () => {
-    if(existingItem){
-      trashItemHandler();
+  const btnShoppingCartActionHandler = () => {
+    if(!userLoggedIn){
+      navigate('/project-1/sign-in');
     }
     else{
-      addItemHandler();
+      if(existingItem){
+        trashItemHandler();
+      }
+      else{
+        addItemHandler();
+      }
     }
   }
 
@@ -43,7 +51,7 @@ const MiniCard = (props) => {
                 <SearchOutlined />
               </div>
             </Link>
-            <button onClick={btnActionHandler}>
+            <button onClick={btnShoppingCartActionHandler}>
               <div className={classToggler}><ShoppingBagOutlined /></div>
             </button>
             <div><FavoriteBorderOutlined /></div>

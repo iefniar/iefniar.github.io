@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { authActions } from '../../../store/ecommerce/auth-slice';
 
-const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
+const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returnedValue) => {}}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -27,6 +27,7 @@ const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
 
     const logOutHandler = () => {
         dispatch(authActions.logOutUser());
+        navigate('/project-1');
     }
 
     return (
@@ -44,10 +45,17 @@ const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
                 </Link>
             </div>
             <div className={classes['navBar-right']}>
-                <div className={classes['navBar-search-container']}>
-                    <input type='text' placeholder='Search by color, product...' value={searchTerm} onChange={handleChange} />
-                    <span><SearchOutlined /></span>
-                </div>
+                {showNavBarSearchContainer? (
+                    <div className={classes['navBar-search-container']}>
+                        <input type='text' placeholder='Search by color, product...' value={searchTerm} onChange={handleChange} />
+                        <span><SearchOutlined /></span>
+                    </div>
+                ) : (
+                    <div className={classes['navBar-search-container-hidden']}>
+                        <input type='text' disabled />
+                        <span><SearchOutlined /></span>
+                    </div>
+                )}
                 {!userLoggedIn? (
                     <Link to='/project-1/register'>
                         <div>
@@ -68,15 +76,26 @@ const NavBar = ({searchCallbackFn = (returnedValue) => {}}) => {
                     </Link>
                     )
                 }
-                <Link to='/project-1/cart'>
-                    <div>
-                        <Badge badgeContent={totalItemsInCart} color='primary'>
-                            <ShoppingBagOutlined />
-                        </Badge>
-                    </div>
-                </Link>
+                {userLoggedIn? (
+                    <Link to='/project-1/cart'>
+                        <div>
+                            <Badge badgeContent={totalItemsInCart} color='primary'>
+                                <ShoppingBagOutlined />
+                            </Badge>
+                        </div>
+                    </Link>
+                    ) : (
+                    <Link to='/project-1/sign-in'>
+                        <div>
+                            <Badge badgeContent={totalItemsInCart} color='primary'>
+                                <ShoppingBagOutlined />
+                            </Badge>
+                        </div>
+                    </Link>
+                    )
+                }
+                
             </div>
-
 
         </div>
     );
