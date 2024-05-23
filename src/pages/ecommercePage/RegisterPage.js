@@ -89,7 +89,7 @@ const RegisterPage = () => {
                             </div>
                             <div className={classes['column']}>
                                 <label htmlFor='password'>Password</label>
-                                <input type='text' id='password' ref={passwordInputRef} />
+                                <input type='password' id='password' ref={passwordInputRef} />
                                 {showPasswordErrorMsg && (
                                     <p>Password must not be empty</p>
                                 )}
@@ -97,7 +97,7 @@ const RegisterPage = () => {
                         </div>
                         <div className={classes['simple-row']}>
                             <label htmlFor='repeat-password'>Repeat password</label>
-                            <input type='text' id='repeat-password' ref={repeatPasswordInputRef} />
+                            <input type='password' id='repeat-password' ref={repeatPasswordInputRef} />
                             {showRepeatPasswordErrorMsg && (
                                 <p>The repeated password must not be empty and must match the password introduced before</p>
                             )}

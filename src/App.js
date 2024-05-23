@@ -7,6 +7,7 @@ import ItemsPage from "./pages/ecommercePage/ItemsPage";
 import IndividualItemPage from "./pages/ecommercePage/IndividualItemPage";
 import ShoppingCartPage from "./pages/ecommercePage/ShoppingCartPage";
 import CheckoutPage from "./pages/ecommercePage/CheckoutPage";
+import Success from "./pages/ecommercePage/Success";
 import ScrollToTop from "./components/utilities/ScrollToTop";
 
 import MainContent from './components/MainContent';
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/project-1/individual-item/:itemId" element={<IndividualItemPage />} /> 
         <Route path="/project-1/cart" element={<ShoppingCartPage />} /> 
         <Route path="/project-1/checkout" element={<CheckoutPage />} /> 
+        <Route path="/project-1/success" element={<Success />} /> 
         <Route path="/project-2" element={<MainContent />} />
       </Routes>
     </>

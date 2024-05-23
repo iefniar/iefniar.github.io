@@ -39,7 +39,7 @@ const SignInPage = () => {
                         </div>
                         <div className={classes['simple-row']}>
                             <label htmlFor='password'>Password</label>
-                            <input type='text' id='password' ref={passwordInputRef} />
+                            <input type='password' id='password' ref={passwordInputRef} />
                         </div>
                         <button>Sign In</button>
                     </div>
