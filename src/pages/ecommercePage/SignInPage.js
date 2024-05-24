@@ -1,28 +1,65 @@
 import classes from './SignInPage.module.css';
 import NavBar from './pageSections/NavBar';
 import Footer from './pageSections/Footer';
-import { useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useRef, useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/ecommerce/auth-slice';
 import { useNavigate } from 'react-router-dom';
+
+let isFirstLoad = true;
+let formSubmitted = false;
 
 const SignInPage = () => {
     const usernameInputRef = useRef();
     const passwordInputRef = useRef();
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const userSigningInError = useSelector(state => state.auth.userSigningIn);
+    const [error, setError] = useState(useSelector(state => state.auth.userSigningIn.msg));
+    
+    const errorHandlerFn = (errorMessage) => {
+        console.log(`errorMessage: ${errorMessage}`);
+        return;
+    }
+
+    const noErrorHandlerFn = () => {
+        isFirstLoad = true;
+        formSubmitted = false;
+        console.log('no error');
+        navigate('/project-1');
+    }
+
+    useEffect(() => {
+        if(isFirstLoad){
+            isFirstLoad = false;
+            return;
+        }
+        if(!formSubmitted){
+            return;
+        }
+        setError(userSigningInError.msg);
+        console.log(`userSigningInError.msg has changed: ${userSigningInError.msg}`);
+
+        if(userSigningInError.hasError){
+            errorHandlerFn(userSigningInError.msg);
+        }
+        else{
+            noErrorHandlerFn();
+        }
+        
+    }, [userSigningInError, formSubmitted]);
 
     const formSubmissionHandler = (event) => {
         event.preventDefault();
+        formSubmitted = true;
         const enteredUsername = usernameInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
 
         dispatch(authActions.signInUser({
             username: enteredUsername,
             password: enteredPassword
-        }));
-
-        navigate('/project-1/items');
+        }));  
+     
     }
 
   return (
@@ -41,6 +78,7 @@ const SignInPage = () => {
                             <label htmlFor='password'>Password</label>
                             <input type='password' id='password' ref={passwordInputRef} />
                         </div>
+                        <p>{error}</p>
                         <button>Sign In</button>
                     </div>
                 </form>
