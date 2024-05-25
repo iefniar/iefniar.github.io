@@ -20,9 +20,9 @@ const Success = () => {
         <NavBar />
         <div className={classes['main-container']}>
             <div className={classes['left-content']}>
-                <h2>Success!!!</h2>
+                <h2>Success</h2>
                 <h3>Your order is being prepared...</h3>
-                <h4>Thanks for your purchase!!!</h4>
+                <h4>Thanks for your purchase</h4>
             </div>
             <div className={classes['right-content']}>
                 <img src='/optimized-images/ecommerce/models/both/both-2.webp' alt='success' />

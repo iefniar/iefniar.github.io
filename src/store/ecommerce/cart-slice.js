@@ -48,6 +48,10 @@ const cartSlice = createSlice({
             
             state.orderTotal -= existingItem.totalPrice;
             state.items = state.items.filter(item => item.id !== id);
+        },
+        emptyCart(state){
+            state.items = [];
+            state.orderTotal = 0;
         }
     }
 });

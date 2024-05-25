@@ -1,14 +1,17 @@
 import classes from './CheckoutForm.module.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { cartActions } from '../../../store/ecommerce/cart-slice';
 import { useNavigate } from 'react-router-dom';
 
 const CheckoutForm = () => {
     const totalItemsInCart = useSelector(state => state.cart.items.length);
     const itemsInShoppingCart = useSelector(state => state.cart.items);
     const orderTotal = useSelector(state => state.cart.orderTotal);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const formSubmissionHandler = () => {
+        dispatch(cartActions.emptyCart());
         navigate('/project-1/success');
     }
         
@@ -57,7 +60,11 @@ const CheckoutForm = () => {
                             <h4>Free Shipping</h4>
                             <h4>USD$ 0.00</h4>
                         </div>
-                        <button>Checkout Now</button>
+                        {totalItemsInCart === 0 ? (
+                            <></>
+                        ) : (
+                            <button>Checkout Now</button>
+                        )}   
                     </div>
                 </form>
             </div>

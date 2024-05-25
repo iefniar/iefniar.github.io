@@ -1,10 +1,12 @@
 import classes from './RegisterPage.module.css';
 import NavBar from './pageSections/NavBar';
 import Footer from './pageSections/Footer';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/ecommerce/auth-slice';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+let isFirstLoad = true;
 
 const RegisterPage = () => {
     const usernameInputRef = useRef();
@@ -19,9 +21,43 @@ const RegisterPage = () => {
     const [enteredRepeatPasswordIsValid, setEnteredRepeatPasswordIsValid] = useState(false);
     const [enteredRepeatPasswordIsTouched, setEnteredRepeatPasswordIsTouched] = useState(false);
     const [showRepeatPasswordErrorMsg, setShowRepeatPasswordErrorMsg] = useState(false);
+    const userRegisteringError = useSelector(state => state.auth.userRegistering);
+    const [error, setError] = useState(useSelector(state => state.auth.userRegistering.msg));
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+
+    const errorHandlerFn = (errorMessage) => {
+        console.log(`errorMessage: ${errorMessage}`);
+        return;
+    }
+
+    const noErrorHandlerFn = () => {
+        setFormSubmitted(false);
+        console.log('no error');
+        navigate('/project-1/sign-in');
+    }
+
+    useEffect(() => {
+        if(isFirstLoad){
+            isFirstLoad = false;
+            return;
+        }
+        if(!formSubmitted){
+            return;
+        }
+        setError(userRegisteringError.msg);
+        console.log(`userRegisteringError.msg has changed: ${userRegisteringError.msg}`);
+
+        if(userRegisteringError.hasError){
+            errorHandlerFn(userRegisteringError.msg);
+        }
+        else{
+            noErrorHandlerFn();
+        }
+        
+    }, [userRegisteringError, formSubmitted]);
 
     const formSubmissionHandler = (event) => {
         event.preventDefault();
@@ -68,7 +104,8 @@ const RegisterPage = () => {
             password: enteredPassword
         }));
 
-        navigate('/project-1/items');
+        setFormSubmitted(true);
+
     }
 
   return (
@@ -102,6 +139,9 @@ const RegisterPage = () => {
                                 <p>The repeated password must not be empty and must match the password introduced before</p>
                             )}
                         </div>
+                        {formSubmitted && (
+                            <p>{error}</p>
+                        )}
                         <button>Register</button>
                     </div>
                 </form>

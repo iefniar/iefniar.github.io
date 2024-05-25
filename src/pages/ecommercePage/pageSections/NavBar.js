@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { authActions } from '../../../store/ecommerce/auth-slice';
+import { cartActions } from '../../../store/ecommerce/cart-slice';
 
 const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returnedValue) => {}}) => {
     const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returned
     const userLoggedIn = useSelector(state => state.auth.anyUserLoggedIn);
 
     const logOutHandler = () => {
+        dispatch(cartActions.emptyCart());
         dispatch(authActions.logOutUser());
         navigate('/project-1');
     }

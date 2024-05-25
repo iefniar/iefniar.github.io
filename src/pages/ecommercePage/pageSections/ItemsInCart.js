@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { cartActions } from '../../../store/ecommerce/cart-slice';
 
 const ItemsInCart = () => {
+    const totalItemsInCart = useSelector(state => state.cart.items.length);
     const cartItems = useSelector(state => state.cart.items);
     const orderTotal = useSelector(state => state.cart.orderTotal);
     const dispatch = useDispatch();
@@ -29,6 +30,13 @@ const ItemsInCart = () => {
 
     return (
         <div className={classes['container']}>
+            {totalItemsInCart === 0 ? (
+                <div>
+                    You have no items in your cart. Start adding some.
+                </div>
+            ) : (
+                <></>
+            )}
             <ul>
                 {cartItems.map(item => (
                     <li key={item.id}>
@@ -84,9 +92,13 @@ const ItemsInCart = () => {
                     <h3><span>Total</span></h3>
                     <h3><span>USD$ {orderTotal}</span></h3>
                 </div>
-                <Link to='/project-1/checkout'>
-                    <button>Checkout</button>
-                </Link>
+                {totalItemsInCart === 0 ? (
+                    <></>
+                ) : (
+                    <Link to='/project-1/checkout'>
+                        <button>Checkout</button>
+                    </Link>
+                )}
             </div>
         </div>
     )
