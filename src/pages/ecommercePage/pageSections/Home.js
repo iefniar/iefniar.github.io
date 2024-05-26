@@ -63,8 +63,11 @@ useEffect(() => {
         </div>
         <div className={classes['video-section']} id='videoSection'>
           <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/ecommerce-video.mp4" playsInline muted />
-          <div className={classes['scroll-down']}>
-            <h4>Scroll <br></br> <span>Down</span></h4>
+          <div className={classes['scroll-down-container']}>
+            <div className={classes['scroll-down-inner-container']}>
+              <div className={classes['scroll-down']} />
+              <h4>Scroll <br></br> <span>Down</span></h4>
+            </div>   
           </div>
         </div>
         <div className={classes['middle-bottom-section']}>
