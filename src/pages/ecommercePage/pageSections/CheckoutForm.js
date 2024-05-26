@@ -24,35 +24,35 @@ const CheckoutForm = () => {
                         <div className={classes['two-column-row']}>
                             <div className={classes['column']}>
                                 <label htmlFor='firstname'>First Name*</label>
-                                <input type='text' id='firstname' />
+                                <input type='text' id='firstname' required />
                             </div>
                             <div className={classes['column']}>
                                 <label htmlFor='lastname'>Last Name*</label>
-                                <input type='text' id='lastname' />
+                                <input type='text' id='lastname' required />
                             </div>
                         </div>
                         <div className={classes['simple-row']}>
                             <label htmlFor='address'>Street Address*</label>
-                            <input type='text' id='address' />
+                            <input type='text' id='address' required />
                         </div>
                         <div className={classes['two-column-row']}>
                             <div className={classes['column']}>
                                 <label htmlFor='country'>Country*</label>
-                                <input type='text' id='country' />
+                                <input type='text' id='country' required />
                             </div>
                             <div className={classes['column']}>
                                 <label htmlFor='state'>State/Province*</label>
-                                <input type='text' id='state' />
+                                <input type='text' id='state' required />
                             </div>
                         </div>
                         <div className={`${classes['two-column-row']} ${classes['margin-bottom-utility']} `}>
                             <div className={classes['column']}>
                                 <label htmlFor='city'>City*</label>
-                                <input type='text' id='city' />
+                                <input type='text' id='city' required />
                             </div>
                             <div className={classes['column']}>
                                 <label htmlFor='postalcode'>Postal Code*</label>
-                                <input type='text' id='postalcode' />
+                                <input type='text' id='postalcode' required />
                             </div>
                         </div>
                         <h3>Shipping Costs</h3>

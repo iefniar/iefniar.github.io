@@ -22,7 +22,7 @@ const ItemsPage = () => {
   };
 
   const searchInputWatcher = (searchInputValue) => {
-    setFilteredItems(itemsCopy.filter(item => item.description.includes(searchInputValue)));
+    setFilteredItems(itemsCopy.filter(item => item.description.includes(searchInputValue.toLowerCase())));
   }
 
   return (

@@ -3,6 +3,7 @@ import { SearchOutlined, ShoppingBagOutlined, FavoriteBorderOutlined } from '@mu
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store/ecommerce/cart-slice';
+import { favoriteActions } from '../store/ecommerce/favorite-slice';
 import { useNavigate } from 'react-router-dom';
 
 const MiniCard = (props) => {
@@ -14,6 +15,9 @@ const MiniCard = (props) => {
   const classToggler = existingItem? classes.active : classes.inactive;
   const userLoggedIn = useSelector(state => state.auth.anyUserLoggedIn);
   const navigate = useNavigate();
+  const favoriteItems = useSelector(state => state.favorite.favItems);
+  const isFavorite = favoriteItems.find(item => item.id === id);
+  const favoriteClassToggler = isFavorite? classes.favorite : classes.unfavorite;
 
   const addItemHandler = () => {
     dispatch(cartActions.addItemToCart({
@@ -42,6 +46,15 @@ const MiniCard = (props) => {
     }
   }
 
+  const btnFavoriteActionHandler = () => {
+    if(!userLoggedIn){
+      navigate('/project-1/sign-in');
+    }
+    else{
+      dispatch(favoriteActions.addOrRemoveItemFromFavorites(id));
+    }
+  }
+
   return (
       <div className={classes['container']}>
           <img src={url} alt='small-preview' />
@@ -54,7 +67,9 @@ const MiniCard = (props) => {
             <button onClick={btnShoppingCartActionHandler}>
               <div className={classToggler}><ShoppingBagOutlined /></div>
             </button>
-            <div><FavoriteBorderOutlined /></div>
+            <button onClick={btnFavoriteActionHandler}>
+              <div className={favoriteClassToggler}><FavoriteBorderOutlined /></div>
+            </button>
           </div>
       </div>
     

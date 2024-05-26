@@ -74,8 +74,8 @@
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);*/
 }
 
-.hero-left>button{
-    margin-top: 5rem;
+.hero-left>a>button{
+    margin-top: 1rem;
 }
 
 .banner-ads{

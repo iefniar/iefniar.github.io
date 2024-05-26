@@ -76,12 +76,16 @@
     justify-content: center;
 }
 
-.inactive{
+.inactive, .unfavorite{
     background-color: var(--color-white-100);
 }
 
 .active{
-    background-color: dodgerblue;
+    background-color: rgba(0, 128, 255, 0.658);
+}
+
+.favorite{
+    background-color: rgba(255, 0, 0, 0.671);
 }
 
 .group-container>a{

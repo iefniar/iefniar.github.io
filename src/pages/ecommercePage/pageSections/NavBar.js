@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { authActions } from '../../../store/ecommerce/auth-slice';
 import { cartActions } from '../../../store/ecommerce/cart-slice';
+import { favoriteActions } from '../../../store/ecommerce/favorite-slice';
 
 const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returnedValue) => {}}) => {
     const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returned
 
     const logOutHandler = () => {
         dispatch(cartActions.emptyCart());
+        dispatch(favoriteActions.emptyFavorites());
         dispatch(authActions.logOutUser());
         navigate('/project-1');
     }
