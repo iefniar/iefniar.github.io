@@ -13,20 +13,29 @@
 }
 
 .outer-container{
-
+    overflow: hidden;
 }
 
 .hero-section{
     position: relative;
+    width: 100%;
+    height: 150vh;
+    background-image: url('../../../../public/optimized-images/project-1-blue.webp');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
-.hero-section>img{
+.hero-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    background: radial-gradient(transparent 0, transparent 30%, black 100%); 
+    z-index: 1;
 }
-
 
 .hero-text{
     position: absolute;
@@ -35,6 +44,7 @@
     left: 0;
     right: 0;
     display: flex;
+    z-index: 2;
 }
 
 .hero-left{
@@ -74,7 +84,7 @@
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);*/
 }
 
-.hero-left>a>button{
+.hero-left>div>a>button{
     margin-top: 1rem;
 }
 
@@ -108,6 +118,17 @@
     position: relative;
 }
 
+.video-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(transparent 0, transparent 10%, black 100%); 
+    z-index: 1;
+}
+
 .video-section>video{
     width: 100%;
     height: 100%;
@@ -121,6 +142,7 @@
     transform: translate(-2%, -98%);
     width: 70px;
     height: 70px;
+    z-index: 2;
 }
 
 .scroll-down-inner-container{
