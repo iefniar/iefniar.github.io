@@ -7,9 +7,24 @@ import Contact from './pageSections/Contact';
 import Logo from '../../icons/Logo.svg';
 import Button from '../../components/Button';
 import Lenis from '@studio-freight/lenis';
-import { useTransform, useScroll, motion } from 'framer-motion';
+import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
+import { Stars } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
+  const COLORS = ["#021631", "#042c62", "#2d6ec7", "#437CAF"];
+  const color = useMotionValue(COLORS[0]);
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #010b19 0%, ${color})`;
+
+  useEffect(() => {
+    animate(color, COLORS, {
+      ease: 'easeInOut',
+      duration: 10,
+      repeat: Infinity,
+      repeatType: 'mirror'
+    });
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -79,7 +94,11 @@ const HomePage = () => {
   const opacityProgressContactContainer = useTransform(scrollYProgressContactContainer, [0, 1], [0.7, 1]);
 
   return (
-    <div ref={mainContainer} className={classes['homePage-container']}>
+    <motion.div ref={mainContainer} className={classes['homePage-container']}
+    style={{
+      backgroundImage
+    }}
+    >
       <motion.div className={classes['navBar-container']}
         initial={{
           scale: 1.1,
@@ -118,6 +137,11 @@ const HomePage = () => {
           </div>
         </div>
       </motion.div>
+      <div className={classes.stars}>
+        <Canvas>
+          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+        </Canvas>
+      </div>
       <motion.div className={classes['hero-section']}
         initial={{
           scale: 1.1,
@@ -178,7 +202,7 @@ const HomePage = () => {
           <Contact ref={contactRef} />
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
