@@ -13,21 +13,23 @@
 }
 
 .btn{
-    border: none;
+    border: 1px solid dodgerblue;
     padding: 1rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(30, 143, 255, 0.808);
     font-family: "PT Sans", sans-serif;
     font-size: clamp(1rem, 4vw + 1rem, 1.5rem);
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
-    color: var(--color-black-900);
+    color: var(--color-white-100);
     transition: all 350ms ease-in-out;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .btn:hover, .btn:focus{
     cursor: pointer;
-    background-color: rgb(25, 118, 210);
-    color: var(--color-white-100);
+    background-image: linear-gradient(to bottom right, rgb(0, 80, 160), dodgerblue);
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 30px 1px rgba(255, 255, 255, 0.5);
 }

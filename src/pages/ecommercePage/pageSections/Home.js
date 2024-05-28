@@ -2,29 +2,18 @@ import classes from './Home.module.css';
 import { useRef, useEffect } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
-import { ArrowCircleDownOutlined, ArrowDropDownOutlined } from '@mui/icons-material';
+import { ArrowDropDownOutlined } from '@mui/icons-material';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
 
 const Home = () => {
-  const middleSectionContainer = useRef(null);
   const middleBottomSectionContainer = useRef(null);
-  const { scrollYProgress: scrollYProgressMiddleSectionContainer } = useScroll({
-      target: middleSectionContainer,
-      offset: ["1.33 1.33", "1 1"]
-  });
   const { scrollYProgress: scrollYProgressMiddleBottomSectionContainer } = useScroll({
       target: middleBottomSectionContainer,
       offset: ["1.33 1.33", "1 1"]
   });
 
-  const x1Child1MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [window.innerHeight*-0.5, 1]);
-  const scaleProgressChild1MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [0.8, 1]);
-  const opacityProgressChild1MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [0, 1]);  
-  const x1Child2MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [window.innerHeight*-0.9, 1]);
-  const scaleProgressChild2MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [0.8, 1]);
-  const opacityProgressChild2MiddleSectionContainer = useTransform(scrollYProgressMiddleSectionContainer, [0, 1], [0, 1]);  
   const x1Child1MiddleBottomSectionContainer = useTransform(scrollYProgressMiddleBottomSectionContainer, [0, 1], [window.innerHeight*-0.8, 1]);
   const scaleProgressChild1MiddleBottomSectionContainer = useTransform(scrollYProgressMiddleBottomSectionContainer, [0, 1], [0.8, 1]);
   const opacityProgressChild1MiddleBottomSectionContainer = useTransform(scrollYProgressMiddleBottomSectionContainer, [0, 1], [0, 1]);  
@@ -32,39 +21,82 @@ const Home = () => {
   const scaleProgressChild2MiddleBottomSectionContainer = useTransform(scrollYProgressMiddleBottomSectionContainer, [0, 1], [0.8, 1]);
   const opacityProgressChild2MiddleBottomSectionContainer = useTransform(scrollYProgressMiddleBottomSectionContainer, [0, 1], [0, 1]);  
 
+  const [middleSectionTextsContainerScope, middleSectionTextsAnimate] = useAnimate();
+  const middleSectionTextsContainerIsInView = useInView(middleSectionTextsContainerScope);
+
+  useEffect(() => {
+    const animationSequenceFn = async () => {
+      if (middleSectionTextsContainerIsInView) {
+        await middleSectionTextsAnimate("#middle-section-text-1", {
+          opacity: 1, 
+          scale: 1 
+        }, { 
+          duration: 0.3,
+          delay: 0.2 
+        });      
+        await middleSectionTextsAnimate("#middle-section-text-2", {
+          opacity: 1, 
+          scale: 1 
+        }, { 
+          duration: 0.3,
+          delay: 0.2 
+        });      
+        await middleSectionTextsAnimate("#middle-section-arrow", {
+          opacity: 1, 
+          scale: 1 
+        }, { 
+          duration: 0.3,
+          delay: 0.2 
+        });      
+      }
+      else{
+        await middleSectionTextsAnimate("#middle-section-text-1", {
+          opacity: 0, 
+          scale: 0.5 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#middle-section-text-2", {
+          opacity: 0, 
+          scale: 0.5 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#middle-section-arrow", {
+          opacity: 0, 
+          scale: 0.5 
+        }, { 
+          duration: 0.3 
+        });  
+      }
+    };
+
+    animationSequenceFn();
+    
+  }, [middleSectionTextsContainerIsInView]);
+  
   const [cardsScope, animate] = useAnimate();
   const isInView = useInView(cardsScope);
   
   useEffect(() => {
     const animationSequenceFn = async () => {
       if (isInView) {
-        await animate("#card-1", { y: '-4rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-1", { y: '-3rem' }, { duration: 0.3 });
-        await animate("#card-2", { y: '-4.1rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-2", { y: '-3rem' }, { duration: 0.3 });
-        await animate("#card-3", { y: '-4.2rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-3", { y: '-3rem' }, { duration: 0.3 });
-        await animate("#card-4", { y: '-4rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-4", { y: '-3rem' }, { duration: 0.3 });
-        await animate("#card-6", { y: '-4.2rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-6", { y: '-3rem' }, { duration: 0.3 });
-        await animate("#card-5", { y: '-4.1rem', opacity: 1 }, { duration: 0.3 });
-        await animate("#card-5", { y: '-3rem' }, { duration: 0.3 });
-        
-       
+        await animate("#card-1", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
+        await animate("#card-2", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
+        await animate("#card-3", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
+        await animate("#card-4", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
+        await animate("#card-6", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
+        await animate("#card-5", { y: '-3rem', opacity: 1 }, { duration: 0.3 });
       }
       else{
-        await animate("#card-1", { y: '4rem', opacity: 0 }, { duration: 0 });
-        await animate("#card-2", { y: '4rem', opacity: 0 }, { duration: 0 });
-        await animate("#card-3", { y: '4rem', opacity: 0 }, { duration: 0 });
-        await animate("#card-4", { y: '4rem', opacity: 0 }, { duration: 0 });
-        await animate("#card-5", { y: '4rem', opacity: 0 }, { duration: 0 });
-        await animate("#card-6", { y: '4rem', opacity: 0 }, { duration: 0 });
-     
-
+        await animate("#card-1", { y: '3rem', opacity: 0 }, { duration: 0 });
+        await animate("#card-2", { y: '3rem', opacity: 0 }, { duration: 0 });
+        await animate("#card-3", { y: '3rem', opacity: 0 }, { duration: 0 });
+        await animate("#card-4", { y: '3rem', opacity: 0 }, { duration: 0 });
+        await animate("#card-5", { y: '3rem', opacity: 0 }, { duration: 0 });
+        await animate("#card-6", { y: '3rem', opacity: 0 }, { duration: 0 });
       }
-
-    }
+    };
 
     animationSequenceFn();
      
@@ -85,16 +117,6 @@ const Home = () => {
         scrub: 0.2,
         snap: 0.01,
         onUpdate: (self) => {
-          /*console.log(
-            "progress:",
-            self.progress.toFixed(3),
-            "direction:",
-            self.direction,
-            "velocity",
-            self.getVelocity()
-          );
-          */
-
           setInterval(() => {
             gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3)*7;
           }, 33.3);
@@ -102,7 +124,6 @@ const Home = () => {
         },
       }
     });
-    
   }, []);
   //gsap code end
 
@@ -116,58 +137,40 @@ const Home = () => {
             scale: 1.0,
             transition: {
                 duration: 1,
-                delay: 1
+                delay: 0
             }
         }}>
             <motion.div className={classes['hero-text']}
             initial={{
               opacity: 0,
+              letterSpacing: '.4rem'
             }}
             animate={{
               opacity: 1,
+              letterSpacing: '.1rem',
               transition: {
                   duration: 1,
-                  delay: 2
+                  delay: 1
               }
             }}>
               <div className={classes['hero-left']}>
                 <h1>Confidence Starts <br></br> <span>Here</span></h1>
                 <h3>Shop Pre-Curated Outfits & Look Amazing!</h3>
-                <motion.div
-                initial={{
-                  opacity: 0,
-                  transform: 'translateX(-5%)'
-                }}
-                animate={{
-                  opacity: 1,
-                  transform: 'translateX(0%)',
-                  transition: {
-                      duration: 1,
-                      delay: 3
-                  }
-                }}>
+                <div>
                   <ECommerceButton text='Explore' path='/project-1/items' />
-                </motion.div>
+                </div>
               </div>
               <div className={classes['hero-right']} />
             </motion.div>
         </motion.div>
-        <div className={classes['middle-section']} ref={middleSectionContainer}>
-          <motion.h2
-          style={{opacity: opacityProgressChild1MiddleSectionContainer, 
-            x: x1Child1MiddleSectionContainer, 
-            scale: scaleProgressChild1MiddleSectionContainer
-          }}>
+        <div className={classes['middle-section']} ref={middleSectionTextsContainerScope}>
+          <h2 id='middle-section-text-1'>
             Score Up to <span>50% Off</span> on Your New Favorite Pieces!
-          </motion.h2>
-          <motion.h2
-          style={{opacity: opacityProgressChild2MiddleSectionContainer, 
-            x: x1Child2MiddleSectionContainer, 
-            scale: scaleProgressChild2MiddleSectionContainer
-          }}>
+          </h2>
+          <h2 id='middle-section-text-2'>
             Free Shipping & Easy Returns: Shop <span>Risk-Free</span>
-          </motion.h2>
-          <span><ArrowDropDownOutlined /></span>
+          </h2>
+          <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
         <div className={classes['video-section']} id='videoSection'>
           <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/ecommerce-video.mp4" playsInline muted />

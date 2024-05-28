@@ -279,7 +279,7 @@
 
 .cards-group>*{
     flex: 1;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .cards-group:nth-child(2)>*{
