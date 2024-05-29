@@ -12,7 +12,7 @@ import { Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
-  const COLORS = ["#021631", "#042c62", "#2d6ec7", "#437CAF"];
+  const COLORS = ["#042c62", "#2d6ec7", "#437CAF"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #010b19 0%, ${color})`;
 
@@ -173,7 +173,7 @@ const HomePage = () => {
         }}
       >
         <div className={classes['button-area']}>
-          <Button text="get started" />
+          <Button text="get started" onClick={handleClickProjects} />
         </div>
         <div className={classes['cta-text-area']}>
           Craft a user experience that converts

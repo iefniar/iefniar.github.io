@@ -16,6 +16,7 @@
     background-color: rgb(25, 118, 210);
     color: var(--color-black-900);
     padding: 2rem 2rem 1rem 2rem;
+    overflow: hidden;
 }
 
 .upper-section{
@@ -67,4 +68,10 @@
     text-transform: capitalize;
     line-height: 1;
     margin: 0;
+}
+
+@media(max-width: 560px){
+    .container{
+        
+    }
 }

@@ -91,7 +91,8 @@
     grid-area: hero;
     min-height: 600px;
     padding: var(--padding-inline-value);
-    width: calc(100vw - 2*var(--padding-inline-value)) ;
+    width: calc(100vw - 2*var(--padding-inline-value));
+    z-index: 1;
 }
 
 .call-to-action-area {
@@ -136,6 +137,7 @@
     grid-area: about;
     min-height: 600px;
     padding: 0 var(--padding-inline-value);
+    z-index: 1;
 }
 
 .projects-section {
@@ -144,6 +146,7 @@
     background-color: transparent;
     min-height: 600px;
     padding: 0 var(--padding-inline-value);
+    z-index: 1;
 }
 
 .contact-section {
@@ -151,7 +154,7 @@
     grid-area: contact;
     min-height: 600px;
     padding: 0 var(--padding-inline-value);
-
+    z-index: 1;
 }
 
 @media(max-width: 768px){

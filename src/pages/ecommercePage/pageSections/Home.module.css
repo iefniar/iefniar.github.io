@@ -285,3 +285,7 @@
 .cards-group:nth-child(2)>*{
     margin-top: 1rem;
 }
+
+@media(max-width: 560px){
+    
+}
