@@ -32,6 +32,12 @@
     flex: 1;
 }
 
+.navBar-left>div>button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .go-back-btn{
     border: none;
     background-color: whitesmoke;
@@ -107,8 +113,17 @@
 }
 
 @media(max-width: 560px){
+    .navBar-container{
+        margin: .5rem 1rem;
+    }
+
     .navBar-left{
         gap: .5rem;
+    }
+
+    .navBar-left>div>button>*{
+        width: 16px;
+        height: 16px;
     }
 
     .navBar-right{
