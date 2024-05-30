@@ -19,7 +19,7 @@
     background-size: cover;
     background-blend-mode: multiply;*/
     position: relative;
-    /*background-image: linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);*/
+    background-image: linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);
     display: grid;
     grid-template-areas:
         "hero"
