@@ -108,4 +108,14 @@
     color: whitesmoke;
 }
 
+@media(max-width: 560px){
+    .form-area{
+        max-width: 200px;
+    }
+
+    .two-column-row{
+        flex-direction: column;
+    }
+
+}
 

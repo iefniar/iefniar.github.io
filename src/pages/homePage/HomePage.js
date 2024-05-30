@@ -8,8 +8,8 @@ import Logo from '../../icons/Logo.svg';
 import Button from '../../components/Button';
 import Lenis from '@studio-freight/lenis';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
-import { Stars } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+//import { Stars } from '@react-three/drei';
+//import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
   const COLORS = ["#042c62", "#2d6ec7", "#437CAF"];
@@ -137,11 +137,13 @@ const HomePage = () => {
           </div>
         </div>
       </motion.div>
+      {/*
       <div className={classes.stars}>
         <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
         </Canvas>
       </div>
+      */}
       <motion.div className={classes['hero-section']}
         initial={{
           scale: 1.1,

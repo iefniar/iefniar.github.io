@@ -126,3 +126,10 @@
     background-color: var(--color-minimalist-900);
     color: whitesmoke;
 }
+
+@media(max-width: 940px){
+    .main-container{
+        flex-direction: column;
+    }
+
+}

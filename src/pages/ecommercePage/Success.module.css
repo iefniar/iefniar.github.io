@@ -15,6 +15,7 @@
 .main-container{
     padding: 2rem;
     display: flex;
+    gap: 2rem;
 }
 
 .left-content{
@@ -60,4 +61,11 @@
     line-height: 1;
     color: var(--color-minimalist-800);
     margin-top: 1rem;
+}
+
+@media(max-width: 940px){
+    .main-container{
+        flex-direction: column;
+    }
+
 }
