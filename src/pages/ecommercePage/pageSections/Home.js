@@ -11,17 +11,13 @@ import useOrientation from '../../../hooks/use-orientation';
 const Home = () => {
   const deviceOrientation = useOrientation();
   const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
-  const [videoDuration, setVideoDuration] = useState('7');
-  const videoDurationNumber = parseInt(videoDuration);
 
   useEffect(() => {
     if(deviceOrientation === 'portrait'){
       setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-portrait-video-1080p.mp4');
-      setVideoDuration('4');
     }
     else if(deviceOrientation === 'landscape'){
       setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
-      setVideoDuration('7');
     }
 
   }, [deviceOrientation]);
@@ -136,9 +132,8 @@ const Home = () => {
         snap: 0.01,
         onUpdate: (self) => {
           setInterval(() => {
-            gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3)*7;
+            gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3)*4;
           }, 33.3);
-
         },
       }
     });
