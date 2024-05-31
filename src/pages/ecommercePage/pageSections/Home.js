@@ -1,13 +1,31 @@
 import classes from './Home.module.css';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowDropDownOutlined } from '@mui/icons-material';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
+import useOrientation from '../../../hooks/use-orientation';
 
 const Home = () => {
+  const deviceOrientation = useOrientation();
+  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
+  const [videoDuration, setVideoDuration] = useState('7');
+  const videoDurationNumber = parseInt(videoDuration);
+
+  useEffect(() => {
+    if(deviceOrientation === 'portrait'){
+      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-portrait-video-1080p.mp4');
+      setVideoDuration('4');
+    }
+    else if(deviceOrientation === 'landscape'){
+      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
+      setVideoDuration('7');
+    }
+
+  }, [deviceOrientation]);
+
   const middleBottomSectionContainer = useRef(null);
   const { scrollYProgress: scrollYProgressMiddleBottomSectionContainer } = useScroll({
       target: middleBottomSectionContainer,
@@ -173,7 +191,7 @@ const Home = () => {
           <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
         <div className={classes['video-section']} id='videoSection'>
-          <video ref={gsapVideoRef} src="/optimized-images/ecommerce/models/women/ecommerce-video.mp4" playsInline muted />
+          <video ref={gsapVideoRef} src={videoPath} playsInline muted />
           <div className={classes['scroll-down-container']}>
             <div className={classes['scroll-down-inner-container']}>
               <div className={classes['scroll-down']} />
