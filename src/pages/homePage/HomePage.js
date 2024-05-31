@@ -137,13 +137,6 @@ const HomePage = () => {
           </div>
         </div>
       </motion.div>
-      {/*
-      <div className={classes.stars}>
-        <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
-        </Canvas>
-      </div>
-      */}
       <motion.div className={classes['hero-section']}
         initial={{
           scale: 1.1,
