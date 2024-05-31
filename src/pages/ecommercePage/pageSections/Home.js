@@ -10,14 +10,14 @@ import useOrientation from '../../../hooks/use-orientation';
 
 const Home = () => {
   const deviceOrientation = useOrientation();
-  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
+  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p-compressed.mp4');
 
   useEffect(() => {
     if(deviceOrientation === 'portrait'){
-      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-portrait-video-1080p.mp4');
+      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-portrait-video-1080p-compressed.mp4');
     }
     else if(deviceOrientation === 'landscape'){
-      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p.mp4');
+      setVideoPath('/optimized-images/ecommerce/models/women/ecommerce-landscape-video-1080p-compressed.mp4');
     }
 
   }, [deviceOrientation]);
