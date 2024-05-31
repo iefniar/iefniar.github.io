@@ -8,8 +8,6 @@ import Logo from '../../icons/Logo.svg';
 import Button from '../../components/Button';
 import Lenis from '@studio-freight/lenis';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
-//import { Stars } from '@react-three/drei';
-//import { Canvas } from '@react-three/fiber';
 
 const HomePage = () => {
   const COLORS = ["#042c62", "#2d6ec7", "#437CAF"];
