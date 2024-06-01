@@ -10,14 +10,14 @@ import useOrientation from '../../../hooks/use-orientation';
 
 const Home = () => {
   const deviceOrientation = useOrientation();
-  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-80-percent-reduction-compressed.mp4');
+  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
 
   useEffect(() => {
     if(deviceOrientation === 'portrait'){
-      setVideoPath('/optimized-images/ecommerce/models/women/videos/portrait/compressed/ecommerce-portrait-video-1080p-25fps-80-percent-reduction-compressed.mp4');
+      setVideoPath('/optimized-images/ecommerce/models/women/videos/portrait/compressed/ecommerce-portrait-video-1080p-25fps-90-percent-reduction-compressed.mp4');
     }
     else if(deviceOrientation === 'landscape'){
-      setVideoPath('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-80-percent-reduction-compressed.mp4');
+      setVideoPath('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
     }
 
   }, [deviceOrientation]);
@@ -186,7 +186,7 @@ const Home = () => {
           <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
         <div className={classes['video-section']} id='videoSection'>
-          <video ref={gsapVideoRef} src={videoPath} playsInline muted />
+          <video ref={gsapVideoRef} src={videoPath} preload='auto' playsInline muted />
           <div className={classes['scroll-down-container']}>
             <div className={classes['scroll-down-inner-container']}>
               <div className={classes['scroll-down']} />
