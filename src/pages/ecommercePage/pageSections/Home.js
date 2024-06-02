@@ -8,6 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
 import useOrientation from '../../../hooks/use-orientation';
 
+import Canvas from './Canvas';
+
 const Home = () => {
   const deviceOrientation = useOrientation();
   const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
@@ -142,6 +144,9 @@ const Home = () => {
 
   return (
     <div className={classes['outer-container']}>
+      
+      <Canvas />
+
         <motion.div className={classes['hero-section']} 
         initial={{
           scale: 1.1
