@@ -190,10 +190,11 @@ const Home = () => {
           <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
         <Canvas />
+        {/*
         <div className={classes['video-section']} id='videoSection'>
-          {/*
+          
           <video ref={gsapVideoRef} src={videoPath} preload='auto' playsInline muted />
-          */}
+          
           
           <div className={classes['scroll-down-container']}>
             <div className={classes['scroll-down-inner-container']}>
@@ -202,6 +203,7 @@ const Home = () => {
             </div>   
           </div>
         </div>
+        */}
         <div className={classes['middle-bottom-section']} ref={middleBottomSectionContainer}>
           <motion.h2
           style={{opacity: opacityProgressChild1MiddleBottomSectionContainer, 
