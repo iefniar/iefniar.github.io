@@ -118,6 +118,7 @@ const Home = () => {
      
   }, [isInView]);
 
+/*  
   //gsap code start
   gsap.registerPlugin(ScrollTrigger);
   const gsapVideoRef = useRef(null);
@@ -141,12 +142,10 @@ const Home = () => {
     });
   }, []);
   //gsap code end
+*/
 
   return (
     <div className={classes['outer-container']}>
-      
-      <Canvas />
-
         <motion.div className={classes['hero-section']} 
         initial={{
           scale: 1.1
@@ -190,8 +189,12 @@ const Home = () => {
           </h2>
           <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
+        <Canvas />
         <div className={classes['video-section']} id='videoSection'>
+          {/*
           <video ref={gsapVideoRef} src={videoPath} preload='auto' playsInline muted />
+          */}
+          
           <div className={classes['scroll-down-container']}>
             <div className={classes['scroll-down-inner-container']}>
               <div className={classes['scroll-down']} />
