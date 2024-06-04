@@ -4,40 +4,21 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useOrientation from '../../../hooks/use-orientation';
 
-let firstLoad = true;
+let firstLoadCanvas = true;
 
 const Canvas = () => {
     gsap.registerPlugin(ScrollTrigger);
-    const deviceOrientation = useOrientation();
-    const landscapeImages = []; 
-    const portraitImages = []; 
+    let imagesArray = []; 
     const [images, setImages] = useState([]); 
     const canvasRef = useRef(null); 
     let context = null; 
     const videoFrames = { frame: 0 };
     const framesCount = 97;
 
-    useEffect(() => {
-        while(portraitImages.length !== framesCount || landscapeImages.length !== framesCount){
-            firstLoad = !firstLoad;
-            return;
-        }
+    const deviceOrientation = useOrientation();
+    const landscapeImages = []; 
+    const portraitImages = []; 
 
-        if(portraitImages.length === framesCount && landscapeImages.length === framesCount){
-            if(deviceOrientation === 'portrait'){
-                setImages(portraitImages);
-                console.log(`portrait orientation; images length: ${images.length}`);
-                firstLoad = null;
-            }
-            else if(deviceOrientation === 'landscape'){
-                setImages(landscapeImages);
-                console.log(`landscape orientation; images length: ${images.length}`);
-                firstLoad = null;
-            }       
-        }
-    }, [deviceOrientation, firstLoad]);
-
-    
     for (let index = 1; index <= framesCount; index++) {
         const landscapeImageHTMLElement = new Image();
         landscapeImageHTMLElement.src = `/optimized-images/ecommerce/models/women/image-sequence/landscape/img-${index}.webp`;
@@ -47,6 +28,64 @@ const Canvas = () => {
         portraitImageHTMLElement.src = `/optimized-images/ecommerce/models/women/image-sequence/portrait/img-${index}.webp`;
         portraitImages.push(portraitImageHTMLElement);
     }
+
+    useEffect(() => {
+        while(portraitImages.length !== framesCount || landscapeImages.length !== framesCount){
+            firstLoadCanvas = !firstLoadCanvas;
+            return;
+        }
+
+        if(portraitImages.length === framesCount && landscapeImages.length === framesCount){
+            if(deviceOrientation === 'portrait'){
+                setImages(portraitImages);
+                console.log(`portrait orientation; images length: ${images.length}`);
+                firstLoadCanvas = 'null';
+            }
+            else if(deviceOrientation === 'landscape'){
+                setImages(landscapeImages);
+                console.log(`landscape orientation; images length: ${images.length}`);
+                firstLoadCanvas = 'null';
+            }       
+        }
+
+        return () => {
+            firstLoadCanvas = true;
+        }
+    }, [deviceOrientation, firstLoadCanvas]);
+
+    useEffect(() => {
+        if(firstLoadCanvas === 'null'){
+            const render = () => {
+                if(context && canvasRef.current){
+                    context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+                    context.drawImage(landscapeImages[videoFrames.frame], 0, 0); 
+                }  
+            }
+    
+            if(canvasRef.current && landscapeImages.length === framesCount) {
+                context = canvasRef.current.getContext("2d");
+                context.canvas.width = '1920';
+                context.canvas.height = '1080';
+                context.drawImage(landscapeImages[0], 0, 0, canvasRef.current.width, canvasRef.current.height);
+            }
+    
+            gsap.to(videoFrames, {
+                frame: framesCount - 1,
+                duration: 1,
+                snap: "frame",
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#canvasContainer",
+                  start: "top top",
+                  end: "+=3000",
+                  pin: true,
+                  scrub: 0.5
+                },
+                onUpdate: render 
+          });
+        }
+
+    }, [firstLoadCanvas]);
     
 
     /*
@@ -96,40 +135,6 @@ const Canvas = () => {
 
     }, [deviceOrientation]);
     */
-    
-
-    
-    useEffect(() => {
-        if(firstLoad === null){
-            const render = () => {
-                context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-                context.drawImage(landscapeImages[videoFrames.frame], 0, 0);    
-            }
-    
-            if(canvasRef.current && landscapeImages.length === framesCount) {
-                context = canvasRef.current.getContext("2d");
-                context.canvas.width = '1920';
-                context.canvas.height = '1080';
-                context.drawImage(landscapeImages[0], 0, 0, canvasRef.current.width, canvasRef.current.height);
-            }
-    
-            gsap.to(videoFrames, {
-                frame: framesCount - 1,
-                duration: 1,
-                snap: "frame",
-                ease: "none",
-                scrollTrigger: {
-                  trigger: "#canvasContainer",
-                  start: "top top",
-                  end: "+=3000",
-                  pin: true,
-                  scrub: 0.5
-                },
-                onUpdate: render 
-          });
-        }  
-    }, [firstLoad]);
-
    
     return (
         <div className={classes['canvas-container']} id='canvasContainer'>

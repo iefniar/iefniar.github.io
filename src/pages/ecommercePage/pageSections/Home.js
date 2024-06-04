@@ -3,8 +3,8 @@ import { useRef, useEffect, useState } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowDropDownOutlined } from '@mui/icons-material';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+//import gsap from 'gsap';
+//import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
 import useOrientation from '../../../hooks/use-orientation';
 
