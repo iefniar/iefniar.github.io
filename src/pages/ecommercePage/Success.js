@@ -25,7 +25,7 @@ const Success = () => {
                 <h4>Thanks for your purchase</h4>
             </div>
             <div className={classes['right-content']}>
-                <img src='/optimized-images/ecommerce/models/both/both-2.webp' alt='success' />
+                <img src='/optimized-images/ecommerce/shopping-cart.webp' alt='success shopping cart' />
             </div>
         </div>
         <Footer />

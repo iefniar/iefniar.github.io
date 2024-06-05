@@ -92,8 +92,8 @@
     color: var(--color-black-900);
 }
 
-.group-container>div>*, .group-container>a>div>*, .group-container>button>div>*{
-    transition: all 350ms ease-in-out;
+.group-container>div>*, .group-container>a>div>*, .group-container>button>div, .group-container>button>div>*{
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out, font-size 350ms ease-in-out;
 }
 
 .group-container>div:hover>*, .group-container>div:focus>*, .group-container>a>div:hover>*, .group-container>a>div:focus>*, .group-container>button>div:hover>*, .group-container>button>div:focus>*{
@@ -103,4 +103,20 @@
 
 .group-container>button:hover, .group-container>button:focus{
     cursor: pointer;
+}
+
+.group-container>button:active>div{
+    animation: scale 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(1.2);
+    }
+    90%{
+        transform: scale(1);
+    }
 }
