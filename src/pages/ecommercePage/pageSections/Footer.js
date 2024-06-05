@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
         </div>
         <div className={classes['bottom-section']}>
-            <h5><span>&copy;</span> 2024 Company Name, Inc. All Rights Reserved</h5>
+            <h5><span>&copy;</span> 2024 Canvas, Cobalt & Co., Inc. All Rights Reserved</h5>
         </div>
     </div>
   )
