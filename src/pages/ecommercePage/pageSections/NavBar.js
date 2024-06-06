@@ -44,7 +44,7 @@ const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returned
                 </div>
                 <Link to='/project-1'>
                     <div>
-                        <img src='/optimized-images/ecommerce/ecommerce-black-logo.svg' alt='logo' />
+                        <img src='/optimized-images/ecommerce/ecommerce-logo.svg' alt='logo' />
                     </div>
                 </Link>
             </div>
