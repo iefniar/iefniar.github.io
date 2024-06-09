@@ -8,9 +8,8 @@ import IndividualItemPage from "./pages/ecommercePage/IndividualItemPage";
 import ShoppingCartPage from "./pages/ecommercePage/ShoppingCartPage";
 import CheckoutPage from "./pages/ecommercePage/CheckoutPage";
 import Success from "./pages/ecommercePage/Success";
+import TravelHomePage from "./pages/travelPage/TravelHomePage";
 import ScrollToTop from "./components/utilities/ScrollToTop";
-
-import MainContent from './components/MainContent';
 
 const App = () => {
   return (
@@ -26,7 +25,7 @@ const App = () => {
         <Route path="/project-1/cart" element={<ShoppingCartPage />} /> 
         <Route path="/project-1/checkout" element={<CheckoutPage />} /> 
         <Route path="/project-1/success" element={<Success />} /> 
-        <Route path="/project-2" element={<MainContent />} />
+        <Route path="/project-2" element={<TravelHomePage />} />
       </Routes>
     </>
   );
