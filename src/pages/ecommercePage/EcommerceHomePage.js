@@ -5,11 +5,11 @@ import Footer from './pageSections/Footer';
 
 const EcommerceHomePage = () => {
   return (
-    <>
+    <div className={classes['ecommerce-container']}>
       <NavBar />
       <Home />
       <Footer />
-    </>
+    </div>
   );
 }
 

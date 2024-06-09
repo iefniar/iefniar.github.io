@@ -75,6 +75,7 @@ canvas{
 }
   
 .scroll-down-inner-container>h4{
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,6 +83,7 @@ canvas{
     color: var(--color-white-100);
     text-transform: uppercase;
     font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 500;
 }
 
 .scroll-down-inner-container>h4>span{
