@@ -2,12 +2,15 @@ import classes from './TravelHomePage.module.css';
 import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
-import { red } from '@mui/material/colors';
 
 const TravelHomePage = () => {
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
+
+  const MASKS = [`url('/optimized-images/travel/rectangle.svg')`, `url('/optimized-images/travel/blob-3.svg')`];
+  const mask = useMotionValue(MASKS[0]);
+  const maskImage = useMotionTemplate`${mask}`;
 
   useEffect(() => {
     animate(color, COLORS, {
@@ -16,7 +19,17 @@ const TravelHomePage = () => {
       repeat: Infinity,
       repeatType: 'mirror'
     });
+
+    
+    animate(mask, MASKS, {
+      ease: 'easeInOut',
+      duration: 10,
+      repeat: Infinity,
+      repeatType: 'mirror'
+    });
+
   }, []);
+
 
   const navigate = useNavigate();
 
@@ -86,6 +99,15 @@ const TravelHomePage = () => {
         </div>
 
       </motion.div>
+      <motion.img src='/optimized-images/travel/webp/landscape-6.webp' 
+      alt='vacation destination' 
+      className={classes['travel-img']}
+      style={{
+        maskImage
+        
+      }}
+      />
+      
       
     </div>
 );
