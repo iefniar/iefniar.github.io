@@ -19,12 +19,52 @@ const TravelHomePage = () => {
 
     const timeline = gsap.timeline({ defaults: { duration: 1 }});
     timeline
+    .from('#imgOverlay', 
+      { y: '0',
+        ease: 'power1.inOut'
+      }
+    )
     .from('#travelImg', 
       { opacity: 0, 
-        scale: 3,
+        scale: 2,
         duration: 3
-      })
-
+      }
+    )
+    .fromTo('#navBtn', 
+      { opacity: 0,
+        y: '-100'
+      },
+      { opacity: 1,
+        y: '0',
+        stagger: .4}, 
+      3
+    )
+    .fromTo('#navDiv', 
+      { opacity: 0,
+        scale: .5,
+        y: '-100'
+      },
+      { opacity: 1,
+        scale: 1,
+        y: '0',
+        ease: 'elastic.out',
+        duration: 2
+      }
+    )
+    .from('#textLeft', 
+      { opacity: 0,
+        scale: .5,
+        x: '-100'}, 
+        2
+    )
+    .from('#textRight', 
+      { opacity: 0,
+        scale: .5,
+        y: '100vh',
+        ease: 'power4'},
+        '<1'
+    )
+    
       
   }, []);
 
@@ -50,47 +90,48 @@ const TravelHomePage = () => {
   return (
     <div className={classes['main-container']}>
       <div layout  className={classes['travel-hero-section']} id='travelHeroSection' >
-        <div className={classes['nav-container']}>
+        <div className={classes['nav-container']} id='navContainer'>
           <div className={classes['nav-left']}>
-            <button className={classes['nav-btn']} onClick={goHomeHandler}>
+            <button className={classes['nav-btn']} id='navBtn' onClick={goHomeHandler}>
               <h4>Home</h4>
             </button>
-            <button className={classes['nav-btn']} onClick={aboutClickHandler}>
+            <button className={classes['nav-btn']} id='navBtn' onClick={aboutClickHandler}>
               <h4>About</h4>
             </button>
           </div>
           <div className={classes['nav-center']}>
-            <div className={classes['nav-div']}>
+            <div className={classes['nav-div']} id='navDiv'>
               <h4>Travel Agency Name</h4>
             </div>
           </div>
           <div className={classes['nav-right']}>
-            <button className={classes['nav-btn']} onClick={destinationsClickHandler}>
+            <button className={classes['nav-btn']} id='navBtn' onClick={destinationsClickHandler}>
               <h4>Destinations</h4>
             </button>
-            <button className={classes['nav-btn']} onClick={reviewsClickHandler}>
+            <button className={classes['nav-btn']} id='navBtn' onClick={reviewsClickHandler}>
               <h4>Reviews</h4>
             </button>
           </div>
         </div>
         <div className={classes['hero-text']}>
-          <div className={classes['text-left']}>
+          <div className={classes['text-left']} id='textLeft'>
             <motion.h1 style={{
             backgroundImage
           }}>
             The travels of your dreams
             </motion.h1>
           </div>
-          <div className={classes['text-right']}>
+          <div className={classes['text-right']} id='textRight'>
             <h3>The travels of your dreams</h3>
           </div>
         </div>
-        <img src='/optimized-images/travel/webp/landscape-6.webp' alt='vacation destination' className={classes['travel-img']} id='travelImg' />
+        <div className={classes['img-container']}>
+          <div className={classes['img-overlay']} id='imgOverlay' />
+          <img src='/optimized-images/travel/webp/landscape-6.webp' alt='vacation destination' className={classes['travel-img']} id='travelImg' />
+        </div>
+        
 
-      </div>
-      
-      
-      
+      </div>      
     </div>
 );
 }
