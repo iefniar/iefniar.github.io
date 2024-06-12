@@ -12,15 +12,17 @@
 .main-container{
     background-color: var(--color-minimalist-100);
     font-family: "DM Sans", sans-serif;
+    overflow: hidden;
 }
 
 .travel-hero-section{
-    background-image: url('../../../public/optimized-images/travel/webp/landscape-6.webp');
+    /*background-image: url('../../../public/optimized-images/travel/webp/landscape-6.webp');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;*/
     width: 100%;
     height: 100vh; 
+    position: relative;
 }
 
 .nav-container{
@@ -28,11 +30,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
+    z-index: 2;
 }
 
 .nav-left, .nav-right{
     display: flex;
     gap: 2rem;
+    z-index: 2;
 }
 
 .nav-left{
@@ -45,6 +49,7 @@
 
 .nav-center{
     text-align: center;
+    z-index: 2;
 }
 
 .nav-btn{
@@ -77,17 +82,20 @@
 .hero-text{
     padding-inline: 14rem;
     display: flex;
+    z-index: 2;
 }
 
 .text-left{
     flex: 2;
     display: flex;   
+    z-index: 2;
 }
 
 .text-right{
     flex: 1;
     display: flex;
     align-items: flex-end;
+    z-index: 2;
 }
 
 .text-left>h1{
@@ -111,28 +119,13 @@
 .travel-img{
     width: 100%;
     height: 100%;
-    /*mask-image: url('../../../public/optimized-images/travel/blob-3.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    mask-image: url('../../../public/optimized-images/travel/blob-3.svg');
     mask-size: contain;
     mask-repeat: no-repeat;
-    mask-position: center;*/
-    /*animation: svgShape 4s linear forwards;*/
-    /*transition: 350ms all ease-in-out;*/
-}
-
-@keyframes svgShape{
-    0%{
-        mask-image: url('../../../public/optimized-images/travel/rectangle.svg');
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        mask-position: center;
-
-    }
-    100%{
-        mask-image: url('../../../public/optimized-images/travel/blob-3.svg');
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        mask-position: center;
-
-    }
+    mask-position: center;
+    z-index: 1;
 }
 

@@ -2,15 +2,12 @@ import classes from './TravelHomePage.module.css';
 import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
+import gsap from 'gsap';
 
 const TravelHomePage = () => {
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
-
-  const MASKS = [`url('/optimized-images/travel/rectangle.svg')`, `url('/optimized-images/travel/blob-3.svg')`];
-  const mask = useMotionValue(MASKS[0]);
-  const maskImage = useMotionTemplate`${mask}`;
 
   useEffect(() => {
     animate(color, COLORS, {
@@ -20,14 +17,15 @@ const TravelHomePage = () => {
       repeatType: 'mirror'
     });
 
-    
-    animate(mask, MASKS, {
-      ease: 'easeInOut',
-      duration: 10,
-      repeat: Infinity,
-      repeatType: 'mirror'
-    });
+    const timeline = gsap.timeline({ defaults: { duration: 1 }});
+    timeline
+    .from('#travelImg', 
+      { opacity: 0, 
+        scale: 3,
+        duration: 3
+      })
 
+      
   }, []);
 
 
@@ -51,17 +49,7 @@ const TravelHomePage = () => {
 
   return (
     <div className={classes['main-container']}>
-      <motion.div layout  className={classes['travel-hero-section']}
-      animate={{
-        borderBottomRightRadius: '0%',
-        borderTopLeftRadius: '50%',
-        borderBottomLeftRadius: '0%',
-        transition: {
-          duration: 2,
-          delay: 2
-      }
-      }}
-      >
+      <div layout  className={classes['travel-hero-section']} id='travelHeroSection' >
         <div className={classes['nav-container']}>
           <div className={classes['nav-left']}>
             <button className={classes['nav-btn']} onClick={goHomeHandler}>
@@ -97,16 +85,10 @@ const TravelHomePage = () => {
             <h3>The travels of your dreams</h3>
           </div>
         </div>
+        <img src='/optimized-images/travel/webp/landscape-6.webp' alt='vacation destination' className={classes['travel-img']} id='travelImg' />
 
-      </motion.div>
-      <motion.img src='/optimized-images/travel/webp/landscape-6.webp' 
-      alt='vacation destination' 
-      className={classes['travel-img']}
-      style={{
-        maskImage
-        
-      }}
-      />
+      </div>
+      
       
       
     </div>
