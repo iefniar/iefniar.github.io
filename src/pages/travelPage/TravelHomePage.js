@@ -4,9 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
 import gsap from 'gsap';
 import About from './pageSections/About';
+import Destinations from './pageSections/Destinations';
 
 const TravelHomePage = () => {
   const aboutRef = useRef(null);
+  const destinationsRef = useRef(null);
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
@@ -89,7 +91,7 @@ const TravelHomePage = () => {
   }
 
   const destinationsClickHandler = () => {
-
+    destinationsRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   const reviewsClickHandler = () => {
@@ -141,7 +143,10 @@ const TravelHomePage = () => {
       </div>   
       <div className={classes['travel-about-section']} id='travelAboutSection'>
         <About ref={aboutRef} />
-      </div>   
+      </div>  
+      <div className={classes['travel-destinations-section']} id='travelDestinationsSection'>
+        <Destinations ref={destinationsRef} />
+      </div> 
     </div>
 );
 }
