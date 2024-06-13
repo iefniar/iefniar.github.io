@@ -82,20 +82,20 @@
 .hero-text{
     padding-inline: 14rem;
     display: flex;
+    flex-direction: column;
     z-index: 2;
 }
 
 .text-left{
-    flex: 2;
-    display: flex;   
+    width: 50%; 
     z-index: 2;
 }
 
 .text-right{
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
+    margin-top: 4rem;
+    width: 40%; 
     z-index: 2;
+    align-self: flex-end;
 }
 
 .text-left>h1{
@@ -108,12 +108,12 @@
 }
 
 .text-right>h3{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: end;
     color: var(--color-font-secondary);
     font-weight: bold;
     text-transform: lowercase;
-    text-decoration: underline;
+    font-style: italic;
 }
 
 .img-container{
@@ -138,10 +138,15 @@
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
+    display: block;
     /*mask-image: url('../../../public/optimized-images/travel/rectangle.svg');
     mask-size: contain;
     mask-repeat: no-repeat;
-    mask-position: center;*/
-    
+    mask-position: center;*/ 
+}
+
+.travel-about-section{
+
 }
 

@@ -3,8 +3,10 @@ import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
 import gsap from 'gsap';
+import About from './pageSections/About';
 
 const TravelHomePage = () => {
+  const aboutRef = useRef(null);
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
@@ -64,6 +66,13 @@ const TravelHomePage = () => {
         ease: 'power4'},
         '<1'
     )
+    .fromTo('#travelAboutSection', 
+      { opacity: 0
+      },
+      { opacity: 1
+      },
+      4
+    )
     
       
   }, []);
@@ -76,7 +85,7 @@ const TravelHomePage = () => {
   }
 
   const aboutClickHandler = () => {
-    
+    aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   const destinationsClickHandler = () => {
@@ -101,7 +110,7 @@ const TravelHomePage = () => {
           </div>
           <div className={classes['nav-center']}>
             <div className={classes['nav-div']} id='navDiv'>
-              <h4>Travel Agency Name</h4>
+              <h4>Aujourd'hui Journeys</h4>
             </div>
           </div>
           <div className={classes['nav-right']}>
@@ -118,20 +127,21 @@ const TravelHomePage = () => {
             <motion.h1 style={{
             backgroundImage
           }}>
-            The travels of your dreams
+            Begin your journey today
             </motion.h1>
           </div>
           <div className={classes['text-right']} id='textRight'>
-            <h3>The travels of your dreams</h3>
+            <h3>Aujourd'hui, le monde vous attend</h3>
           </div>
         </div>
         <div className={classes['img-container']}>
           <div className={classes['img-overlay']} id='imgOverlay' />
-          <img src='/optimized-images/travel/webp/landscape-6.webp' alt='vacation destination' className={classes['travel-img']} id='travelImg' />
+          <img src='/optimized-images/travel/webp/landscape-8.webp' alt='vacation destination' className={classes['travel-img']} id='travelImg' />
         </div>
-        
-
-      </div>      
+      </div>   
+      <div className={classes['travel-about-section']} id='travelAboutSection'>
+        <About ref={aboutRef} />
+      </div>   
     </div>
 );
 }
