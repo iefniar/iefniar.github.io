@@ -23,7 +23,7 @@ const TravelHomePage = () => {
     timeline
     .from('#imgOverlay', 
       { y: '0',
-        ease: 'power1.inOut'
+        ease: 'power1.inOut',
       }
     )
     .from('#travelImg', 

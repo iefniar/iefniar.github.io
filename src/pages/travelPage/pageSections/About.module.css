@@ -10,11 +10,14 @@
 }
 
 .main-container{
+    background-color: var(--color-font-secondary-plus);
+    font-family: "DM Sans", sans-serif;
+}
+
+.inner-container{
+    padding: 12rem 10rem;
     display: flex;
     gap: 1rem;
-    background-color: var(--color-font-secondary-plus);
-    padding: 12rem 10rem;
-    font-family: "DM Sans", sans-serif;
 }
 
 .left-content{
@@ -22,18 +25,7 @@
     position: relative;
 }
 
-.left-content>img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    z-index: 2;
-}
-
-.left-content>img:nth-child(2){
+.first-image{
     position: absolute;
     top: -50px;
     left: 50px;
@@ -41,8 +33,16 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    z-index: 1;
+}
 
+.second-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .right-content{
