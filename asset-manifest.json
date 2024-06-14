@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.63e46eb1.css",
-    "main.js": "/static/js/main.acc75862.js",
+    "main.css": "/static/css/main.4e1f9f29.css",
+    "main.js": "/static/js/main.e81e8f2c.js",
     "static/media/man-2-cropped.webp": "/static/media/man-2-cropped.7cc88c9cbedbc4439207.webp",
     "static/media/women-1-cropped.webp": "/static/media/women-1-cropped.ae5d8f7bcbf18fc7825a.webp",
     "static/media/project-1-blue.webp": "/static/media/project-1-blue.def0c15c435306724cca.webp",
@@ -14,11 +14,11 @@
     "static/media/ri_github-fill.svg": "/static/media/ri_github-fill.4e4485382aa1398a9e9855b1b204c6e5.svg",
     "index.html": "/index.html",
     "static/media/tabler_brand-mongodb.svg": "/static/media/tabler_brand-mongodb.1c41781ec44fbfdf2c4e78efaf7129d6.svg",
-    "main.63e46eb1.css.map": "/static/css/main.63e46eb1.css.map",
-    "main.acc75862.js.map": "/static/js/main.acc75862.js.map"
+    "main.4e1f9f29.css.map": "/static/css/main.4e1f9f29.css.map",
+    "main.e81e8f2c.js.map": "/static/js/main.e81e8f2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.63e46eb1.css",
-    "static/js/main.acc75862.js"
+    "static/css/main.4e1f9f29.css",
+    "static/js/main.e81e8f2c.js"
   ]
 }
