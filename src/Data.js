@@ -974,3 +974,41 @@ export const itemsInShoppingCart = [
         quantity: 2
     }
 ];
+
+export const reviewsItemsSliderTravelProject = [
+    {
+        id: "0",
+        headline: "Exceeded Expectations!",
+        review: "From the initial consultation to the final farewell, Aujourd'hui Journeys made our dream vacation to Thailand a reality. Their personalized itinerary perfectly captured our desire for relaxation and cultural immersion. We can't wait to book our next adventure with them!",
+        date: "June 7, 2024",
+        customer: "Sarah Miller"
+    },
+    {
+        id: "1",
+        headline: "Unforgettable Honeymoon in Italy",
+        review: "Aujourd'hui Journeys curated the most romantic honeymoon for us in Italy! From picturesque vineyards to charming coastal towns, every detail was perfectly planned. We wouldn't change a thing!",
+        date: "May 19, 2024",
+        customer: "David & Emily Jones"
+    },
+    {
+        id: "2",
+        headline: "Adventure Awaits in Patagonia",
+        review: "Our Patagonia adventure with Aujourd'hui Journeys was truly unforgettable. Expert guides led us on breathtaking hikes, and the lodging was top-notch. They even arranged a private wildlife viewing experience!",
+        date: "April 23, 2024",
+        customer: "John Lee"
+    },
+    {
+        id: "3",
+        headline: "Stress-Free Family Vacation",
+        review: "Planning a family vacation can be overwhelming, but Aujourd'hui Journeys took care of everything. Our kids loved the mix of activities and relaxation, and we all appreciated the seamless travel arrangements.",
+        date: "March 2, 2024",
+        customer: "Jessica Brown"
+    },
+    {
+        id: "4",
+        headline: "Solo Safari in South Africa",
+        review: "As a solo traveler, I was hesitant about a safari. Aujourd'hui Journeys paired me with a fantastic group and ensured I felt safe and welcome. They even helped me capture amazing wildlife photos!",
+        date: "February 10, 2024",
+        customer: "Michael Chen"
+    }
+];

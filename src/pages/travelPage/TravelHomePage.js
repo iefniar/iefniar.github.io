@@ -5,10 +5,12 @@ import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, ani
 import gsap from 'gsap';
 import About from './pageSections/About';
 import Destinations from './pageSections/Destinations';
+import Reviews from './pageSections/Reviews';
 
 const TravelHomePage = () => {
   const aboutRef = useRef(null);
   const destinationsRef = useRef(null);
+  const reviewsRef = useRef(null);
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
@@ -102,7 +104,7 @@ const TravelHomePage = () => {
   }
 
   const reviewsClickHandler = () => {
-
+    reviewsRef.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
@@ -153,6 +155,9 @@ const TravelHomePage = () => {
       </div>  
       <div className={classes['travel-destinations-section']} id='travelDestinationsSection'>
         <Destinations ref={destinationsRef} />
+      </div> 
+      <div className={classes['travel-reviews-section']} id='travelReviewsSection'>
+        <Reviews ref={reviewsRef} />
       </div> 
     </div>
 );
