@@ -108,6 +108,12 @@
 .individual-group{
     display: flex;
     gap: 2rem;
+    /*background-color: var(--color-black-900);*/
+    /*background-image: linear-gradient(to bottom right, #023bf7, #161c2c, #000000);*/
+    /*background-color: #0028ad;*/
+    background-image: linear-gradient(to bottom right, #023bf7, #001761);
+    padding: 2rem;
+    border: 1px solid var(--color-black-900);
 }
 
 .img-container{
@@ -130,9 +136,9 @@
 }
 
 .content-container>h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1;
-    color: var(--color-black-900);
+    color: var(--color-white-100);
 }
 
 .small-img-container{
@@ -151,6 +157,6 @@
     margin-bottom: 0;
     font-size: 1.2rem;
     line-height: 1;
-    color: var(--color-black-900);
+    color: var(--color-white-100);
 }
 
