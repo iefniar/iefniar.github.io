@@ -52,6 +52,8 @@ const About = (props, ref) => {
                 '<'
             )
         });
+
+        return () => ctx.revert();
     }, []);
 
   return (

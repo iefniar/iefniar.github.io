@@ -75,6 +75,13 @@ const TravelHomePage = () => {
       },
       4
     )
+    .fromTo('#travelDestinationsSection', 
+      { opacity: 0
+      },
+      { opacity: 1
+      },
+      '<'
+    )
     
       
   }, []);
