@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import About from './pageSections/About';
 import Destinations from './pageSections/Destinations';
 import Reviews from './pageSections/Reviews';
+import Footer from './pageSections/Footer';
 
 const TravelHomePage = () => {
   const aboutRef = useRef(null);
@@ -158,6 +159,9 @@ const TravelHomePage = () => {
       </div> 
       <div className={classes['travel-reviews-section']} id='travelReviewsSection'>
         <Reviews ref={reviewsRef} />
+      </div> 
+      <div className={classes['travel-footer-section']} id='travelFooterSection'>
+        <Footer />
       </div> 
     </div>
 );

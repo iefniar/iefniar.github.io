@@ -37,6 +37,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    background-color: var(--color-minimalist-100);
 }
 
 .arrow-left-btn:hover, .arrow-left-btn:focus{
@@ -97,7 +98,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: goldenrod;
+    background-color: var(--color-minimalist-100);
     color: var(--color-font-secondary-plus);
 }
 
@@ -145,6 +146,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    background-color: var(--color-minimalist-100);
 }
 
 .arrow-right-btn:hover, .arrow-right-btn:focus{
@@ -170,4 +172,5 @@
     left: 50%;
     transform: translate(-50%, 0);
     background-color: var(--color-black-900);
+    opacity: 0;
 }

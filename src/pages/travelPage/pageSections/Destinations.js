@@ -199,7 +199,7 @@ const Destinations = (props, ref) => {
                 </div>
             </div>
             <div className={classes['sub-header']}>
-                ...
+                Start planning today
             </div>
             <div className={classes['small-horizontal-line']} />
         </div>

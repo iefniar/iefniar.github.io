@@ -1,0 +1,57 @@
+:root {
+    --color-white-100: #FFFFFF;
+    --color-black-900: #000000;
+    --color-font-secondary: orangered;
+    --color-font-secondary-plus: #000552;
+    --color-minimalist-100: #dbdbdb;
+    --color-minimalist-300: #a7c8ee;
+    --color-minimalist-500: #57a3fa;
+    --color-minimalist-700: #0073f7;
+}
+
+.footer-container{
+    background-color: var(--color-black-900);
+    color: var(--color-minimalist-100);
+    min-height: 300px;
+    padding: 4rem 4rem 1rem 4rem;
+}
+
+.footer-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-top, .footer-middle, .footer-bottom{
+    width: 100%;
+    padding-block: 4rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-minimalist-100);
+}
+
+.individual-item{
+    flex: 1;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom{
+    padding-bottom: 1rem;
+    border: none;
+}
+
+.bottom-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
