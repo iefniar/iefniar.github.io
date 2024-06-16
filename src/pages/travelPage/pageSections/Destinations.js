@@ -18,7 +18,7 @@ const Destinations = (props, ref) => {
                 scrollTrigger: {
                     trigger: upperContainerRef.current,
                     start: 'top center',
-                    end: 'bottom bottom',
+                    end: 'bottom top',
                     onUpdate: (self) => {
                         setYImg1(self.progress*100);
                         setYImg2(self.progress*50);
@@ -124,7 +124,7 @@ const Destinations = (props, ref) => {
     <div className={classes['destinations-container']} ref={ref}>
         <div className={classes['destinations-upper-container']} ref={upperContainerRef}>
             <div className={classes['card']} id='firstImage' style={{ transform: `translateY(-${yImg1}px)` }} >
-                <DestinationsCard imgPath='/optimized-images/travel/webp/portrait-3.webp' days='4' continent='America' headline='Waterfalls and beach' description='A beautiful destination to spend the holidays with your family' price='240.00' />
+                <DestinationsCard imgPath='/optimized-images/travel/webp/portrait-3.webp' days='4' continent='America' headline='Relax and explore' description='Escape to white sand shores and crystal-clear waters' price='240.00' />
             </div>
             <div className={classes['in-between']} id='inBetween'>
                 <div className={classes['vertical-line-top']} />
@@ -137,7 +137,7 @@ const Destinations = (props, ref) => {
                 <div className={classes['vertical-line-bottom']} />
             </div>
             <div className={classes['card']} id='secondImage' style={{ transform: `translateY(-${yImg2}px)` }} >
-                <DestinationsCard imgPath='/optimized-images/travel/webp/portrait-6.webp' days='7' continent='Asia' headline='Delicious food' description='A beautiful destination to spend the holidays with your family' price='350.00' />
+                <DestinationsCard imgPath='/optimized-images/travel/webp/portrait-6.webp' days='7' continent='Asia' headline='Embrace the adventure' description='Dive into serenity and discover wonders' price='350.00' />
             </div>
         </div>
         <div className={classes['destinations-bottom-container']} ref={bottomContainerRef}>
@@ -155,26 +155,26 @@ const Destinations = (props, ref) => {
                     </div>
                     <div className={classes['content-container']}>
                         <h2>
-                            A beautiful destination to spend the holidays with your family
+                            Your Private Beachfront Oasis Awaits
                         </h2>
                         <div className={classes['small-img-container']}>
                             <img src='/optimized-images/travel/webp/landscape-16.webp' alt='vacation destination' />
                         </div>
                         <p>
-                            A beautiful destination to spend the holidays with your family. A beautiful destination to spend the holidays with your family.A beautiful destination to spend the holidays with your family.
+                            Nestled amidst lush tropical landscapes, our resort offers an unparalleled escape, where pristine beaches, turquoise waters, and luxurious accommodations await.
                         </p>
                     </div>
                 </div>
                 <div className={classes['individual-group']} id='individualGroup'>
                     <div className={classes['content-container']}>
                         <h2>
-                            A beautiful destination to spend the holidays with your family
+                            Private Pool Paradise in Our Mountain Sanctuary
                         </h2>
                         <div className={classes['small-img-container']}>
                             <img src='/optimized-images/travel/webp/landscape-19.webp' alt='vacation destination' />
                         </div>
                         <p>
-                            A beautiful destination to spend the holidays with your family. A beautiful destination to spend the holidays with your family.A beautiful destination to spend the holidays with your family.
+                            Indulge in breathtaking views, a refreshing private pool, and gourmet meals crafted with the finest ingredients.
                         </p>
                     </div>
                     <div className={classes['img-container']}>
@@ -187,21 +187,24 @@ const Destinations = (props, ref) => {
                     </div>
                     <div className={classes['content-container']}>
                         <h2>
-                            A beautiful destination to spend the holidays with your family
+                            Poolside Luxury And Panoramic Views
                         </h2>
                         <div className={classes['small-img-container']}>
                             <img src='/optimized-images/travel/webp/landscape-5.webp' alt='vacation destination' />
                         </div>
                         <p>
-                            A beautiful destination to spend the holidays with your family. A beautiful destination to spend the holidays with your family.A beautiful destination to spend the holidays with your family.
+                            Create lasting family memories at our modern escape. Imagine splashing by your private pool, surrounded by sleek design and endless vistas.
                         </p>
                     </div>
                 </div>
             </div>
             <div className={classes['sub-header']}>
-                Start planning today
+                Start planning
             </div>
             <div className={classes['small-horizontal-line']} />
+            <div className={classes['header-bottom']} >
+                Book your modern getaway today
+            </div>
         </div>
     </div>
   );

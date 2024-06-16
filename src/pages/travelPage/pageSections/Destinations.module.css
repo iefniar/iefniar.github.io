@@ -166,3 +166,10 @@
     color: var(--color-black-900);
 }
 
+.header-bottom{
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--color-black-900);
+    text-align: center;
+    margin-inline: 25rem;
+}

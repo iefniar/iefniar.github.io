@@ -76,7 +76,7 @@ const Reviews = (props, ref) => {
                 },
                 '<1'
             )
-            .fromTo('#smallHorizontalLine', 
+            .fromTo('#reviewsSmallHorizontalLine', 
                 {
                   opacity: 0,
                   width: '0px'
@@ -151,7 +151,7 @@ const Reviews = (props, ref) => {
                                 <div className={classes['date-area']} id='dateArea'>
                                     {item.date}
                                 </div>
-                                <div className={classes['small-horizontal-line']} id='smallHorizontalLine'/>
+                                <div className={classes['small-horizontal-line']} id='reviewsSmallHorizontalLine'/>
                             </div>
                         </div>
                     ))}
