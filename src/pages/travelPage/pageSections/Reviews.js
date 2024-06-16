@@ -17,7 +17,8 @@ const Reviews = (props, ref) => {
                 scrollTrigger: {
                     trigger: reviewsInnerContainerRef.current,
                     start: 'top center',
-                    end: 'bottom bottom'
+                    end: 'bottom center',
+                    scrub: true
                 }
             });
             tl
@@ -41,7 +42,7 @@ const Reviews = (props, ref) => {
                   x: 0,
                   stagger: .5
                 },
-                '<1'
+                '<1.5'
             )
             .fromTo('#headlineArea', 
                 {
@@ -52,7 +53,7 @@ const Reviews = (props, ref) => {
                   opacity: 1, 
                   y: 0
                 },
-                '<1'
+                '<1.5'
             )
             .fromTo('#reviewArea', 
                 {
@@ -63,7 +64,7 @@ const Reviews = (props, ref) => {
                   opacity: 1, 
                   y: 0
                 },
-                '<1'
+                '<1.5'
             )
             .fromTo('#dateArea', 
                 {
@@ -83,7 +84,8 @@ const Reviews = (props, ref) => {
                 },
                 {
                   opacity: 1, 
-                  width: '50px'
+                  width: '50px',
+                  duration: 3
                 },
                 '<1'
             )

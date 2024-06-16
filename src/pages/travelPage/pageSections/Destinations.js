@@ -14,11 +14,12 @@ const Destinations = (props, ref) => {
         let ctx = gsap.context(() => {
             gsap.registerPlugin(ScrollTrigger);
             let tl = gsap.timeline({
-                defaults: { duration: 1 },
+                defaults: { duration: .5 },
                 scrollTrigger: {
                     trigger: upperContainerRef.current,
-                    start: 'top center',
+                    start: 'top 80%',
                     end: 'bottom top',
+                    scrub: true,
                     onUpdate: (self) => {
                         setYImg1(self.progress*100);
                         setYImg2(self.progress*50);
@@ -33,38 +34,36 @@ const Destinations = (props, ref) => {
                 },
                 {
                   opacity: 1, 
-                  y: 0
+                  y: 0,
+                  duration: 2
                 }
             )
             .fromTo('#firstImage', 
                 {
-                  opacity: 0, 
-                  y: '-50px'
+                  opacity: 0
                 },
                 {
-                  opacity: 1, 
-                  y: 0
+                  opacity: 1
                 },
-                '<1'
+                '<.2'
             )
             .fromTo('#secondImage', 
                 {
-                  opacity: 0,
-                  y: '-50px'
+                  opacity: 0
                 },
                 {
-                  opacity: 1, 
-                  y: 0
+                  opacity: 1
                 },
-                '<1'
+                '<.2'
             )
 
             let tl2 = gsap.timeline({
                 defaults: { duration: 1 },
                 scrollTrigger: {
                     trigger: bottomContainerRef.current,
-                    start: 'top center',
+                    start: 'top bottom',
                     end: 'bottom bottom',
+                    scrub: true,
                     onUpdate: (self) => {
                         setYImg1(self.progress*100);
                         setYImg2(self.progress*50);
@@ -91,7 +90,7 @@ const Destinations = (props, ref) => {
                   opacity: 1, 
                   width: '100px'
                 },
-                '<1'
+                '<.2'
             )
             .fromTo('#header', 
                 {
@@ -101,7 +100,8 @@ const Destinations = (props, ref) => {
                 {
                   opacity: 1, 
                   y: 0
-                }
+                },
+                .5
             )
             .fromTo('#individualGroup', 
                 {
@@ -112,7 +112,8 @@ const Destinations = (props, ref) => {
                   opacity: 1, 
                   x: 0,
                   stagger: 1
-                }
+                },
+                .5
             )
             
         });

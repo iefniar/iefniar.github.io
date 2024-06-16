@@ -17,6 +17,7 @@ const About = (props, ref) => {
                     trigger: containerRef.current,
                     start: 'top center',
                     end: 'bottom bottom',
+                    scrub: true,
                     onUpdate: (self) => {
                         setYImg1(self.progress*10);
                         setYImg2(self.progress*30);
@@ -28,13 +29,13 @@ const About = (props, ref) => {
                 {
                   opacity: 0, 
                 },
-                1
+                .5
             )
             .from('#secondImage', 
                 {
                   opacity: 0,
                 },
-                '<1'
+                '<.5'
             )
             .from('#h2Why', 
                 {
