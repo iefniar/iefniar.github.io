@@ -14,7 +14,7 @@ const TravelHomePage = () => {
   const reviewsRef = useRef(null);
   const COLORS = ["#851212", "#da0b2d", "#0178ff"];
   const color = useMotionValue(COLORS[0]);
-  const backgroundImage = useMotionTemplate`linear-gradient(to bottom right, #2e033b, #000552, ${color})`;
+  const backgroundImage = useMotionTemplate`linear-gradient(to bottom, #2e033b, #000552, ${color})`;
 
   useEffect(() => {
     animate(color, COLORS, {
@@ -115,9 +115,11 @@ const TravelHomePage = () => {
           <div className={classes['nav-left']}>
             <button className={classes['nav-btn']} id='navBtn' onClick={goHomeHandler}>
               <h4>Home</h4>
+              <div className={classes['nav-btn-underline']} />
             </button>
             <button className={classes['nav-btn']} id='navBtn' onClick={aboutClickHandler}>
               <h4>About</h4>
+              <div className={classes['nav-btn-underline']} />
             </button>
           </div>
           <div className={classes['nav-center']}>
@@ -128,9 +130,11 @@ const TravelHomePage = () => {
           <div className={classes['nav-right']}>
             <button className={classes['nav-btn']} id='navBtn' onClick={destinationsClickHandler}>
               <h4>Destinations</h4>
+              <div className={classes['nav-btn-underline']} />
             </button>
             <button className={classes['nav-btn']} id='navBtn' onClick={reviewsClickHandler}>
               <h4>Reviews</h4>
+              <div className={classes['nav-btn-underline']} />
             </button>
           </div>
         </div>

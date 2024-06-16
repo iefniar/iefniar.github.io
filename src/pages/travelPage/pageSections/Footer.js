@@ -42,7 +42,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    2024 Aujourd'hui Journeys. All rights reserved.
+                    <span>&copy;</span> 2024 Aujourd'hui Journeys. All rights reserved.
                 </div>
             </div>
         </div>

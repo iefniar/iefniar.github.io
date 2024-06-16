@@ -56,18 +56,24 @@
     border: none;
     background-color: transparent;
     padding-block: 1rem;
-    border-bottom: 1px solid transparent;
     transition: all 350ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-btn, .nav-div{
     opacity: 0;
 }
 
+.nav-div{
+    margin-bottom: 1rem;
+}
+
 .nav-btn:hover, .nav-btn:focus{
     cursor: pointer;
     color: var(--color-font-secondary);
-    border-bottom: 1px solid var(--color-font-secondary);
 }
 
 .nav-btn>h4, .nav-div>h4{
@@ -79,8 +85,20 @@
     color: var(--color-font-secondary-plus);
 }
 
+.nav-btn-underline{
+    margin-top: 1rem;
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-font-secondary);
+    transition: all 350ms ease-in-out;
+}
+
 .nav-btn:hover>h4, .nav-btn:focus>h4{
     color: var(--color-font-secondary);
+}
+
+.nav-btn:hover>.nav-btn-underline, .nav-btn:focus>.nav-btn-underline{
+    width: 100%;
 }
 
 .hero-text{
