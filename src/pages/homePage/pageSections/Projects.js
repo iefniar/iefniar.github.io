@@ -19,7 +19,7 @@ const Projects = (props, ref) => {
   const opacityProgressCard2Container = useTransform(scrollYProgressCardsContainer, [0, 1], [0, 1]);
 
   const [mainCardItem, setMainCardItem] = useState({
-    cardImage: '/optimized-images/project-1-blue.webp',
+    cardImage: '/optimized-images/project-1.webp',
     cardLink: '/project-1'
   });
 
@@ -40,26 +40,26 @@ const Projects = (props, ref) => {
           >
             <Link to='' onClick={()=>{
               setMainCardItem({
-                cardImage: '/optimized-images/project-1-blue.webp',
+                cardImage: '/optimized-images/project-1.webp',
                 cardLink: '/project-1'
               })
             }}>
-              <img className={classes['small-img']} src='/optimized-images/project-1-blue.webp' alt="project 1 small preview" id='img-1' />
+              <img className={classes['small-img']} src='/optimized-images/project-1.webp' alt="project 1 small preview" id='img-1' />
             </Link> 
-            <h4>e-commerce app</h4>
+            <h4>ecommerce</h4>
           </motion.div>
           <motion.div className={classes['individual-item']}
                       style={{opacity: opacityProgressCard2Container, y: y1Card2Container, scale: scaleProgressCard2Container}}
           >
             <Link to='' onClick={()=>{
               setMainCardItem({
-                cardImage: '/optimized-images/project-2-blue.webp',
+                cardImage: '/optimized-images/project-2.webp',
                 cardLink: '/project-2'
               })
             }}>
-              <img className={classes['small-img']} src='/optimized-images/project-2-blue.webp' alt="project 2 small preview" id='img-2' />
+              <img className={classes['small-img']} src='/optimized-images/project-2.webp' alt="project 2 small preview" id='img-2' />
             </Link> 
-            <h4>landing page of a restaurant</h4>
+            <h4>landing page</h4>
           </motion.div>
         </div>
         <div className={classes['main-card']}>
