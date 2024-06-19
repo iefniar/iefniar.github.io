@@ -7,6 +7,8 @@
     --color-minimalist-300: #a7c8ee;
     --color-minimalist-500: #57a3fa;
     --color-minimalist-700: #0073f7;
+    --padding-inline: clamp(2rem, 1vw + 1rem, 6rem);
+    --padding-block: clamp(4rem, 2vh + 1rem, 6rem); 
 }
 
 .main-container{
@@ -58,4 +60,83 @@
 
 .right-content>p{
     color: var(--color-minimalist-100);
+}
+
+@media screen and (max-width: 1200px){
+    .inner-container{
+        margin: clamp(1rem, 1vh + 1rem, 2rem) clamp(1rem, 1vw + 1rem, 2rem);
+        padding: var(--padding-block) var(--padding-inline);
+    }
+
+    .left-content{
+        margin: clamp(3rem, 8vh + 1rem, 12rem) clamp(1rem, 1vw + 1rem, 2rem);   
+    }
+
+    .right-content{
+        flex: 2;
+        padding-inline: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 940px){
+    .main-container{
+        display: grid;
+        grid-template-areas: 'left-content' 
+                             'right-content';
+    }
+
+    .inner-container{
+        display: unset;
+        margin: clamp(1rem, 1vh + 1rem, 2rem) clamp(1rem, 1vw + 1rem, 2rem);
+        padding: var(--padding-block) var(--padding-inline);
+    }
+
+    .left-content{
+        grid-area: 'left-content';
+        width: calc(90vw - 2*var(--padding-inline));
+        height: calc(90vh - 2*var(--padding-block));
+        margin-block: clamp(2rem, 1vh + 1rem, 6rem);
+        position: relative;
+    }
+
+    .first-image{
+        position: absolute;
+        top: clamp(-32px, -4vw - 1px, -12px);
+        left: clamp(12px, 4vw + 1px, 32px);
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .second-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .right-content{
+        grid-area: 'right-content';
+        padding-inline: 0rem;
+        padding-right: 1rem;
+    }
+
+    .right-content>h2{
+        font-size: clamp(1rem, 4vw + .5rem, 3rem);
+        text-align: center;
+    }
+
+    .right-content>p{
+        font-size: clamp(.5rem, 2vw + .5rem, 1.5rem);
+    }
+
+}
+
+@media screen and (max-width: 940px) and (orientation: portrait){
+    
 }
