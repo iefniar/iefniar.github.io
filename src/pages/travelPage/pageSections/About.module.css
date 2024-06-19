@@ -102,7 +102,7 @@
 
     .first-image{
         position: absolute;
-        top: clamp(-32px, -4vw - 1px, -12px);
+        top: clamp(-32px, -4vh - 1px, -12px);
         left: clamp(12px, 4vw + 1px, 32px);
         width: 90%;
         height: 90%;
@@ -137,6 +137,14 @@
 
 }
 
-@media screen and (max-width: 940px) and (orientation: portrait){
+@media screen and (max-width: 940px) and (orientation: portrait) and (max-aspect-ratio: 2/3){
+    .left-content{
+        grid-area: 'left-content';
+        width: calc(90vw - 2*var(--padding-inline));
+        height: calc(90vh - 2*var(--padding-block));
+        margin-block: clamp(2rem, 1vh + 1rem, 6rem);
+        position: relative;
+        max-height: 100vw;
+    }
     
 }

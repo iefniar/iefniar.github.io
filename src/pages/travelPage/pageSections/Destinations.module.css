@@ -7,6 +7,7 @@
     --color-minimalist-300: #a7c8ee;
     --color-minimalist-500: #57a3fa;
     --color-minimalist-700: #0073f7;
+    --padding-inline: clamp(2rem, 1vw + 1rem, 6rem);
 }
 
 .destinations-container{
@@ -172,4 +173,70 @@
     color: var(--color-black-900);
     text-align: center;
     margin-inline: 25rem;
+}
+
+@media screen and (max-width: 1200px){
+    .destinations-upper-container{
+        background-color: var(--color-minimalist-300);
+        padding: 10rem var(--padding-inline);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vertical-line-top{
+        width: 1px;
+        height: clamp(50px, 20vw + 1px, 200px);
+        background-color: var(--color-font-secondary-plus);
+    }
+
+    .vertical-line-bottom{
+        margin-bottom: 3rem;
+        width: 1px;
+        height: clamp(50px, 20vw + 1px, 200px);
+        background-color: var(--color-font-secondary-plus);
+    }
+
+    .large-text{
+        font-size: clamp(1rem, 8vw + .2rem, 3rem);
+        line-height: 1;
+        color: var(--color-font-secondary-plus);
+        text-align: center;
+        margin-inline: 20rem;
+    }
+
+    .header{
+        font-size: clamp(1rem, 8vw + .2rem, 3rem);
+        line-height: 1;
+        color: var(--color-black-900);
+        text-align: center;
+        margin-inline: 30rem;
+    }
+
+    .individual-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 4rem;
+        border-bottom: 1px solid var(--color-font-secondary-plus);
+    }
+    
+    .content-container>h2{
+        font-size: clamp(1.5rem, 6vw + .2rem, 3.5rem);
+        line-height: 1;
+        color: var(--color-minimalist-700);
+    }
+
+    .header-bottom{
+        font-size: clamp(1rem, 8vw + .2rem, 3rem);
+        line-height: 1;
+        color: var(--color-black-900);
+        text-align: center;
+        margin-inline: 25rem;
+    }
+
 }
