@@ -1,5 +1,5 @@
 import classes from './NavBar.module.css';
-import { ArrowBackOutlined, ShoppingBagOutlined, SearchOutlined } from '@mui/icons-material';
+import { ShoppingBagOutlined, SearchOutlined, HomeOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -39,12 +39,12 @@ const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returned
             <div className={classes['navBar-left']}>
                 <div>
                     <button className={classes['go-back-btn']} onClick={goBackHandler}>
-                        <ArrowBackOutlined />
+                        <ArrowBackIosNewOutlined />
                     </button>  
                 </div>
-                <Link to='/project-1'>
+                <Link to='/'>
                     <div>
-                        <img src='/optimized-images/ecommerce/ecommerce-logo.svg' alt='logo' />
+                        <HomeOutlined />
                     </div>
                 </Link>
             </div>

@@ -41,12 +41,6 @@
     height: 100%;
 }
 
-.navBar-left>a>div>img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 .navBar-left>div>button{
     display: flex;
     align-items: center;
@@ -137,8 +131,13 @@
     }
 
     .navBar-left>div>button>*{
-        width: 16px;
-        height: 16px;
+        width: clamp(16px, 4vw + 4px, 20px);
+        height: clamp(16px, 4vw + 4px, 20px);
+    }
+
+    .navBar-left>a>div>*{
+        width: clamp(16px, 6vw + 4px, 35px);
+        height: clamp(16px, 6vw + 4px, 35px);
     }
 
     .navBar-right{
