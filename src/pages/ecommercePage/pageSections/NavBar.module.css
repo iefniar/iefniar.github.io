@@ -42,6 +42,10 @@
     height: 100%;
 }
 
+.navBar-left>a>div:hover, .navBar-left>a>div:focus{
+    color: rgb(25, 118, 210);
+}
+
 .navBar-left>div>button{
     display: flex;
     align-items: center;
@@ -60,7 +64,6 @@
 
 .go-back-btn:hover>*, .go-back-btn:focus>*{
     color: rgb(25, 118, 210);
-
 }
 
 .go-back-btn>*{
@@ -78,6 +81,10 @@
 .navBar-left>a, .navBar-right>a{
     text-decoration: none;
     color: var(--color-black-900);
+}
+
+.navBar-right>a>div:hover, .navBar-right>a>div:focus{
+    color: rgb(25, 118, 210);
 }
 
 .navBar-right>button{

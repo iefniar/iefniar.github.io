@@ -22,7 +22,7 @@ const Home = () => {
       },
       { scale: 1.0,
         opacity: 1,
-        ease: 'back',
+        ease: 'back.in',
         delay: 3,
         duration: 2
       }
