@@ -1,3 +1,14 @@
 .ecommerce-container{
     background-color: whitesmoke;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background-color: dodgerblue;
+    z-index: 3;
 }

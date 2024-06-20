@@ -4,12 +4,51 @@ import { Badge } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { authActions } from '../../../store/ecommerce/auth-slice';
 import { cartActions } from '../../../store/ecommerce/cart-slice';
 import { favoriteActions } from '../../../store/ecommerce/favorite-slice';
+import gsap from 'gsap';
+
+let navBarFirstLoad = true;
 
 const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returnedValue) => {}}) => {
+    useEffect(() => {
+        if(navBarFirstLoad === true){
+            navBarFirstLoad = false;
+            const timeline = gsap.timeline({ defaults: { duration: 1 }});
+            
+            timeline
+            .from('#navBarContainer', 
+            {   
+                y: '-100%',
+                backgroundColor: '#1f8dfc',
+                ease: 'power1.inOut',
+                delay: 2
+            }
+            )
+            .to('#navBarContainer', 
+            {   
+                y: '0%',
+                backgroundColor: '#1f8dfc',
+                ease: 'power4'
+            },
+            '<'
+            )
+            .to('#navBarContainer', 
+            {   
+                backgroundColor: 'whitesmoke'
+            },
+            '<4'
+            )
+            
+        }
+        else{
+            return;
+        }
+        
+    }, []);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -35,7 +74,7 @@ const NavBar = ({showNavBarSearchContainer = false, searchCallbackFn = (returned
     }
 
     return (
-        <div className={classes['navBar-container']}>
+        <div className={classes['navBar-container']} id='navBarContainer'>
             <div className={classes['navBar-left']}>
                 <div>
                     <button className={classes['go-back-btn']} onClick={goBackHandler}>

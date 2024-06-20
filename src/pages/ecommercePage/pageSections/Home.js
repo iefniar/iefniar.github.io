@@ -3,27 +3,67 @@ import { useRef, useEffect, useState } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowDropDownOutlined } from '@mui/icons-material';
-//import gsap from 'gsap';
-//import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useTransform, useScroll, motion, useAnimate, useInView, animate, useMotionValue, useMotionTemplate } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
 import useOrientation from '../../../hooks/use-orientation';
-
 import Canvas from './Canvas';
 
 const Home = () => {
-  const COLORS = ["#198AFC", "#0364d4", "#e4effa"];
-  const color = useMotionValue(COLORS[0]);
-  //const backgroundImage = useMotionTemplate`linear-gradient(to bottom, ${color}, #198AFC, #198AFC)`;
   const deviceOrientation = useOrientation();
   const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
 
   useEffect(() => {
-    animate(color, COLORS, {
-      ease: 'easeInOut',
-      duration: 10,
-      repeat: Infinity,
-      repeatType: 'mirror'
-    });
+    const timeline = gsap.timeline({ defaults: { duration: 1 }});
+    timeline
+    .fromTo('#heroSection', 
+      { scale: 1.1,
+        opacity: 0
+      },
+      { scale: 1.0,
+        opacity: 1,
+        ease: 'back',
+        delay: 3,
+        duration: 2
+      }
+    )
+    .from('#heroH1', 
+      {
+        y: '-100vh',
+        opacity: 0,
+        ease: 'back.in'
+      },
+      '<2'
+    )
+    .from('#heroSpan', 
+      {
+        y: '100vh',
+        opacity: 0,
+        stagger: .3,
+        ease: 'back'
+      },
+      '<'
+    )
+    .from('#heroH3', 
+      {
+        x: '-100vw',
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: 'bounce.in'
+      },
+      '<1'
+    )
+    .from('#heroButton', 
+      {
+        x: '-100vw',
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: 'back'
+      },
+      '<1'
+    )
 
   }, []);
 
@@ -159,17 +199,7 @@ const Home = () => {
 
   return (
     <div className={classes['outer-container']}>
-        <motion.div className={classes['hero-section']} 
-        initial={{
-          scale: 1.1
-        }}
-        animate={{
-            scale: 1.0,
-            transition: {
-                duration: 1,
-                delay: 0
-            }
-        }}>
+        <div className={classes['hero-section']} id='heroSection'>
             <motion.div className={classes['hero-text']}
             initial={{
               opacity: 0,
@@ -184,21 +214,21 @@ const Home = () => {
               }
             }}>
               <div className={classes['hero-left']}>
-                <h1>Confidence Starts <br></br> 
-                  <motion.span style={{
-                    backgroundColor: color
-                    }}>
-                    Here
-                  </motion.span>
-                </h1>
-                <h3>Shop Pre-Curated Outfits & Look Amazing!</h3>
-                <div>
+                <h1 id='heroH1'>Confidence Starts </h1>
+                <div className={classes['hero-span']}>
+                  <span id='heroSpan'>H</span>
+                  <span id='heroSpan'>e</span>
+                  <span id='heroSpan'>r</span>
+                  <span id='heroSpan'>e</span>
+                </div>
+                <h3 id='heroH3'>Shop Pre-Curated Outfits & Look Amazing!</h3>
+                <div id='heroButton'>
                   <ECommerceButton text='Explore' path='/project-1/items' />
                 </div>
               </div>
               <div className={classes['hero-right']} />
             </motion.div>
-        </motion.div>
+        </div>
         <div className={classes['middle-section']} ref={middleSectionTextsContainerScope}>
           <h2 id='middle-section-text-1'>
             Score Up to <span>50% Off</span> on Your New Favorite Pieces!

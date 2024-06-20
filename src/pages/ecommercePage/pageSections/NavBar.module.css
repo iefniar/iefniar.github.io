@@ -15,9 +15,10 @@
 .navBar-container{
     display: flex;
     gap: 1rem;
-    margin: 1rem;
+    padding: 1rem;
     align-items: center;
     background-color: whitesmoke;
+    transition: all 650ms ease-in-out;
 }
 
 .navBar-left{
@@ -45,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: transparent;
 }
 
 .go-back-btn{
@@ -110,7 +112,7 @@
 
 .navBar-search-container>input, .navBar-search-container-hidden>input{
     border-style: none;
-    background-color: whitesmoke;
+    background-color: transparent;
 }
 
 .navBar-search-container-hidden>span>*{
@@ -123,7 +125,7 @@
 
 @media(max-width: 560px){
     .navBar-container{
-        margin: .5rem 1rem;
+        padding: .5rem 1rem;
     }
 
     .navBar-left{

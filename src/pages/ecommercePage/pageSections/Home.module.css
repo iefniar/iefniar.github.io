@@ -67,16 +67,21 @@
     color: var(--color-white-100);
     text-shadow: 10px 10px 50px #ffffff;
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);*/
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.hero-left>h1>span{
-    background-clip: text;
-    -webkit-background-clip: text; 
-    color: transparent;
+.hero-span{
+    display: flex;
+}
+
+.hero-span>span{
+    color: dodgerblue;
     text-shadow: 10px 10px 50px #198AFC;
     /*filter: drop-shadow(1px 1px 10px #14598b);*/
     font-size: clamp(2rem, 10vw + 1rem, 8rem);
     text-transform: uppercase;
+    letter-spacing: 1rem;
 }
 
 .hero-left>h3{
