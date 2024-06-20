@@ -65,11 +65,16 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-white-100);
+    text-shadow: 10px 10px 50px #ffffff;
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);*/
 }
 
 .hero-left>h1>span{
-    color: dodgerblue;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    text-shadow: 10px 10px 50px #198AFC;
+    /*filter: drop-shadow(1px 1px 10px #14598b);*/
     font-size: clamp(2rem, 10vw + 1rem, 8rem);
     text-transform: uppercase;
 }

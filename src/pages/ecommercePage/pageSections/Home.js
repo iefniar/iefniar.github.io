@@ -5,14 +5,27 @@ import ECommerceButton from '../../../components/ECommerceButton';
 import { ArrowDropDownOutlined } from '@mui/icons-material';
 //import gsap from 'gsap';
 //import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
+import { useTransform, useScroll, motion, useAnimate, useInView, animate, useMotionValue, useMotionTemplate } from 'framer-motion';
 import useOrientation from '../../../hooks/use-orientation';
 
 import Canvas from './Canvas';
 
 const Home = () => {
+  const COLORS = ["#198AFC", "#0364d4", "#e4effa"];
+  const color = useMotionValue(COLORS[0]);
+  //const backgroundImage = useMotionTemplate`linear-gradient(to bottom, ${color}, #198AFC, #198AFC)`;
   const deviceOrientation = useOrientation();
   const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
+
+  useEffect(() => {
+    animate(color, COLORS, {
+      ease: 'easeInOut',
+      duration: 10,
+      repeat: Infinity,
+      repeatType: 'mirror'
+    });
+
+  }, []);
 
   useEffect(() => {
     if(deviceOrientation === 'portrait'){
@@ -171,7 +184,13 @@ const Home = () => {
               }
             }}>
               <div className={classes['hero-left']}>
-                <h1>Confidence Starts <br></br> <span>Here</span></h1>
+                <h1>Confidence Starts <br></br> 
+                  <motion.span style={{
+                    backgroundColor: color
+                    }}>
+                    Here
+                  </motion.span>
+                </h1>
                 <h3>Shop Pre-Curated Outfits & Look Amazing!</h3>
                 <div>
                   <ECommerceButton text='Explore' path='/project-1/items' />

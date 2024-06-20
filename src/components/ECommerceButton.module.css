@@ -28,10 +28,10 @@
 
 .btn:hover, .btn:focus{
     cursor: pointer;
-    background-image: linear-gradient(to bottom right, rgb(0, 80, 160), dodgerblue);
-    color: white;
-    border: 1px solid white;
-    box-shadow: 0 0 30px 1px rgba(255, 255, 255, 0.5);
+    background-color: whitesmoke;
+    color: var(--color-black-900);
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 30px 1px whitesmoke;
 }
 
 @media(max-width: 940px){
