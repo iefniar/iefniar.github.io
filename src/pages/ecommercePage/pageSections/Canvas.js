@@ -82,7 +82,43 @@ const Canvas = () => {
                   scrub: 0.5
                 },
                 onUpdate: render 
-          });
+            });
+
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                trigger: "#canvasContainer",
+                start: "top top",
+                end: "+=3000",
+                scrub: 0.2,
+                snap: {
+                    snapTo: 'labels', // snap to the closest label in the timeline
+                    duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                    delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+                    ease: 'power1.inOut' // the ease of the snap animation ("power3" by default)
+                }
+                }
+            });
+
+            // add animations and labels to the timeline
+            tl.addLabel('start')
+            .from('#canvasH1First', { top: '100%' })
+            .addLabel('h1FirstMiddle')
+            .to('#canvasH1First', { top: '50%', transform: 'translate(0, -25%)' })
+            .addLabel('h1FirstUp')
+            .to('#canvasH1First', { top: '-100%' })
+            .addLabel('h1SecondStart')
+            .from('#canvasH1Second', { top: '100%' })
+            .addLabel('h1SecondMiddle')
+            .to('#canvasH1Second', { top: '50%', transform: 'translate(0, -25%)' })
+            .addLabel('h1SecondUp')
+            .to('#canvasH1Second', { top: '-100%' })
+            .addLabel('h1ThirdStart')
+            .from('#canvasH1Third', { top: '100%' })
+            .addLabel('h1ThirdMiddle')
+            .to('#canvasH1Third', { top: '50%', transform: 'translate(0, -25%)' })
+            .addLabel('h1ThirdUp')
+            .to('#canvasH1Third', { top: '-100%' })
+            .addLabel('end');
         }
 
     }, [firstLoadCanvas]);
@@ -138,12 +174,19 @@ const Canvas = () => {
    
     return (
         <div className={classes['canvas-container']} id='canvasContainer'>
-            <canvas ref={canvasRef} />
-            <div className={classes['scroll-down-container']}>
-                <div className={classes['scroll-down-inner-container']}>
-                    <div className={classes['scroll-down']} />
-                    <h4>Scroll <br></br> <span>Down</span></h4>
-                </div>   
+            <div className={classes['canvas-section']} id='canvasSection'>
+                <canvas ref={canvasRef} />
+                <div className={classes['scroll-down-container']}>
+                    <div className={classes['scroll-down-inner-container']}>
+                        <div className={classes['scroll-down']} />
+                        <h4>Scroll <br></br> <span>Down</span></h4>
+                    </div>   
+                </div>
+            </div>
+            <div className={classes['text-section']}>
+                <h1 id='canvasH1First'>Find your signature style</h1>
+                <h1 id='canvasH1Second'>Beyond the trend</h1>
+                <h1 id='canvasH1Third'>Get inspired</h1>
             </div>
         </div>
     );

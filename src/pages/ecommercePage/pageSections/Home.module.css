@@ -81,7 +81,7 @@
     /*filter: drop-shadow(1px 1px 10px #14598b);*/
     font-size: clamp(2rem, 10vw + 1rem, 8rem);
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: clamp(.5rem, 2vw + .1rem, 2rem);
 }
 
 .hero-left>h3{

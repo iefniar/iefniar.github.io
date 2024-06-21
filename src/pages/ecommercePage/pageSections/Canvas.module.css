@@ -28,6 +28,11 @@
     z-index: 1;
 }
 
+.canvas-section{
+    width: 100%;
+    height: 100%;
+}
+
 canvas{
     width: 100%;
     height: 100%;
@@ -88,6 +93,25 @@ canvas{
 
 .scroll-down-inner-container>h4>span{
     color: dodgerblue;
+}
+
+.text-section{
+    
+}
+
+.text-section>h1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    font-family: "PT Sans", sans-serif;
+    font-size: clamp(.5rem, 8vw + .1rem, 6rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-white-100);
+    text-align: center;
 }
 
 @media(max-width: 560px){
