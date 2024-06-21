@@ -13,7 +13,7 @@ const Canvas = () => {
     const canvasRef = useRef(null); 
     let context = null; 
     const videoFrames = { frame: 0 };
-    const framesCount = 97;
+    const framesCount = 96;
 
     const deviceOrientation = useOrientation();
     const landscapeImages = []; 
