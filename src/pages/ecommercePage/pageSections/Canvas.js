@@ -101,23 +101,23 @@ const Canvas = () => {
 
             // add animations and labels to the timeline
             tl.addLabel('start')
-            .from('#canvasH1First', { top: '100%' })
+            .from('#canvasH1First', { opacity: 0, delay: 1 })
             .addLabel('h1FirstMiddle')
-            .to('#canvasH1First', { top: '50%', transform: 'translate(0, -25%)' })
+            .to('#canvasH1First', { opacity: 1, duration: 1 })
             .addLabel('h1FirstUp')
-            .to('#canvasH1First', { top: '-100%' })
+            .to('#canvasH1First', { top: '40%', opacity: 0, duration: 0.5 })
             .addLabel('h1SecondStart')
-            .from('#canvasH1Second', { top: '100%' })
+            .from('#canvasH1Second', { opacity: 0, delay: 1 })
             .addLabel('h1SecondMiddle')
-            .to('#canvasH1Second', { top: '50%', transform: 'translate(0, -25%)' })
+            .to('#canvasH1Second', { opacity: 1, duration: 1 })
             .addLabel('h1SecondUp')
-            .to('#canvasH1Second', { top: '-100%' })
+            .to('#canvasH1Second', { top: '40%', opacity: 0, duration: 0.5 })
             .addLabel('h1ThirdStart')
-            .from('#canvasH1Third', { top: '100%' })
+            .from('#canvasH1Third', { opacity: 0, delay: 1 })
             .addLabel('h1ThirdMiddle')
-            .to('#canvasH1Third', { top: '50%', transform: 'translate(0, -25%)' })
+            .to('#canvasH1Third', { opacity: 1, duration: 1 })
             .addLabel('h1ThirdUp')
-            .to('#canvasH1Third', { top: '-100%' })
+            .to('#canvasH1Third', { top: '40%', opacity: 0, duration: 0.5 })
             .addLabel('end');
         }
 
