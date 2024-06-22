@@ -89,6 +89,7 @@ canvas{
     text-transform: uppercase;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 500;
+    font-size: clamp(.6rem, 2vw + .1rem, .8rem);
 }
 
 .scroll-down-inner-container>h4>span{

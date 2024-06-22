@@ -60,7 +60,7 @@ const Home = () => {
         scale: 0.8,
         opacity: 0,
         duration: 1,
-        ease: 'back'
+        ease: 'back.in'
       },
       '<1'
     )
@@ -109,14 +109,7 @@ const Home = () => {
         }, { 
           duration: 0.3,
           delay: 0.2 
-        });      
-        await middleSectionTextsAnimate("#middle-section-arrow", {
-          opacity: 1, 
-          scale: 1 
-        }, { 
-          duration: 0.3,
-          delay: 0.2 
-        });      
+        });           
       }
       else{
         await middleSectionTextsAnimate("#middle-section-text-1", {
@@ -130,13 +123,7 @@ const Home = () => {
           scale: 0.5 
         }, { 
           duration: 0.3 
-        });  
-        await middleSectionTextsAnimate("#middle-section-arrow", {
-          opacity: 0, 
-          scale: 0.5 
-        }, { 
-          duration: 0.3 
-        });  
+        });   
       }
     };
 
@@ -170,6 +157,7 @@ const Home = () => {
     animationSequenceFn();
      
   }, [isInView]);
+
 
 /*  
   //gsap code start
@@ -230,15 +218,34 @@ const Home = () => {
             </motion.div>
         </div>
         <div className={classes['middle-section']} ref={middleSectionTextsContainerScope}>
+          <div className={classes['in-between']}>
+            <div className={classes['vertical-line-top']} />
+            <div className={classes['small-text']}>
+                discover
+            </div>
+            <div className={classes['large-text']}>
+              Who are we?
+            </div>
+          </div>
+          <div className={classes['paragraph-section']}>
+            <p>
+             <span>Canvas, Cobalt & Co.</span> isn't your average clothing store. We're a brand built on the belief that clothing is a powerful tool for transformation. Since 2018, we've curated a collection of modern pieces designed for those who crave a balance between sophisticated style and effortless cool. We champion timeless designs with a modern twist, featuring clean lines that flatter any figure and statement details that let your personality shine.
+            </p>
+            <p>
+            Break free from the fashion mainstream and discover a wardrobe that reflects your individuality. At Canvas, Cobalt & Co., we believe in unleashing your inner artist.  We don't just sell clothes, we offer a platform for self-expression. Browse our collection and discover timeless pieces that will become the foundation of your modern wardrobe - paint your own canvas today and express your unique voice with every outfit.
+            </p>
+          </div>
+          <div className={classes['vertical-line-bottom']} />
           <h2 id='middle-section-text-1'>
-            Score Up to <span>50% Off</span> on Your New Favorite Pieces!
+            Score Up to <span>50% Off</span> on Your New Favorite Pieces
           </h2>
           <h2 id='middle-section-text-2'>
             Free Shipping & Easy Returns: Shop <span>Risk-Free</span>
           </h2>
-          <span id='middle-section-arrow'><ArrowDropDownOutlined /></span>
         </div>
-        <Canvas />
+        <div className={classes['canvas-section']}>
+          <Canvas />
+        </div>
         {/*
         <div className={classes['video-section']} id='videoSection'>
           
