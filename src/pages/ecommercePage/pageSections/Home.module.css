@@ -221,6 +221,8 @@
 }
 
 .large-text{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
     font-size: 3rem;
     line-height: 1;
     color: dodgerblue;
@@ -246,7 +248,8 @@
 
 .paragraph-section>p{
     flex: 1;
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
     font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
     color: var(--color-black-900);
     text-align: justify;
@@ -260,9 +263,9 @@
 }
 
 .middle-section>h2{
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-    font-weight: 400;
+    font-weight: 200;
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-black-900);
@@ -327,7 +330,8 @@
     text-transform: lowercase;
     line-height: 1;
     color: var(--color-black-900);
-
+    padding-bottom: 1rem;
+    border-bottom: 1px solid dodgerblue;
 }
 
 .cards-section{

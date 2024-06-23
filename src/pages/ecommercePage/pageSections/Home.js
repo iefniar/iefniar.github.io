@@ -96,6 +96,41 @@ const Home = () => {
   useEffect(() => {
     const animationSequenceFn = async () => {
       if (middleSectionTextsContainerIsInView) {
+        await middleSectionTextsAnimate("#verticalLineTop", {
+          opacity: 1, 
+          scale: 1 
+        }, { 
+          duration: 1,
+          delay: 0.5 
+        });      
+        await middleSectionTextsAnimate("#smallText", {
+          opacity: 1, 
+          y: 0 
+        }, { 
+          duration: 0.5,
+          delay: 0.2 
+        });      
+        await middleSectionTextsAnimate("#largeText", {
+          opacity: 1, 
+          y: 0 
+        }, { 
+          duration: 0.5,
+          delay: 0.2 
+        });      
+        await middleSectionTextsAnimate("#paragraphSection", {
+          opacity: 1, 
+          y: 0 
+        }, { 
+          duration: 0.5,
+          delay: 0.5 
+        });      
+        await middleSectionTextsAnimate("#verticalLineBottom", {
+          opacity: 1, 
+          scale: 1 
+        }, { 
+          duration: 0.5,
+          delay: 1 
+        });      
         await middleSectionTextsAnimate("#middle-section-text-1", {
           opacity: 1, 
           scale: 1 
@@ -112,6 +147,36 @@ const Home = () => {
         });           
       }
       else{
+        await middleSectionTextsAnimate("#verticalLineTop", {
+          opacity: 0, 
+          scale: 0 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#smallText", {
+          opacity: 0, 
+          y: 10 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#largeText", {
+          opacity: 0, 
+          y: -10 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#paragraphSection", {
+          opacity: 0, 
+          y: -10 
+        }, { 
+          duration: 0.3 
+        });  
+        await middleSectionTextsAnimate("#verticalLineBottom", {
+          opacity: 0, 
+          scale: 0 
+        }, { 
+          duration: 0.3 
+        });  
         await middleSectionTextsAnimate("#middle-section-text-1", {
           opacity: 0, 
           scale: 0.5 
@@ -219,15 +284,15 @@ const Home = () => {
         </div>
         <div className={classes['middle-section']} ref={middleSectionTextsContainerScope}>
           <div className={classes['in-between']}>
-            <div className={classes['vertical-line-top']} />
-            <div className={classes['small-text']}>
+            <div className={classes['vertical-line-top']} id='verticalLineTop' />
+            <div className={classes['small-text']} id='smallText'>
                 discover
             </div>
-            <div className={classes['large-text']}>
+            <div className={classes['large-text']} id='largeText'>
               Who are we?
             </div>
           </div>
-          <div className={classes['paragraph-section']}>
+          <div className={classes['paragraph-section']} id='paragraphSection'>
             <p>
              <span>Canvas, Cobalt & Co.</span> isn't your average clothing store. We're a brand built on the belief that clothing is a powerful tool for transformation. Since 2018, we've curated a collection of modern pieces designed for those who crave a balance between sophisticated style and effortless cool. We champion timeless designs with a modern twist, featuring clean lines that flatter any figure and statement details that let your personality shine.
             </p>
@@ -235,7 +300,7 @@ const Home = () => {
             Break free from the fashion mainstream and discover a wardrobe that reflects your individuality. At Canvas, Cobalt & Co., we believe in unleashing your inner artist.  We don't just sell clothes, we offer a platform for self-expression. Browse our collection and discover timeless pieces that will become the foundation of your modern wardrobe - paint your own canvas today and express your unique voice with every outfit.
             </p>
           </div>
-          <div className={classes['vertical-line-bottom']} />
+          <div className={classes['vertical-line-bottom']} id='verticalLineBottom' />
           <h2 id='middle-section-text-1'>
             Score Up to <span>50% Off</span> on Your New Favorite Pieces
           </h2>

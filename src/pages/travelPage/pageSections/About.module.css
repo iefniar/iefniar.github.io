@@ -124,7 +124,7 @@
     .right-content{
         grid-area: 'right-content';
         padding-inline: 0rem;
-        padding-right: 1rem;
+        padding-right: 2rem;
     }
 
     .right-content>h2{
