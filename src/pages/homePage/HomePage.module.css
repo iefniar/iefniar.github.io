@@ -19,6 +19,7 @@
     background-size: cover;
     background-blend-mode: multiply;*/
     /*background-image: linear-gradient(to bottom right, #05121d, #14598b, #94b7d6);*/
+    position: relative;
     display: grid;
     grid-template-areas:
         "hero"
@@ -27,6 +28,17 @@
         "projects"
         "contact";
     overflow: hidden;
+}
+
+.homePage-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: radial-gradient(transparent 0, transparent 40%, dodgerblue 100%);
+    z-index: 1;
 }
 
 .navBar-container {
@@ -118,6 +130,7 @@
     /*background-image: url(../../img/concrete_white.png),
                       linear-gradient(to bottom, #0e0e0f, #020202);*/
     background-color: var(--color-black-900);
+    z-index: 2;
     /*background-size: cover;
     background-blend-mode: multiply;*/
 }

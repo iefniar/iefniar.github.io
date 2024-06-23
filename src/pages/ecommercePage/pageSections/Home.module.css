@@ -247,9 +247,8 @@
     margin-bottom: 4rem;
     width: 1px;
     height: clamp(130px, 25vw + 16px, 300px);
-    background-color: rgb(190, 222, 255);
+    background-color: dodgerblue;
 }
-
 
 .paragraph-section{
     margin-inline: clamp(1rem, 4vw + .1rem, 5rem);
@@ -281,21 +280,16 @@
     padding-inline: 2rem;
     font-family: "DM Sans", sans-serif;
     font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-    font-weight: 200;
+    font-weight: 300;
     text-transform: lowercase;
-    font-style: italic;
     line-height: 1;
     color: var(--color-black-900);
     text-align: center;
 }
 
-.middle-section>h2:nth-child(1){
-    text-transform: uppercase;
-}
-
 .middle-section>h2>span{
+    font-style: italic;
     font-weight: 700;
-    color: rgb(190, 222, 255);
 }
 
 .middle-section>span{
