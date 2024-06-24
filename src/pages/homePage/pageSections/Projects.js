@@ -45,8 +45,23 @@ const Projects = (props, ref) => {
               })
             }}>
               <img className={classes['small-img']} src='/optimized-images/project-1.webp' alt="project 1 small preview" id='img-1' />
+              <h4>ecommerce |<span> frontend development</span></h4>
+              <p>E-commerce platform for a clothing brand</p>
+              <div className={classes['stack-used']}>
+                <div>
+                  React.js
+                </div>
+                <div>
+                  Redux
+                </div>
+                <div>
+                  Gsap
+                </div>
+                <div>
+                  Framer Motion
+                </div>
+              </div>
             </Link> 
-            <h4>ecommerce</h4>
           </motion.div>
           <motion.div className={classes['individual-item']}
                       style={{opacity: opacityProgressCard2Container, y: y1Card2Container, scale: scaleProgressCard2Container}}
@@ -58,8 +73,20 @@ const Projects = (props, ref) => {
               })
             }}>
               <img className={classes['small-img']} src='/optimized-images/project-2.webp' alt="project 2 small preview" id='img-2' />
+              <h4>landing page |<span> frontend development</span></h4>
+              <p>Landing page for a travel agency</p>
+              <div className={classes['stack-used']}>
+                <div>
+                  React.js
+                </div>
+                <div>
+                  Gsap
+                </div>
+                <div>
+                  Framer Motion
+                </div>
+              </div>
             </Link> 
-            <h4>landing page</h4>
           </motion.div>
         </div>
         <div className={classes['main-card']}>

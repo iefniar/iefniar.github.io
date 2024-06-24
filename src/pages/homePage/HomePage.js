@@ -128,11 +128,6 @@ const HomePage = () => {
               <h4>Contact</h4>
             </button>
           </div>
-          <div className={classes['navBar-container-links']}>
-            <button className={classes['navBar-btn']} >
-              <img src={Logo} alt="logo" />
-            </button>
-          </div>
         </div>
       </motion.div>
       <motion.div className={classes['hero-section']}

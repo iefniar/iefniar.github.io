@@ -194,9 +194,10 @@
     gap: 1rem;
     /*background-color: rgb(25, 118, 210);*/
     /*background-color: rgb(9, 9, 10);*/
-    background-image: linear-gradient(to bottom, whitesmoke, dodgerblue, rgb(0, 80, 160)); 
+    /*background-image: linear-gradient(to bottom, whitesmoke, dodgerblue, rgb(0, 80, 160)); */
 }
 
+/*
 .middle-section::before{
     content: "";
     position: absolute;
@@ -207,6 +208,7 @@
     background: radial-gradient(transparent 0, transparent 100%, black 100%); 
     z-index: 1;
 }
+*/
 
 .in-between{
     flex: 1;

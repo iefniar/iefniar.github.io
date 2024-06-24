@@ -8,6 +8,7 @@ const Card = ({imagePath, link}) => {
         <img className={classes['preview-img']} src={imagePath} alt="project preview" />
         <div className={`${classes['text-type-1']} ${classes['text-over-image']}`}>
           Explore
+          <div className={classes['text-underline']} />
         </div>
       </Link> 
       
