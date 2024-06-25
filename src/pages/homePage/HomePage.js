@@ -4,7 +4,6 @@ import Hero from './pageSections/Hero';
 import About from './pageSections/About';
 import Projects from './pageSections/Projects';
 import Contact from './pageSections/Contact';
-import Logo from '../../icons/Logo.svg';
 import Button from '../../components/Button';
 import Lenis from '@studio-freight/lenis';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';

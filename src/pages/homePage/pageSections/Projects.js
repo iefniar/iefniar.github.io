@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import Card from '../../../components/Card';
 import classes from './Projects.module.css';
 import { useTransform, useScroll, motion } from 'framer-motion';
+import { FolderOutlined } from '@mui/icons-material';
 
 const Projects = (props, ref) => {
+  const mainCardRef = useRef(null);
   const cardsContainer = useRef(null);
   const { scrollYProgress: scrollYProgressCardsContainer } = useScroll({
       target: cardsContainer,
@@ -22,6 +24,10 @@ const Projects = (props, ref) => {
     cardImage: '/optimized-images/project-1.webp',
     cardLink: '/project-1'
   });
+
+  const scrollIntoMainCardHandler = () => {
+    mainCardRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className={classes['projects-container']} ref={ref}>
@@ -42,25 +48,32 @@ const Projects = (props, ref) => {
               setMainCardItem({
                 cardImage: '/optimized-images/project-1.webp',
                 cardLink: '/project-1'
-              })
+              });
+
+              scrollIntoMainCardHandler();
             }}>
-              <img className={classes['small-img']} src='/optimized-images/project-1.webp' alt="project 1 small preview" id='img-1' />
-              <h4>ecommerce |<span> frontend development</span></h4>
-              <p>E-commerce platform for a clothing brand</p>
-              <div className={classes['stack-used']}>
-                <div>
-                  React.js
+              <div className={classes['card-overlay']}>
+                <h4>ecommerce |<span> frontend development</span></h4>
+                <p>E-commerce platform for a clothing brand</p>
+                <div className={classes['stack-used']}>
+                  <div>
+                    React.js
+                  </div>
+                  <div>
+                    Redux
+                  </div>
+                  <div>
+                    Gsap
+                  </div>
+                  <div>
+                    Framer Motion
+                  </div>
                 </div>
-                <div>
-                  Redux
-                </div>
-                <div>
-                  Gsap
-                </div>
-                <div>
-                  Framer Motion
+                <div className={classes['card-icon']}>
+                  <FolderOutlined />
                 </div>
               </div>
+              <img className={classes['small-img']} src='/optimized-images/project-1.webp' alt="project 1 small preview" id='img-1' />
             </Link> 
           </motion.div>
           <motion.div className={classes['individual-item']}
@@ -70,26 +83,33 @@ const Projects = (props, ref) => {
               setMainCardItem({
                 cardImage: '/optimized-images/project-2.webp',
                 cardLink: '/project-2'
-              })
+              });
+
+              scrollIntoMainCardHandler();
             }}>
-              <img className={classes['small-img']} src='/optimized-images/project-2.webp' alt="project 2 small preview" id='img-2' />
-              <h4>landing page |<span> frontend development</span></h4>
-              <p>Landing page for a travel agency</p>
-              <div className={classes['stack-used']}>
-                <div>
-                  React.js
+              <div className={classes['card-overlay']}>
+                <h4>landing page |<span> frontend development</span></h4>
+                <p>Landing page for a travel agency</p>
+                <div className={classes['stack-used']}>
+                  <div>
+                    React.js
+                  </div>
+                  <div>
+                    Gsap
+                  </div>
+                  <div>
+                    Framer Motion
+                  </div>
                 </div>
-                <div>
-                  Gsap
-                </div>
-                <div>
-                  Framer Motion
+                <div className={classes['card-icon']}>
+                  <FolderOutlined />
                 </div>
               </div>
+              <img className={classes['small-img']} src='/optimized-images/project-2.webp' alt="project 2 small preview" id='img-2' />
             </Link> 
           </motion.div>
         </div>
-        <div className={classes['main-card']}>
+        <div className={classes['main-card']} ref={mainCardRef}>
           <Card imagePath={mainCardItem.cardImage} link={mainCardItem.cardLink} />
         </div>
       </div>
