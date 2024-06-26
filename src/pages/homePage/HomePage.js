@@ -147,14 +147,14 @@ const HomePage = () => {
       </motion.div>
       <motion.div className={classes['call-to-action-area']}
         initial={{
-          scaleX: 0.8,
+          y: '40px',
           opacity: 0,
         }}
         animate={{
           opacity: 1,
-          scaleX: 1.0,
+          y: '0',
           transition: {
-            duration: 2,
+            duration: 1,
             delay: 1
           }
         }}
