@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Card from '../../../components/Card';
 import classes from './Projects.module.css';
 import { useTransform, useScroll, motion } from 'framer-motion';
-import { FolderOutlined } from '@mui/icons-material';
+import { ArrowUpwardOutlined } from '@mui/icons-material';
 
 const Projects = (props, ref) => {
   const mainCardRef = useRef(null);
@@ -53,6 +53,7 @@ const Projects = (props, ref) => {
               scrollIntoMainCardHandler();
             }}>
               <div className={classes['card-overlay']}>
+                <img className={classes['overlay-img']} src='/optimized-images/ecommerce/project-1-background.webp' alt="project 1 small preview" />
                 <h4>ecommerce |<span> frontend development</span></h4>
                 <p>E-commerce platform for a clothing brand</p>
                 <div className={classes['stack-used']}>
@@ -70,10 +71,10 @@ const Projects = (props, ref) => {
                   </div>
                 </div>
                 <div className={classes['card-icon']}>
-                  <FolderOutlined />
+                  <ArrowUpwardOutlined />
                 </div>
               </div>
-              <img className={classes['small-img']} src='/optimized-images/project-1.webp' alt="project 1 small preview" id='img-1' />
+              <img className={classes['small-img']} src='/optimized-images/ecommerce/project-1-background.webp' alt="project 1 small preview" id='img-1' />
             </Link> 
           </motion.div>
           <motion.div className={classes['individual-item']}
@@ -88,6 +89,7 @@ const Projects = (props, ref) => {
               scrollIntoMainCardHandler();
             }}>
               <div className={classes['card-overlay']}>
+                <img className={classes['overlay-img']} src='/optimized-images/travel/webp/landscape-8.webp' alt="project 2 small preview" />
                 <h4>landing page |<span> frontend development</span></h4>
                 <p>Landing page for a travel agency</p>
                 <div className={classes['stack-used']}>
@@ -102,10 +104,10 @@ const Projects = (props, ref) => {
                   </div>
                 </div>
                 <div className={classes['card-icon']}>
-                  <FolderOutlined />
+                  <ArrowUpwardOutlined />
                 </div>
               </div>
-              <img className={classes['small-img']} src='/optimized-images/project-2.webp' alt="project 2 small preview" id='img-2' />
+              <img className={classes['small-img']} src='/optimized-images/travel/webp/landscape-8.webp' alt="project 2 small preview" id='img-2' />
             </Link> 
           </motion.div>
         </div>
