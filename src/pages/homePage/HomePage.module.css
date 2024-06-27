@@ -50,6 +50,7 @@
     position: fixed;
     width: 100vw;
     z-index: 3;
+    /*background-image: linear-gradient(to bottom, rgba(0, 88, 177, 0.5), rgba(27, 138, 250, 0.5));*/
 }
 
 .navBar-left {
