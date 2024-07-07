@@ -8,7 +8,6 @@ let firstLoadCanvas = true;
 
 const Canvas = () => {
     gsap.registerPlugin(ScrollTrigger);
-    let imagesArray = []; 
     const [images, setImages] = useState([]); 
     const canvasRef = useRef(null); 
     let context = null; 
@@ -91,15 +90,14 @@ const Canvas = () => {
                 end: "+=3000",
                 scrub: 0.2,
                 snap: {
-                    snapTo: 'labels', // snap to the closest label in the timeline
-                    duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-                    delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-                    ease: 'power1.inOut' // the ease of the snap animation ("power3" by default)
+                    snapTo: 'labels', 
+                    duration: { min: 0.2, max: 3 }, 
+                    delay: 0.2, 
+                    ease: 'power1.inOut' 
                 }
                 }
             });
 
-            // add animations and labels to the timeline
             tl.addLabel('start')
             .from('#canvasH1First', { opacity: 0, delay: 1 })
             .addLabel('h1FirstMiddle')
@@ -122,56 +120,7 @@ const Canvas = () => {
         }
 
     }, [firstLoadCanvas]);
-    
-
-    /*
-    useEffect(() => {
-        const render = () => {
-            if(deviceOrientation === 'portrait'){
-                context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-                context.drawImage(portraitImages[videoFrames.frame], 0, 0);
-            }
-            else if(deviceOrientation === 'landscape'){
-                context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-                context.drawImage(landscapeImages[videoFrames.frame], 0, 0);
-            }  
-        }
-
-        if(deviceOrientation === 'portrait'){
-            if(canvasRef.current && portraitImages.length === framesCount) {
-                context = canvasRef.current.getContext("2d");
-                context.canvas.width = '1080';
-                context.canvas.height = '1920';
-                context.drawImage(portraitImages[0], 0, 0, canvasRef.current.width, canvasRef.current.height);
-            }
-        }
-        else if(deviceOrientation === 'landscape'){
-            if(canvasRef.current && landscapeImages.length === framesCount) {
-                context = canvasRef.current.getContext("2d");
-                context.canvas.width = '1920';
-                context.canvas.height = '1080';
-                context.drawImage(landscapeImages[0], 0, 0, canvasRef.current.width, canvasRef.current.height);
-            }
-        }
-
-        gsap.to(videoFrames, {
-          frame: framesCount - 1,
-          duration: 1,
-          snap: "frame",
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#canvasContainer",
-            start: "top top",
-            end: "+=3000",
-            pin: true,
-            scrub: 0.5
-          },
-          onUpdate: render 
-    });
-
-    }, [deviceOrientation]);
-    */
-   
+       
     return (
         <div className={classes['canvas-container']} id='canvasContainer'>
             <div className={classes['canvas-section']} id='canvasSection'>

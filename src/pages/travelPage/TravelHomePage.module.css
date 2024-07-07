@@ -16,10 +16,6 @@
 }
 
 .travel-hero-section{
-    /*background-image: url('../../../public/optimized-images/travel/webp/landscape-6.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
     width: 100%;
     height: 100vh; 
     position: relative;
@@ -162,10 +158,6 @@
     left: 0;
     object-fit: cover;
     display: block;
-    /*mask-image: url('../../../public/optimized-images/travel/rectangle.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;*/ 
 }
 
 .travel-about-section{

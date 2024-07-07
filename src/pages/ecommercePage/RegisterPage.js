@@ -12,14 +12,8 @@ const RegisterPage = () => {
     const usernameInputRef = useRef();
     const passwordInputRef = useRef();
     const repeatPasswordInputRef = useRef();
-    const [enteredUsernameIsValid, setEnteredUsernameIsValid] = useState(false);
-    const [enteredUsernameIsTouched, setEnteredUsernameIsTouched] = useState(false);
     const [showUsernameErrorMsg, setShowUsernameErrorMsg] = useState(false);
-    const [enteredPasswordIsValid, setEnteredPasswordIsValid] = useState(false);
-    const [enteredPasswordIsTouched, setEnteredPasswordIsTouched] = useState(false);
     const [showPasswordErrorMsg, setShowPasswordErrorMsg] = useState(false);
-    const [enteredRepeatPasswordIsValid, setEnteredRepeatPasswordIsValid] = useState(false);
-    const [enteredRepeatPasswordIsTouched, setEnteredRepeatPasswordIsTouched] = useState(false);
     const [showRepeatPasswordErrorMsg, setShowRepeatPasswordErrorMsg] = useState(false);
     const userRegisteringError = useSelector(state => state.auth.userRegistering);
     const [error, setError] = useState(useSelector(state => state.auth.userRegistering.msg));
@@ -28,14 +22,8 @@ const RegisterPage = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const errorHandlerFn = (errorMessage) => {
-        console.log(`errorMessage: ${errorMessage}`);
-        return;
-    }
-
     const noErrorHandlerFn = () => {
         setFormSubmitted(false);
-        console.log('no error');
         navigate('/project-1/sign-in');
     }
 
@@ -48,10 +36,9 @@ const RegisterPage = () => {
             return;
         }
         setError(userRegisteringError.msg);
-        console.log(`userRegisteringError.msg has changed: ${userRegisteringError.msg}`);
 
         if(userRegisteringError.hasError){
-            errorHandlerFn(userRegisteringError.msg);
+            return;
         }
         else{
             noErrorHandlerFn();
@@ -65,37 +52,27 @@ const RegisterPage = () => {
         const enteredPassword = passwordInputRef.current.value;
         const enteredRepeatPassword = repeatPasswordInputRef.current.value;
 
-        setEnteredUsernameIsTouched(true);
-        setEnteredPasswordIsTouched(true);
-        setEnteredRepeatPasswordIsTouched(true);
-
         if(enteredUsername.trim() === ''){
-            setEnteredUsernameIsValid(false);
             setShowUsernameErrorMsg(true);
             return;
         }
         else{
-            setEnteredUsernameIsValid(true);
             setShowUsernameErrorMsg(false);
         }
 
         if(enteredPassword.trim() === ''){
-            setEnteredPasswordIsValid(false);
             setShowPasswordErrorMsg(true);
             return;
         }
         else{
-            setEnteredPasswordIsValid(true);
             setShowPasswordErrorMsg(false);
         }
 
         if(enteredRepeatPassword.trim() === '' || enteredRepeatPassword !== enteredPassword){
-            setEnteredRepeatPasswordIsValid(false);
             setShowRepeatPasswordErrorMsg(true);
             return;
         }
         else{
-            setEnteredRepeatPasswordIsValid(true);
             setShowRepeatPasswordErrorMsg(false);
         }
 

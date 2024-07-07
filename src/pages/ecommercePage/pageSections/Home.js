@@ -1,18 +1,12 @@
 import classes from './Home.module.css';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import CategoriesCard from '../../../components/CategoriesCard';
 import ECommerceButton from '../../../components/ECommerceButton';
-import { ArrowDropDownOutlined } from '@mui/icons-material';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTransform, useScroll, motion, useAnimate, useInView } from 'framer-motion';
-import useOrientation from '../../../hooks/use-orientation';
 import Canvas from './Canvas';
 
 const Home = () => {
-  const deviceOrientation = useOrientation();
-  const [videoPath, setVideoPath] = useState('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
-
   useEffect(() => {
     const timeline = gsap.timeline({ defaults: { duration: 1 }});
     timeline
@@ -66,16 +60,6 @@ const Home = () => {
     )
 
   }, []);
-
-  useEffect(() => {
-    if(deviceOrientation === 'portrait'){
-      setVideoPath('/optimized-images/ecommerce/models/women/videos/portrait/compressed/ecommerce-portrait-video-1080p-25fps-90-percent-reduction-compressed.mp4');
-    }
-    else if(deviceOrientation === 'landscape'){
-      setVideoPath('/optimized-images/ecommerce/models/women/videos/landscape/compressed/ecommerce-landscape-video-1080p-25fps-90-percent-reduction-compressed.mp4');
-    }
-
-  }, [deviceOrientation]);
 
   const middleBottomSectionContainer = useRef(null);
   const { scrollYProgress: scrollYProgressMiddleBottomSectionContainer } = useScroll({
@@ -224,32 +208,6 @@ const Home = () => {
   }, [isInView]);
 
 
-/*  
-  //gsap code start
-  gsap.registerPlugin(ScrollTrigger);
-  const gsapVideoRef = useRef(null);
-
-  useEffect(() => {
-    const gsapVideo = gsapVideoRef.current;
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#videoSection",
-        start: "top top",
-        end: "+=3000",
-        pin: true,
-        scrub: 0.2,
-        snap: 0.01,
-        onUpdate: (self) => {
-          setInterval(() => {
-            gsapVideo.currentTime = tl.scrollTrigger.progress.toFixed(3)*4;
-          }, 33.3);
-        },
-      }
-    });
-  }, []);
-  //gsap code end
-*/
-
   return (
     <div className={classes['outer-container']}>
         <div className={classes['hero-section']} id='heroSection'>
@@ -311,20 +269,6 @@ const Home = () => {
         <div className={classes['canvas-section']}>
           <Canvas />
         </div>
-        {/*
-        <div className={classes['video-section']} id='videoSection'>
-          
-          <video ref={gsapVideoRef} src={videoPath} preload='auto' playsInline muted />
-          
-          
-          <div className={classes['scroll-down-container']}>
-            <div className={classes['scroll-down-inner-container']}>
-              <div className={classes['scroll-down']} />
-              <h4>Scroll <br></br> <span>Down</span></h4>
-            </div>   
-          </div>
-        </div>
-        */}
         <div className={classes['middle-bottom-section']} ref={middleBottomSectionContainer}>
           <motion.h2
           style={{opacity: opacityProgressChild1MiddleBottomSectionContainer, 

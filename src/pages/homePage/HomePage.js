@@ -52,15 +52,6 @@ const HomePage = () => {
   };
 
   const mainContainer = useRef(null);
-  const { scrollYProgress: scrollYProgressMainContainer } = useScroll({
-      target: mainContainer,
-      offset: ['start end', 'end start']
-  });
-
-  const y1MainContainer = useTransform(scrollYProgressMainContainer, [0, 1], [0, window.innerHeight]);
-  const y2MainContainer = useTransform(scrollYProgressMainContainer, [0, 1], [0, window.innerHeight*1.01]);
-  const y3MainContainer = useTransform(scrollYProgressMainContainer, [0, 1], [0, window.innerHeight*1.1]);
-  const y4MainContainer = useTransform(scrollYProgressMainContainer, [0, 1], [0, window.innerHeight*(-1)]);
   
   const aboutContainer = useRef(null);
   const { scrollYProgress: scrollYProgressAboutContainer } = useScroll({
@@ -68,7 +59,6 @@ const HomePage = () => {
       offset: ["0 1", "0.33 1"]
   });
 
-  const y1AboutContainer = useTransform(scrollYProgressAboutContainer, [0, 1], [0, window.innerHeight*1.01]);
   const scaleProgressAboutContainer = useTransform(scrollYProgressAboutContainer, [0, 1], [0.8, 1]);
   const opacityProgressAboutContainer = useTransform(scrollYProgressAboutContainer, [0, 1], [0.5, 1]);
 
@@ -79,7 +69,6 @@ const HomePage = () => {
   });
 
   const scaleProgressProjectsContainer = useTransform(scrollYProgressProjectsContainer, [0, 1], [0.9, 1]);
-  const opacityProgressProjectsContainer = useTransform(scrollYProgressProjectsContainer, [0, 1], [0.4, 1]);
 
   const contactContainer = useRef(null);
   const { scrollYProgress: scrollYProgressContactContainer } = useScroll({

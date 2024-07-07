@@ -1,7 +1,7 @@
 import classes from './TravelHomePage.module.css';
 import { useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
 import gsap from 'gsap';
 import About from './pageSections/About';
 import Destinations from './pageSections/Destinations';
@@ -110,7 +110,7 @@ const TravelHomePage = () => {
 
   return (
     <div className={classes['main-container']}>
-      <div layout  className={classes['travel-hero-section']} id='travelHeroSection' >
+      <div className={classes['travel-hero-section']} id='travelHeroSection' >
         <div className={classes['nav-container']} id='navContainer'>
           <div className={classes['nav-left']}>
             <button className={classes['nav-btn']} id='navBtn' onClick={goHomeHandler}>

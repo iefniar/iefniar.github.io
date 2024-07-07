@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { cartActions } from '../../store/ecommerce/cart-slice';
 import { useNavigate } from 'react-router-dom';
-
 import { allItems } from '../../Data';
 
 const IndividualItemPage = () => {

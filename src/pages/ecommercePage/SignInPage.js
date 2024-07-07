@@ -18,15 +18,9 @@ const SignInPage = () => {
     const userSigningInError = useSelector(state => state.auth.userSigningIn);
     const [error, setError] = useState(useSelector(state => state.auth.userSigningIn.msg));
     const [formSubmitted, setFormSubmitted] = useState(false);
-    
-    const errorHandlerFn = (errorMessage) => {
-        console.log(`errorMessage: ${errorMessage}`);
-        return;
-    }
 
     const noErrorHandlerFn = () => {
         setFormSubmitted(false);
-        console.log('no error');
         navigate('/project-1');
     }
 
@@ -39,10 +33,9 @@ const SignInPage = () => {
             return;
         }
         setError(userSigningInError.msg);
-        console.log(`userSigningInError.msg has changed: ${userSigningInError.msg}`);
 
         if(userSigningInError.hasError){
-            errorHandlerFn(userSigningInError.msg);
+            return;
         }
         else{
             noErrorHandlerFn();

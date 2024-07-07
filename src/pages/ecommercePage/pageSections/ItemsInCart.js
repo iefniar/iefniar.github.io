@@ -1,5 +1,4 @@
 import classes from './ItemsInCart.module.css';
-import { itemsInShoppingCart } from '../../../Data';
 import { DeleteOutlined, AddOutlined, RemoveOutlined } from '@mui/icons-material'; 
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
