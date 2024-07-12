@@ -7,8 +7,13 @@ import Contact from './pageSections/Contact';
 import Button from '../../components/Button';
 import Lenis from '@studio-freight/lenis';
 import { useTransform, useScroll, motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
+import ReactGA from "react-ga4";
 
 const HomePage = () => {
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "/", title: "HomePage" });
+  }, []);
+
   const COLORS = ["#042c62", "#2d6ec7", "#437CAF"];
   const color = useMotionValue(COLORS[0]);
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #010b19 0%, ${color})`;

@@ -10,6 +10,10 @@ import CheckoutPage from "./pages/ecommercePage/CheckoutPage";
 import Success from "./pages/ecommercePage/Success";
 import TravelHomePage from "./pages/travelPage/TravelHomePage";
 import ScrollToTop from "./components/utilities/ScrollToTop";
+import ReactGA from "react-ga4";
+
+const TRACKING_ID = 'G-KXFGKHFG4W';
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   return (
